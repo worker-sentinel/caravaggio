@@ -15,12 +15,12 @@ Observasi adalah metode pengumpulan data yang melibatkan pengamatan langsung ter
 Observasi yang dilakukan dalam penelitian ini untuk melakukan uji coba model yang dirancang oleh peneliti dan untuk mengumpulkan data hasil dari model sehingga dapat diperoleh fakta yang sesungguhnya.
 # Teknik Analisis Data
 Setelah data dikumpulkan dengan penggunaan perangkat lunak dan observasi, kemudian dianalisis dengan tujuan untuk menghasilkan data valid yang akan ditampilkan dalam hasil penelitian. Proses analisis yang digunakan sebagai berikut:
-Pencitraan Model Awal
-Catatan Eksperimen
-Observasi Data Eksperimen
-Seleksi Data Eksperimen 
-Implementasi Data Eksperimen
-Deskripsi Prototype
+## Pencitraan Model Awal
+## Catatan Eksperimen
+## Observasi Data Eksperimen
+## Seleksi Data Eksperimen 
+## Implementasi Data Eksperimen
+## Deskripsi Prototype
 # Tempat dan Jadwal Penelitian
 ## Tempat Penelitian
 Penelitian ini dilakukan di PT Lektor Media Utama yang berlokasi di Tokopedia Tower Lantai 22 Unit F, Jl. Prof. Dr. Satrio Kav.11, RT.003, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan.
