@@ -38,19 +38,25 @@ Rumusan Masalah
 
 Adapun rumusan masalah berdasarkan batasan masalah dan latar belakang yang telah dijelaskan di atas, maka peneliti merumuskan masalah penelitian ini yaitu “Bagaimana rancangan model enkripsi media penyimpanan dengan menggunakan Network Bound Disk Encryption Untuk Peningkatan Keamanan Arsip Digital di PT X.”
 
-Tujuan dan Manfaat Penelitian
+# Tujuan dan Manfaat Penelitian
 
 Adapun tujuan dan manfaat penelitian yang ingin dicapai oleh peneliti berdasarkan permasalahan yang telah dijelaskan atas adalah sebagai berikut:
 
-Tujuan Penelitian
+## Tujuan Penelitian
 Tujuan penelitian ini adalah untuk mengetahui model enkripsi perangkat penyimpanan dengan menggunakan Network Bound Disk Encryption untuk meningkatkan keamanan arsip digital.
 
-Manfaat Penelitian
+## Manfaat Penelitian
 
-Manfaat teoritis                                      
-Penelitian ini diharapkan dapat memberi wawasan pengetahuan mengenai model pengamanan pada perangkat keras yang digunakan untuk menyimpan data digital dan dapat dijadikan sumber rujukan untuk penelitian selanjutnya.
+### Manfaat teoritis  
+1. Penelitian ini memberikan kontribusi dalam pengembangan konsep keamanan arsip digital, khususnya yang berkaitan dengan penerapan prinsip CIA Triad pada perangkat penyimpanan arsip digital.
+2. Penelitian ini dapat memperluas penerapan metode design and development research dalam bidang keamanan arsip digital.
+3. Penelitian ini diharapkan dapat memberi wawasan pengetahuan mengenai model pengamanan pada perangkat keras yang digunakan untuk menyimpan data digital dan dapat dijadikan sumber rujukan untuk penelitian selanjutnya.                                     
 
-Manfaat Praktis
-Dapat menambah pengalaman langsung serta wawasan tentang merancang model enkripsi perangkat penyimpanan dengan menggunakan Networks Bound Disk Encryption.
-Dapat memberikan masukan bagi PT Lektor Media Utama dalam meningkatkan keamanan pada perangkat keras untuk menyimpan arsip digital.
+
+### Manfaat Praktis
+1. Dapat menambah pengalaman langsung serta wawasan terkait perancangan model dan implementasi enkripsi perangkat penyimpanan dengan menggunakan Networks Bound Disk Encryption. 
+2. Penelitian ini dapat memberikan kontribusi dalam memberikan solusi terhadap permasalahan dekripsi LUKS.
+3. Dapat memberikan masukan bagi PT Lektor Media Utama dalam meningkatkan keamanan pada perangkat penyimpanan arsip digital. 
+
+
 
