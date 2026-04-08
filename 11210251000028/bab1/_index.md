@@ -22,10 +22,10 @@ Berdasarkan latar belakang yang telah dijelaskan diatas, maka penulis ingin mela
 
 ## Identifikasi masalah
 Berdasarkan uraian pada latar belakang yang sudah dijelaskan bahwa terdapat beberapa masalah yang teridentifikasi. Identifikasi masalah dalam penelitian sebagai berikut: 
-1. 
-2. 
-3. 
-4. 
+1. Arsip digital sebagai aset strategis perusahaan masih rentan terhadap ancaman seperti kebocoran data, manipulasi, dan kehilangan akibat akses tidak sah.
+2. Penerapan enkripsi disk menggunakan LUKS masih memiliki keterbatasan, terutama dalam hal otomatisasi akses dan pengelolaan kunci enkripsi.
+3. Ketergantungan pada mekanisme input manual dalam proses dekripsi khususnya pada lingkungan server.
+4. Belum adanya mekanisme pengamanan berbasis jaringan yang mampu membatasi akses arsip hanya pada lingkungan jaringan yang sah.
 
 ## Batasan masalah
 
