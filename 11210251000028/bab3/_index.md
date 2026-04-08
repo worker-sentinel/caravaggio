@@ -25,3 +25,7 @@ Deskripsi Prototype
 ## Tempat Penelitian
 Penelitian ini dilakukan di PT Lektor Media Utama yang berlokasi di Tokopedia Tower Lantai 22 Unit F, Jl. Prof. Dr. Satrio Kav.11, RT.003, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan.
 ## Jadwal Penelitian
+| No | september   | oktober | november   | desember | januari   | februari | januari   | februari |
+| ---| ----------- | --------|
+| Header | Title |
+| Paragraph | Text |
