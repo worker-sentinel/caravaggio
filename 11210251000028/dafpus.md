@@ -22,4 +22,10 @@ Khariroh, U. (2021). Analisis Sistem Klasifikasi Keamanan dan Akses Arsip Dinami
 
 11. Ardiansyah, Risnita, & Jailani, M. S. (2023). Teknik Pengumpulan Data dan Instrumen Penelitian Ilmiah Pendidikan Pada Pendekatan Kualitatif dan Kuantitatif. Ihsan: Jurnal Pendidikan Islam, 1(2), 1 - 8. https:ss//doi.org/10.61104/ihsan.v1i2.57
 
-12. 
+12. Pressman, R. S., & Maxim, B. R. (2015). Software engineering: A practitioner’s approach (8th ed.). McGraw-Hill Education.
+
+13. Miles, M. B., & Huberman, A. M. (1994). Qualitative data analysis: An expanded sourcebook (2nd ed.). SAGE Publications.
+
+14. Moleong, L. J. (2017). Metodologi penelitian kualitatif (Edisi revisi). PT Remaja Rosdakarya.
+
+15. 
