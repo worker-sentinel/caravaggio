@@ -16,18 +16,5 @@ Peneliti menggunakan penelitian terdahulu yang tepat sebagai bahan rujukan dan s
 # Kerangka Pemikiran 
 Untuk memberikan arahan yang jelas dalam melaksanakan penelitian ini, penulis membuat kerangka berpikir sebagai berikut untuk penelitian ini.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![kerangkaberfikir](../bab2/assets/images/kerangkat%20berfikir%20fix%20(1).png)
 Gambar 1: Kerangka Berpikir
