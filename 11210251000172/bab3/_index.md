@@ -58,7 +58,7 @@ Setelah data dikumpulkan melalui perangkat lunak dan observasi, kemudian dianali
 ## Tempat dan Jadwal Penelitian 
 
 1. Tempat Penelitian
-Penelitian ini dilakukan di PT Lektor Media Utama yang berlokasi di Tokopedia Tower Lantai 22 Unit F, Jl. Prof. Dr. Satrio Kav. 11, RT 003, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan
+Penelitian ini dilakukan di Organisasi N yang berlokasi di Tokopedia Tower Lantai 22 Unit F, Jl. Prof. Dr. Satrio Kav. 11, RT 003, Karet Semanggi, Kecamatan Setiabudi, Kota Jakarta Selatan
 
 2. Jadwal Penelitian
 Peneliti melakukan tahap observasi awal pada bulan September tahun 2024, setelah melakukan observasi awal dan menemukan masalah yang ada pada tempat penelitian peneliti menyusun proposal pada bulan September hingga bulan November dengan bimbingan dari dosen pembimbing. Setelah disetujuinya proposal, peneliti melakukan seminar pada bulan Desember.
