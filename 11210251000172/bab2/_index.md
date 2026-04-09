@@ -58,3 +58,8 @@ d. Keanggotaan: Pengelolaan data pemustaka secara terpusat.
 
 Menurut Mulyadi (2016), implementasi SLiMS bertujuan untuk meningkatkan kualitas layanan perpustakaan melalui percepatan temu kembali informasi (information retrieval). Namun, karena SLiMS diakses melalui protokol HTTP/HTTPS, performa sistem ini sangat bergantung pada stabilitas server web dan database. Ketika jumlah akses pemustaka ke halaman OPAC meningkat tajam, server tunggal yang menjalankan SLiMS berisiko mengalami overload. Oleh karena itu, dalam konteks ketersediaan tinggi (High Availability), infrastruktur SLiMS memerlukan mekanisme distribusi beban seperti load balancing untuk memastikan layanan perpustakaan tetap dapat diakses tanpa kendala teknis (Sutarno, 2020).
 
+Peneliti membuat judul Rancangan Load Balancer untuk Sistem Otomasi Perpustakaan pada PT Lektor Media Utama, lalu menggunakan teori High Availability dengan metode Least Connection dan Weighted Least Connections dan akan menghasilkan rancangan penyeimbang beban server menggunakan Load balancer Pada Sistem Otomasi Perpustakaan PT Lektor Media Utama
+
+## Kerangka Berpikir
+
+Peneliti membuat judul Rancangan Load Balancer untuk Sistem Otomasi Perpustakaan pada PT Lektor Media Utama, lalu menggunakan teori High Availability dengan metode Least Connection dan Weighted Least Connections dan akan menghasilkan rancangan penyeimbang beban server menggunakan Load balancer Pada Sistem Otomasi Perpustakaan PT Lektor Media Utama.
