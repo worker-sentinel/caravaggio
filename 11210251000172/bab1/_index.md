@@ -2,6 +2,8 @@
 
 ## Latar Belakang
 
+<!-- untuk bab 4
+
 Perkembangan teknologi informasi telah mengubah paradigma layanan perpustakaan dari fisik menjadi ekosistem digital yang dinamis. Fenomena pertumbuhan data digital dan peningkatan jumlah pengguna yang mengakses layanan secara daring merupakan perwujudan dari hukum kelima Alireza Noruzi, yaitu "The Web is a growing organism" (Noruzi, 2004). Namun, pertumbuhan ini membawa tantangan besar pada stabilitas infrastruktur server perpustakaan.
 
 Salah satu solusi teknis untuk menjaga performa sistem adalah dengan menerapkan load balancing. Secara definisi, load balancing adalah teknik untuk mendistribusikan beban lalu lintas jaringan atau permintaan aplikasi secara merata ke beberapa peladen (server) di dalam sebuah klaster (Nedelcu, 2013). Tujuan utamanya adalah untuk memastikan tidak ada satu pun peladen yang menanggung beban berlebih (overload), yang dapat menyebabkan sistem melambat atau bahkan tumbang.
@@ -10,9 +12,9 @@ Penerapan load balancing menjadi sangat penting karena beberapa alasan krusial. 
 
 Sebagai contoh, perpustakaan berskala besar seperti Library of Congress di Amerika Serikat atau National Library of Australia telah lama menerapkan arsitektur load balancing untuk menangani jutaan permintaan akses setiap harinya. Di Indonesia, perpustakaan perguruan tinggi besar seperti Perpustakaan Nasional RI (Perpusnas) atau perpustakaan universitas ternama juga mulai mengadopsi teknologi ini untuk mendukung sistem repositori institusi mereka agar tetap stabil saat musim tugas akhir atau ujian (Nedelcu, 2013).
 
-Terdapat perbedaan mendasar antara perpustakaan yang menggunakan load balancing dengan yang tidak. Perpustakaan tanpa load balancing (menggunakan single server) memiliki titik kegagalan tunggal (single point of failure); jika server tersebut mati, seluruh layanan informasi terhenti total. Sebaliknya, perpustakaan yang menerapkan load balancing memiliki infrastruktur yang jauh lebih tangguh (redundant), mampu menangani lonjakan pengunjung secara simultan tanpa penurunan performa yang berarti, dan lebih mudah untuk ditingkatkan kapasitasnya (scalability) di masa depan sesuai kebutuhan pertumbuhan data (Noruzi, 2004; Nedelcu, 2013).
+Terdapat perbedaan mendasar antara perpustakaan yang menggunakan load balancing dengan yang tidak. Perpustakaan tanpa load balancing (menggunakan single server) memiliki titik kegagalan tunggal (single point of failure); jika server tersebut mati, seluruh layanan informasi terhenti total. Sebaliknya, perpustakaan yang menerapkan load balancing memiliki infrastruktur yang jauh lebih tangguh (redundant), mampu menangani lonjakan pengunjung secara simultan tanpa penurunan performa yang berarti, dan lebih mudah untuk ditingkatkan kapasitasnya (scalability) di masa depan sesuai kebutuhan pertumbuhan data (Noruzi, 2004; Nedelcu, 2013). -->
 
-## Latar belakang yang lama
+<!-- ## Latar belakang yang lama
 Perpustakaan merupakan institusi pengelola koleksi karya tulis, cetak, dan/atau rekam secara profesional dengan sistem yang baku guna memenuhi kebutuhan pendidikan, penelitian, dan informasi para pemustaka. Sebagai pusat sumber daya informasi, perpustakaan memiliki peran strategis dalam menyediakan bukti intelektual, membantu pengambilan keputusan akademis, serta menjamin akuntabilitas penyebaran ilmu pengetahuan. Pengelolaan perpustakaan kini menjadi aspek vital dalam operasional lembaga pendidikan dan organisasi, di mana perpustakaan tidak hanya berfungsi sebagai gudang buku, tetapi juga sebagai penyedia data strategis yang dinamis.
 
 Seiring pesatnya perkembangan teknologi informasi hingga tahun 2026, organisasi mulai meninggalkan pola konvensional dan mengadopsi sistem otomasi perpustakaan serta perpustakaan digital untuk meningkatkan efisiensi dan kecepatan akses data. Hal ini sejalan dengan amanat Undang-Undang Republik Indonesia Nomor 43 Tahun 2007 tentang Perpustakaan yang menekankan bahwa penyelenggaraan perpustakaan harus dilakukan sesuai dengan standar nasional untuk menjamin ketersediaan layanan yang autentik dan terpercaya. Praktik tata kelola yang baik melibatkan pengklasifikasian, penyimpanan, dan pemeliharaan koleksi secara digital untuk menjaga integritas dan kerahasiaan informasi di dalamnya.
@@ -35,7 +37,7 @@ Skalabilitas server juga merupakan aspek penting yang harus dipertimbangkan. Den
 
 Pendekatan seperti load balancing dan virtualisasi dapat digunakan untuk mencapai tujuan ini, memungkinkan distribusi beban kerja yang lebih efisien di antara beberapa server (Vennila & Manikandan, 2014, hlm 1-6).
 
-Dengan semakin meningkatnya volume data dan permintaan pada sistem otomasi perpustakaan, dibutuhkan arsitektur yang scalable dan handal. Pendekatan agile dalam pengembangan sistem dapat membantu mengakomodasi perubahan dan kebutuhan yang dinamis. Oleh karena itu, rancangan load balancer yang efektif dan efisien menjadi penting untuk memastikan keandalan dan ketersediaan sistem otomasi perpustakaan dalam menghadapi lonjakan permintaan.
+Dengan semakin meningkatnya volume data dan permintaan pada sistem otomasi perpustakaan, dibutuhkan arsitektur yang scalable dan handal. Pendekatan agile dalam pengembangan sistem dapat membantu mengakomodasi perubahan dan kebutuhan yang dinamis. Oleh karena itu, rancangan load balancer yang efektif dan efisien menjadi penting untuk memastikan keandalan dan ketersediaan sistem otomasi perpustakaan dalam menghadapi lonjakan permintaan. -->
 
 ## Identifikasi Masalah
 
@@ -49,8 +51,9 @@ Peneliti melihat tidak adanya sistem otomasi perpustakaan yang stabil dalam meng
 
 Berdasarkan identifikasi masalah yang telah dipaparkan, maka batasan masalah dalam penelitian ini adalah:
 
-1. Penelitian ini hanya berfokus pada implementasi NGINX sebagai perangkat lunak load balancer
-2. Analisis performa dibatasi pada penggunaan algoritma load balancing tertentu, seperti Round Robin atau Least Connections, untuk mendistribusikan trafik di Organisasi N.
+1. Penelitian ini hanya berfokus pada ruang lingkup perpustakaan Organisasi N. 
+Penelitian ini hanya berfokus pada implementasi NGINX sebagai perangkat lunak load balancer.
+2. Analisis performa dibatasi pada penggunaan algoritma load balancing tertentu untuk mendistribusikan trafik di Organisasi N.
 3. Sistem yang diuji adalah Sistem Otomasi Perpustakaan (SLIMS) yang digunakan di Organisasi N, khususnya pada fungsi pencarian katalog (OPAC) dan akses buku digital.
 
 ## Rumusan Masalah
@@ -90,7 +93,7 @@ Ketiga, Al-Fatih (2023) mengkaji strategi infrastruktur digital perpustakaan dal
 
 Terakhir, penelitian dari Lestari (2020) meneliti tentang kepuasan pengguna terhadap kecepatan akses katalog daring (OPAC), yang menyimpulkan bahwa responsivitas sistem berkorelasi langsung dengan tingkat kepuasan pemustaka. Kesamaannya adalah fokus pada peningkatan kualitas layanan perpustakaan melalui optimasi waktu tunggu. Perbedaannya, Lestari berfokus pada analisis persepsi pengguna, sementara penelitian ini memberikan solusi infrastruktur berupa load balancing NGINX sebagai upaya teknis untuk mewujudkan kecepatan akses yang diinginkan tersebut.
 
-## Tinjauan Penelitian Terdahulu (old)
+<!-- ## Tinjauan Penelitian Terdahulu (old)
 
 Beberapa penelitian terdahulu yang relevan dengan rancangan load balancer pada sistem otomasi perpustakaan adalah sebagai berikut:
 
@@ -98,4 +101,4 @@ Beberapa penelitian terdahulu yang relevan dengan rancangan load balancer pada s
 
 2. Artikel jurnal dari Endarta yang berjudul “Pemanfaatan Cloud Computing Meningkatkan Ketersediaan Dokumen Supervisi” membahas program cloud computing yang bersifat virtual dengan tujuan pemeliharaan data dan aplikasi. Penelitian yang diterbitkan pada tahun 2021 ini menggunakan cloud computing untuk menciptakan ketersediaan dokumen yang lebih siap, sehingga bisa diakses oleh petinggi di sekolah SMK. Hasil dari penelitian ini dapat meningkatkan layanan supervisi akademik dan manajerial kepada sekolah binaan.
 
-3. Artikel jurnal oleh Achmad Mustofa dan Desi Ramayanti yang berjudul “Implementasi Load Balancing dan Failover to Device Mikrotik Router Menggunakan Metode NTH (Studi Kasus: PT Gojek Indonesia”. Penelitian yang diterbitkan pada tahun 2020 ini mengkaji Load Balancing untuk pengefisienan pergantian ISP (Internet Service Provider)). Penelitian ini menghasilkan keseimbangan traffic pada dua jalur koneksi dengan menggunakan metode NTH dapat menghindari terjadinya overload pada salah satu jalur koneksi.
+3. Artikel jurnal oleh Achmad Mustofa dan Desi Ramayanti yang berjudul “Implementasi Load Balancing dan Failover to Device Mikrotik Router Menggunakan Metode NTH (Studi Kasus: PT Gojek Indonesia”. Penelitian yang diterbitkan pada tahun 2020 ini mengkaji Load Balancing untuk pengefisienan pergantian ISP (Internet Service Provider)). Penelitian ini menghasilkan keseimbangan traffic pada dua jalur koneksi dengan menggunakan metode NTH dapat menghindari terjadinya overload pada salah satu jalur koneksi. -->
