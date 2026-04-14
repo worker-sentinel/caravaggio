@@ -21,7 +21,7 @@ Peneliti menggunakan penelitian terdahulu yang tepat sebagai bahan rujukan dan s
 
 3. Penelitian dengan judul “Teknik Pengamanan Data At Rest Menggunakan Bitlocker dan Veracrypt” karya Akhmad Nur Ghazi dan Ghofar Taufiq. Tujuan penelitian ini untuk memberikan instruksi tentang cara menggunakan bitlocker dan veracrypt untuk mengamankan data. Hasil penelitian ini adalah bitlocker hanya dapat digunakan dengan sistem operasi windows, sedangkan veracrypt lebih fleksibel dan disediakan secara gratis. Metode penelitian yang digunakan adalah observasi dan studi pustaka. Kedua penelitian sama-sama bertujuan untuk melindungi data dari akses tidak sah dengan menerapkan mekanisme enkripsi pada media penyimpanan. Perbedaan terletak pada sistem keamanan yang digunakan yaitu bitlocker dan veracrypt, sedangkan sistem keamanan yang digunakan penelitian yang dilakukan adalah network bound disk encryption. Selain itu metode pengumpulan data penelitian yang digunakan yaitu observasi dan studi pustaka, sedangkan metode pengumpulan data penelitian yang dilakukan yaitu wawancara dan uji coba laboratorium.
 
-# Kajian Teoritis
+# Kajian Pustaka
 ## Arsip Digital
 Arsip digital merupakan data elektronik yang diproduksi dan dikelola melalui infrastruktur teknologi informasi. Menurut Setyarto (2025), sistem ini tidak hanya berfungsi sebagai medium penyimpanan, tetapi juga sebagai platform strategis untuk meningkatkan efisiensi manajerial dan kemudahan akses data.
 
@@ -32,16 +32,29 @@ Keunggulan utama teknologi ini terletak pada penggunaan metadata yang mampu memp
 Mengingat kompleksitas problematika dalam praktik di lapangan, pengelolaan arsip digital memerlukan ketelitian tingkat tinggi. Perusahaan atau organisasi diwajibkan menyusun kebijakan tata kelola yang komprehensif, mencakup strategi pemulihan data pasca bencana (disaster recovery) serta proteksi siber yang ketat. Selain regulasi internal, penguatan kompetensi sumber daya manusia melalui pelatihan teknologi informasi yang relevan menjadi faktor penentu keberhasilan manajemen kearsipan modern.
 
 ## Keamanan Arsip Digital
+Keamanan arsip digital merupakan pondasi utama dalam tata kelola arsip berbasis teknologi yang berorientasi pada proteksi data terhadap beragam ancaman. Pengamanan ini mencakup mitigasi risiko terhadap gangguan yang berasal dari faktor internal organisasi maupun serangan dari entitas eksternal, guna menjamin kerahasiaan dan integritas dokumen elektronik yang bernilai strategis  (Ngwenya & Ngoepe 2022). Arsip digital sebagai rekaman informasi dalam bentuk elektronik memiliki karakteristik yang berbeda dengan arsip konvensional, terutama dalam hal kerentanan terhadap akses tidak sah, kehilangan data, serta manipulasi informasi. 
+
+Kerentanan keamanan pada arsip digital dipengaruhi oleh faktor yang luas, mulai dari infiltrasi siber hingga kendala teknis dan manajerial. Serangan siber dalam bentuk malware, ransomware, maupun upaya peretasan berisiko tinggi memicu kebocoran data yang fatal. Di sisi lain, faktor kelalaian manusia (human error), seperti penghapusan data secara tidak sengaja, serta kegagalan sistem turut memberikan dampak signifikan yang dapat mengancam integritas dan keberlangsungan akses terhadap informasi digital.
+
+Oleh karena itu, pengamanan arsip digital merupakan sebuah manifestasi upaya proteksi yang bersifat berkesinambungan dalam menghadapi ancaman terhadap arsip digital. Tata kelola keamanan yang optimal tidak sekadar berfungsi sebagai mekanisme perlindungan data, melainkan juga berperan krusial dalam memperkuat reliabilitas informasi pada arsip digital.
 
 ## Enkripsi
-Enkripsi merupakan metode pengamanan data dengan cara menyandikan informasi asli melalui algoritma khusus (Alfirdaus et al., 2023). Proses ini mengubah data menjadi format yang tidak dapat terbaca, sehingga kerahasiaan informasi tetap terjaga dari pihak yang tidak berwenang selama proses pengiriman.Proses enkripsi pada dasarnya bertumpu pada sinergi antara algoritma kriptografi sebagai prosedur matematis transformasi data dan kunci (key) sebagai parameter kendali outputnya.
- 
-Secara klasifikatif, Stallings (2017) membedakan metode ini menjadi enkripsi simetris yang menggunakan kunci tunggal, serta enkripsi asimetris yang mengandalkan pasangan kunci publik dan privat. Dalam praktik keamanan informasi modern, fungsi enkripsi telah berkembang melampaui aspek kerahasiaan (confidentiality) hingga mencakup jaminan integritas data dan autentikasi melalui integrasi teknik hash function serta tanda tangan digital (Whitman & Mattord, 2018).
+Enkripsi merupakan metode pengamanan data dengan cara menyandikan informasi asli melalui algoritma khusus (Hulu et al., 2020). Proses ini mengubah data menjadi format yang tidak dapat terbaca, sehingga kerahasiaan informasi tetap terjaga dari pihak yang tidak berwenang selama proses pengiriman.Proses enkripsi pada dasarnya bertumpu pada sinergi antara algoritma kriptografi sebagai prosedur matematis transformasi data dan kunci (key) sebagai parameter kendali outputnya.
 
-Seiring dengan eskalasi ancaman siber, evolusi algoritma seperti Advanced Encryption Standard (AES) menjadi representasi ketangguhan proteksi data yang kini telah diimplementasikan secara luas pada infrastruktur cloud computing dan perangkat seluler (Kahn, 2016). Dalam cakupan manajemen arsip digital, penerapan enkripsi menjadi instrumen vital untuk memitigasi risiko kebocoran informasi dan manipulasi ilegal. Oleh karena itu, integrasi teknologi penyandian ke dalam sistem pengarsipan merupakan langkah strategis untuk memperkuat pilar keamanan informasi yang meliputi kerahasiaan, integritas, dan ketersediaan data secara berkelanjutan.
+Dalam keamanan arsip digital, enkripsi merupakan instrumen krusial yang berfungsi memproteksi data baik dalam kondisi statis maupun saat proses transmisi . Lebih lanjut, efektivitas enkripsi sangat dipengaruhi oleh kekuatan algoritma yang digunakan serta panjang dan kompleksitas kunci yang diterapkan. Algoritma kriptografi yang kuat akan menghasilkan tingkat kesulitan yang tinggi bagi pihak yang tidak berwenang untuk melakukan dekripsi tanpa kunci yang sesuai. 
+
+Melalui mekanisme penyandian, otentisitas dan kerahasiaan arsip tetap terjaga meskipun terdapat upaya akses tanpa otoritas, mengingat data hanya dapat diakses melalui kunci dekripsi yang valid. Oleh karena itu, efektivitas skema ini sangat bergantung pada tata kelola kunci (key management) yang baik. Aspek penyimpanan dan distribusi kunci harus dilakukan secara ketat demi menjamin bahwa titik krusial keamanan sistem tetap terproteksi secara optimal.
 ## Luks
+Linux Unified Key Setup (LUKS) merupakan standar spesifikasi yang dirancang untuk implementasi enkripsi pada perangkat blok (block device). LUKS menetapkan kerangka kerja yang lengkap mengenai struktur format data di dalam disk, sekaligus mengatur skema kebijakan manajemen kunci serta frasa sandi (passphrase) secara sistematis (Red Hat Enterprise Linux, 2024).
 
-## NBDE
+Keunggulan komparatif teknologi ini terletak pada aspek standardisasi yang diakui secara luas dan dukungan kompatibilitas yang ekstensif. Selain itu, dalam pengoperasian yang berbasis baris perintah (command-line interface) serta efisiensi performa dalam pengamanan enkripsi disk secara menyeluruh (full disk encryption) menjadikannya standar industri dalam proteksi data (Onishchenko et al., 2024).
+
+Lebih lanjut, LUKS menawarkan fleksibilitas dalam mekanisme manajemen kunci melalui penyediaan multipel key slots pada satu perangkat penyimpanan. Fitur ini memfasilitasi penyimpanan berbagai kunci akses atau passphrase yang berbeda untuk mengakses data yang sama, sehingga mengoptimalkan efisiensi administrasi akses tanpa memerlukan proses enkripsi ulang terhadap sistem perangkat penyimpanan.
+
+Terlepas dari keunggulannya, implementasi LUKS menghadapi tantangan signifikan, terutama terkait ketergantungan proses dekripsi atau input manual pengguna selama fase booting. Ketergantungan terhadap input manual ini tidak hanya menciptakan hambatan operasional, tetapi juga berpotensi memicu kerentanan keamanan dan inefisiensi pada manajemen kunci di lingkungan peladen (server) yang kompleks.
+
+
+## Network Bound Disk Encryption
 
 
 # Kerangka Pemikiran 

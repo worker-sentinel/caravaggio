@@ -34,4 +34,10 @@ Khariroh, U. (2021). Analisis Sistem Klasifikasi Keamanan dan Akses Arsip Dinami
 
 17. Mohammad Harun Alfirdaus, M., Tahir, M., Dewanti, N. E., Ardianto, R., Azurah, N. N., & Cahyono, N. F. (2023). Perancangan aplikasi enkripsi deskripsi menggunakan metode caesar cipher berbasis web. Jurnal Teknik Mesin, Industri, Elektro Dan Informatika, 2(2), 64–76. https://doi.org/10.55606/jtmei.v2i2.1628
 
-18. 
+18. Hulu, D., Nadeak, B., Aripin, Soeb. (2020). Implementasi Algoritma AES (Advanced Encryption Standard) Untuk Keamanan File Hasil Radiologi di RSU Imelda Medan. Jurnal Konferensi Nasional Teknologi Informasi dan Komputer, 4(1), 78-86. http://dx.doi.org/10.30865/komik.v3i1.1558
+
+19. Ngwenya, M. andNgoepe, M. 2022.Data trust in Consumer Internet of Things assemblages in the mobile and fixed telecommunication operators in South Africa. South African Journal of Information Management, 24(1): 1-9. http://dx.doi.org/10.4102/sajim.v24i1.1426
+
+20. Onishchenko, B., Banakh, R., & Ibrahim, A. A. (2024). Encrypting The File System On A Single-Board Computers Platform And Using Linux Unified Key Setup With Physical Access Keys. ADVANCES IN CYBER-PHYSICAL SYSTEMS Учредители: Lviv Polytechnic National University, 9(2), 128-133. https://doi.org/10.23939/acps2024.02.128
+
+21. 
