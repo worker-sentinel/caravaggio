@@ -9,22 +9,16 @@ Menurut Peraturan Kepala Arsip Nasional Republik Indonesia No.7 Tahun 2016 tenta
 
 Dalam konteks perusahaan, arsip berfungsi sebagai aset informasi yang memiliki nilai hukum, administratif, dan strategis. Oleh karena itu, pengelolaan arsip yang baik menjadi bagian integral dari tata kelola organisasi yang efektif. Seiring berkembangnya teknologi informasi, bentuk arsip juga mengalami transformasi dari fisik menuju digital.
 
-Transformasi arsip menuju format digital didorong oleh kebutuhan efisiensi, kemudahan akses, dan penghematan sumber daya. Namun, perubahan format ini juga menimbulkan tantangan baru terutama dalam aspek keamanan data dan keaslian arsip. Arsip digital rentan terhadap kerusakan perangkat, kehilangan data, dan serangan siber yang dapat mengancam integritas informasi. Dengan demikian, pengelolaan arsip digital menuntut penerapan strategi keamanan informasi yang terencana.
+Namun, perubahan dari arsip konvensional menjadi arsip digital juga menimbulkan tantangan baru terutama dalam aspek keamanan data dan keaslian arsip. Arsip digital rentan terhadap kerusakan perangkat, kehilangan data, dan serangan siber yang dapat mengancam integritas informasi. Dengan demikian, pengelolaan arsip digital menuntut penerapan strategi keamanan informasi yang terencana.
 
 
 Keamanan arsip digital merupakan isu strategis dalam tata kelola arsip di era digitalisasi industri. Perusahaan harus memastikan bahwa arsip digital terlindungi dari risiko kebocoran, manipulasi, maupun kehilangan akibat akses yang tidak sah. Untuk itu, diperlukan penerapan kebijakan keamanan yang mencakup aspek kerahasiaan, integritas, dan ketersediaan data. Penerapan keamanan arsip digital bukan hanya tanggung jawab teknis, tetapi juga menjadi bagian dari manajemen risiko informasi secara menyeluruh. Oleh karena itu, sistem penyimpanan arsip digital perlu dirancang dengan pendekatan keamanan berlapis.
 
 Dalam konteks penyimpanan digital, keamanan arsip digital bergantung pada mekanisme proteksi data di tingkat perangkat keras dan perangkat lunak. Salah satu pendekatan umum adalah dengan menerapkan sistem enkripsi pada media penyimpanan agar data tidak dapat diakses tanpa izin atau wewenang.
 
-Ancaman terhadap arsip digital dapat muncul dari berbagai bentuk seperti ransomware, phishing, hingga serangan brute force pada sistem penyimpanan. Serangan-serangan ini sering memanfaatkan celah keamanan pada perangkat lunak atau kesalahan konfigurasi pengguna. Dalam konteks perusahaan, dampak serangan tersebut dapat menyebabkan kerugian finansial, reputasi, bahkan gangguan operasional (Raj, 2023).Karena itu, penerapan sistem keamanan berbasis enkripsi menjadi salah satu cara yang paling efektif untuk mengurangi risiko kebocoran data.
+Ancaman terhadap arsip digital sering memanfaatkan celah keamanan pada perangkat lunak atau kesalahan konfigurasi pengguna. Dalam konteks perusahaan, dampak serangan tersebut dapat menyebabkan kerugian finansial, reputasi, bahkan gangguan operasional (Raj, 2023). Terdapat kasus kebocoran data terhadap arsip digital seperti serangan operasi dragon knight pada tahun 2006 yang merugikan perusahaan - perusahaan minyak dan gas. Serangan ini bertujuan untuk mengambil informasi terkait data lapangan, data keuangan, dan dokumen perintah rahasia untuk kepentingan perusahaan.
 
 Implementasi teknologi enkripsi telah menjadi praktik standar dalam keamanan penyimpanan digital modern. Namun, satu sisi metode enkripsi masih terdapat kelemahan dalam kecepatan proses data yang cukup besar (Judijanto et al., 2025).  Oleh karena itu, pemilihan metode enkripsi yang tepat menjadi hal fundamental bagi keamanan arsip digital.
-
-Salah satu implementasi enkripsi yang populer dalam sistem operasi berbasis Linux adalah LUKS (Linux Unified Key Setup). LUKS dikembangkan sebagai standar untuk mengelola enkripsi disk pada sistem Linux untuk manajemen kunci enkripsi. LUKS menyimpan informasi header yang memungkinkan pengguna mengelola beberapa kunci enkripsi pada satu volume penyimpanan (Onishchenko et al., 2024). Tantangan utama dalam sistem enkripsi adalah pengelolaan kunci yang aman dan efisien. Ketika sistem menggunakan satu kunci utama untuk seluruh media penyimpanan, maka seluruh data dapat diakses pihak luar. Dalam beberapa skenario, LUKS bergantung pada input manual pengguna untuk membuka partisi terenkripsi saat proses booting. Hal ini menimbulkan keterbatasan bagi sistem yang membutuhkan proses otomatis, seperti server atau sistem penyimpanan terpusat.
-
-Salah satu pendekatan yang berkembang untuk mengatasi masalah pengelolaan kunci enkripsi adalah Network Bound Disk Encryption (NBDE). NBDE memungkinkan perangkat terenkripsi melakukan proses dekripsi hanya jika terkoneksi dengan jaringan dan server otentikasi yang sah (Red Hat, 2022). Dengan demikian, walaupun media penyimpanan dipindahkan ke sistem lain, data di dalamnya tetap tidak dapat diakses tanpa koneksi ke server kunci. Konsep ini memperluas keamanan LUKS dengan menambahkan lapisan verifikasi berbasis jaringan. Hal ini relevan bagi organisasi yang mengelola arsip digital pada lingkungan multi-server atau sistem terdistribusi.
-
-Penerapan NBDE biasanya melibatkan dua komponen utama, yaitu Tang Server sebagai penyedia kunci dan Clevis Client sebagai agen dekripsi otomatis. Clevis melakukan proses binding terhadap volume terenkripsi dan secara otomatis meminta kunci dari Tang saat sistem boot . Desain ini memastikan bahwa sistem dapat berjalan tanpa intervensi manual namun tetap mempertahankan keamanan. Dengan mekanisme ini, NBDE memberikan keseimbangan antara keamanan dan efisiensi operasional.
 
 Dalam konteks PT X, arsip digital menjadi aset informasi penting yang harus dijaga kerahasiaannya. Perusahaan yang bergerak di bidang pengembangan teknologi ini menyimpan berbagai data strategis, termasuk naskah, kontrak, dan arsip digital hasil produksi. Dengan meningkatnya ketergantungan terhadap media penyimpanan digital, risiko kebocoran dan kehilangan data juga meningkat. Oleh karena itu, diperlukan pendekatan teknologi yang mampu mengamankan data dari akses tidak sah, baik dari internal maupun eksternal. NBDE menawarkan potensi untuk mengamankan arsip tersebut melalui kontrol berbasis jaringan.
 
@@ -35,25 +29,25 @@ PT X sebagai subjek penelitian memiliki kebutuhan khusus yang menjadikan NBDE re
 
 Selain itu, ketertarikan peneliti dalam mengangkat tema ini didasarkan pada pentingnya pengembangan sistem keamanan arsip digital yang tidak hanya kuat secara teknis, tetapi juga adaptif terhadap kebutuhan operasional modern. Perkembangan ancaman siber yang semakin kompleks menuntut adanya solusi keamanan yang tidak hanya mengandalkan enkripsi konvensional, tetapi juga mampu mengintegrasikan kontrol akses berbasis jaringan. Dalam hal ini, Network Bound Disk Encryption (NBDE) menjadi pendekatan yang menarik karena mampu memberikan lapisan keamanan tambahan melalui mekanisme autentikasi jaringan, sehingga relevan untuk diteliti dan dikembangkan lebih lanjut.
 
-Di sisi lain, pemilihan PT X sebagai objek penelitian didasarkan pada karakteristik perusahaan yang memiliki  arsip digital sebagai aset utama. Lingkungan kerja yang melibatkan banyak pengguna dan akses berbasis jaringan menjadikan kebutuhan akan sistem keamanan yang terstruktur menjadi semakin penting. Hal ini menjadikan PT X sebagai objek yang representatif dalam mengkaji penerapan model NBDE, sehingga hasil penelitian diharapkan tidak hanya relevan bagi perusahaan tersebut, tetapi juga dapat menjadi referensi bagi organisasi atau perusahaan lain dengan karakteristik serupa.
+Pemilihan PT X sebagai objek penelitian didasarkan pada kesesuaian karakteristik operasional perusahaan dengan kebutuhan implementasi NBDE. PT X merupakan perusahaan yang sejak awal mengelola arsip secara digital dan memiliki tingkat ketergantungan yang tinggi terhadap sistem jaringan dalam aktivitas bisnisnya. Dalam lingkungan kerja yang sedemikian rupa, kegagalan dalam pengelolaan arsip digital khususnya dalam rangka pengamanan bukan sekadar kendala teknis, melainkan ancaman terhadap kelangsungan bisnis.
 
 Berdasarkan latar belakang yang telah dijelaskan diatas, maka penulis ingin melakukan penelitian lebih lanjut terkait keamanan arsip digital pada lapisan fisik media penyimpanan yang ada di PT X. Adapun judul dalam penelitian ini adalah Implementasi Model Network Bound Disk Encryption Untuk Peningkatan Keamanan Arsip Digital di PT X.
 
 ## Identifikasi masalah
 Berdasarkan uraian pada latar belakang yang sudah dijelaskan bahwa terdapat beberapa masalah yang teridentifikasi. Identifikasi masalah dalam penelitian sebagai berikut: 
 1. Arsip digital sebagai aset strategis perusahaan masih rentan terhadap ancaman seperti kebocoran data, manipulasi, dan kehilangan akibat akses tidak sah.
-2. Penerapan enkripsi disk menggunakan LUKS masih memiliki keterbatasan, terutama dalam hal otomatisasi akses dan pengelolaan kunci enkripsi.
-3. Ketergantungan pada mekanisme input manual dalam proses dekripsi khususnya pada lingkungan server.
-4. Belum adanya mekanisme pengamanan berbasis jaringan yang mampu membatasi akses arsip hanya pada lingkungan jaringan yang sah.
-
+2. Besarnya probabilitas ancaman terhadap keamanan informasi menyebabkan arsip digital berada dalam kondisi yang sangat rentan.
+3. Masih rendahnya tingkat perlindungan arsip digital dari risiko kebocoran dan penyalahgunaan data.
+4. Meningkatnya penciptaan dan penggunaan arsip digital tanpa diimbangi dengan sistem pengamanan yang memadai. 
 ## Batasan masalah
 
 untuk memperjelas ruang lingkup penelitian agar lebih terarah dan tidak melebar sehingga fokus pada tujuan utama yang ingin dicapai. Dengan adanya batasan masalah, penelitian dapat dilakukan secara lebih sistematis, mendalam, dan sesuai dengan kebutuhan perusahaan.
 
 Batasan masalah dalam penelitian ini adalah sebagai berikut:
 1. Penelitian difokuskan pada keamanan arsip digital yang disimpan dalam perangkat penyimpanan internal perusahaan.
-2. Model enkripsi yang diteliti terbatas pada penerapan Network Bound Disk Encryption (NBDE) dengan kombinasi metode enkripsi LUKS.
+2. Penelitian hanya dilakukan pada perusahaan PT X.
 3. Ruang lingkup penelitian hanya mencakup perancangan model NBDE, tanpa membahas aspek implementasi infrastruktur jaringan secara detail di seluruh unit perusahaan.
+4. Impelementasi NBDE pada perusahaan ini menggunakan sistem operasi Arch Linux.
 
 ## Rumusan Masalah
 

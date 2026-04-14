@@ -76,3 +76,14 @@ Apabila layanan Tang tidak dapat diakses atau terjadi kesalahan dalam komunikasi
   
  
 
+
+
+
+
+## isi
+
+Salah satu implementasi enkripsi yang populer dalam sistem operasi berbasis Linux adalah LUKS (Linux Unified Key Setup). LUKS dikembangkan sebagai standar untuk mengelola enkripsi disk pada sistem Linux untuk manajemen kunci enkripsi. LUKS menyimpan informasi header yang memungkinkan pengguna mengelola beberapa kunci enkripsi pada satu volume penyimpanan (Onishchenko et al., 2024). Tantangan utama dalam sistem enkripsi adalah pengelolaan kunci yang aman dan efisien. Ketika sistem menggunakan satu kunci utama untuk seluruh media penyimpanan, maka seluruh data dapat diakses pihak luar. Dalam beberapa skenario, LUKS bergantung pada input manual pengguna untuk membuka partisi terenkripsi saat proses booting. Hal ini menimbulkan keterbatasan bagi sistem yang membutuhkan proses otomatis, seperti server atau sistem penyimpanan terpusat.
+
+Salah satu pendekatan yang berkembang untuk mengatasi masalah pengelolaan kunci enkripsi adalah Network Bound Disk Encryption (NBDE). NBDE memungkinkan perangkat terenkripsi melakukan proses dekripsi hanya jika terkoneksi dengan jaringan dan server otentikasi yang sah (Red Hat, 2022). Dengan demikian, walaupun media penyimpanan dipindahkan ke sistem lain, data di dalamnya tetap tidak dapat diakses tanpa koneksi ke server kunci. Konsep ini memperluas keamanan LUKS dengan menambahkan lapisan verifikasi berbasis jaringan. Hal ini relevan bagi organisasi yang mengelola arsip digital pada lingkungan multi-server atau sistem terdistribusi.
+
+Penerapan NBDE biasanya melibatkan dua komponen utama, yaitu Tang Server sebagai penyedia kunci dan Clevis Client sebagai agen dekripsi otomatis. Clevis melakukan proses binding terhadap volume terenkripsi dan secara otomatis meminta kunci dari Tang saat sistem boot . Desain ini memastikan bahwa sistem dapat berjalan tanpa intervensi manual namun tetap mempertahankan keamanan. Dengan mekanisme ini, NBDE memberikan keseimbangan antara keamanan dan efisiensi operasional.
