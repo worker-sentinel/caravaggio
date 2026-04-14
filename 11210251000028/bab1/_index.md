@@ -58,23 +58,23 @@ Adapun rumusan masalah berdasarkan batasan masalah dan latar belakang yang telah
 Adapun tujuan dan manfaat penelitian yang ingin dicapai oleh peneliti berdasarkan permasalahan yang telah dijelaskan atas adalah sebagai berikut:
 
 ### Tujuan Penelitian
--Tujuan penelitian ini adalah untuk mengetahui model enkripsi perangkat penyimpanan dengan menggunakan Network Bound Disk Encryption untuk meningkatkan keamanan arsip digital.
--
--
+1. Mengetahui model enkripsi perangkat penyimpanan dengan menggunakan Network Bound Disk Encryption untuk meningkatkan keamanan arsip digital.
+2. Mengkaji upaya perlindungan yang dapat dilakukan untuk keamanan arsip digital.
+3. Mengidentifikasi risiko dan kerentanan yang mempengaruhi keamanan arsip digital.
 
 ### Manfaat Penelitian
 
 #### Manfaat teoritis 
  
-1. Penelitian ini memberikan kontribusi dalam pengembangan konsep keamanan arsip digital, khususnya yang berkaitan dengan penerapan prinsip CIA Triad pada perangkat penyimpanan arsip digital.
-2. Penelitian ini dapat memperluas penerapan metode design and development research dalam bidang keamanan arsip digital.
+1. Penelitian ini diharapkan dapat memberikan kontribusi dalam pengembangan konsep keamanan arsip digital.
+2. Penelitian ini diharapkan dapat memperkaya kajian ilmiah mengenai integrasi metode enkripsi dan dekripsi otomatis dalam menjaga keamanan arsip digital pada perangkat penyimpanan. 
 3. Penelitian ini diharapkan dapat memberi wawasan pengetahuan mengenai model pengamanan pada perangkat keras yang digunakan untuk menyimpan data digital dan dapat dijadikan sumber rujukan untuk penelitian selanjutnya.                                     
 
 
 #### Manfaat Praktis
 1. Dapat menambah pengalaman langsung serta wawasan terkait perancangan model dan implementasi enkripsi perangkat penyimpanan dengan menggunakan Networks Bound Disk Encryption. 
-2. Penelitian ini dapat memberikan kontribusi dalam memberikan solusi terhadap permasalahan dekripsi LUKS.
-3. Dapat memberikan masukan bagi PT Lektor Media Utama dalam meningkatkan keamanan pada perangkat penyimpanan arsip digital. 
+2. Penelitian ini diharapkan dapat memberikan gambaran mengenai upaya perlindungan arsip digital dari ancaman seperti kebocoran, kehilangan, dan penyalahgunaan data.
+3. Dapat memberikan solusi terhadap permasalahan dekripsi luks tanpa penginputan manual dari pengguna.
 
 
 
