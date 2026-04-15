@@ -69,6 +69,25 @@ Seleksi data eksperimen merupakan tahap penyaringan data yang telah diperoleh da
 Dalam penelitian ini, data yang diseleksi meliputi hasil pengujian sistem, tangkapan layar proses implementasi, serta catatan eksperimen yang berkaitan langsung dengan penerapan NBDE. Data yang tidak relevan atau memiliki inkonsistensi akan dieliminasi agar tidak mempengaruhi hasil analisis. Proses ini membantu meningkatkan kualitas data yang digunakan dalam penelitian.
 Selain itu, seleksi data juga bertujuan untuk menyederhanakan data yang kompleks sehingga lebih mudah dianalisis. Dengan data yang telah disaring, peneliti dapat fokus pada informasi yang paling penting dan signifikan, sehingga hasil analisis menjadi lebih terarah dan mendalam.
 
+## Reduksi Data
+Reduksi data merupakan tahap analisis yang melibatkan proses penyaringan, pengelompokan, serta pengorganisasian data mentah guna menonjolkan poin-poin esensial dan pola-pola yang relevan dengan tujuan penelitian (Fiantika et al., 2022).Lebih dari sekadar penyederhanaan, proses ini merupakan bentuk analisis tajam yang menuntut peneliti untuk melakukan interpretasi awal terhadap fenomena yang ditemukan di lapangan.
+
+## Kategorisasi Data
+Kategorisasi data merupakan proses analitis yang memberikan penjelasan sistematis mengenai kesamaan dan perbedaan dalam kumpulan data berdasarkan kelompok yang telah ditentukan. Melalui tahap ini, peneliti dapat mengorganisasikan informasi yang tersebar ke dalam kategori-kategori tematik yang saling berkaitan, sehingga memudahkan identifikasi pola-pola kunci yang relevan dengan fokus penelitian (Hairunisya, 2021).
+
+## Penyajian Data
+Penyajian data adalah seluruh data yang telah direduksi kemudian disajikan dalam bentuk narasi deskriptif yang sistematis. Penyajian data dalam bentuk rangkaian kata dan kalimat ini bertujuan untuk mengorganisasikan informasi yang kompleks ke dalam format yang lebih koheren, sehingga memudahkan peneliti dalam memahami dinamika fenomena yang terjadi serta memetakan keterkaitan antarvariabel penelitian (Ratnaningtyas et al., 2022).
+## Penarikan Kesimpulan
+Tahap ini merupakan proses interpretasi data secara berkesinambungan selama penelitian berlangsung. Peneliti berupaya menangkap makna yang muncul dari data yang telah terkumpul, kemudian menguji kebenarannya melalui proses verifikasi dengan fakta-fakta objektif di lapangan.
+
+# Uji Keabsahan Data
+
+
+## Tringulasi Sumber
+
+## Tringulasi Teknik
+
+## Tringulasi Waktu
 
 # Tempat dan Jadwal Penelitian
 ## Tempat Penelitian

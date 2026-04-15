@@ -42,3 +42,9 @@ Khariroh, U. (2021). Analisis Sistem Klasifikasi Keamanan dan Akses Arsip Dinami
 
 21. Moleong, L. J. (2016). Metodologi Penelitian Kualitatif. PT Remaja
 Rosdakarya.
+
+22. Fiantika, F. R., Wasil, M., Jumiyati, S. R. I., Honesti, L., Wahyuni, S. R. I., Mouw, E., ... & Ambarwati, K. (2022). Metodologi penelitian kualitatif. Padang: PT. Global Eksekutif Teknologi, 56.
+
+23. Ratnaningtyas, E. M., Saputra, E., Suliwati, D., Nugroho, B. T. A., Aminy, M. H., Saputra, N., & Jahja, A. S. (2023). Metodologi penelitian kualitatif. No. Januari. Aceh: Yayasan Penerbit Muhammad Zaini, 3031-0369.
+
+24. Hairunisya, Nanis. (2021). Metode Kualitatif Bagi Para Pemula Disertai Contoh - Contohnya. CV. Zahra Publisher Group.
