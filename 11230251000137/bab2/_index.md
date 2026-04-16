@@ -1,0 +1,45 @@
+# BAB 2
+
+## Landasan Teori
+
+### Teori Database dan Basis Data NoSQL
+
+Teori basis data merupakan bidang ilmu yang mempelajari desain, penyimpanan, pengelolaan, dan pemrosesan informasi dalam skala besar melalui sistem komputer sehingga data dapat diakses secara cepat, konsisten, dan efisien. Basis data modern perlu mempertimbangkan aspek seperti struktur data, pemodelan informasi, serta cara pengambilan (retrieval) yang efektif sesuai kebutuhan aplikasi. Di dalam teori basis data, dikenal konsep model relasional yang menyimpan data dalam tabel berkolom dan baris, serta model non-relasional (NoSQL) yang menyimpan data dalam berbagai struktur seperti key-value, kolom lebar, graf, dan dokumen. NoSQL merupakan respons terhadap keterbatasan model relasional saat menangani data yang besar, beragam, dan tidak memiliki skema tetap karena NoSQL memungkinkan fleksibilitas skema yang lebih tinggi dibandingkan model tradisional. Pada dasarnya, NoSQL menyimpan data dengan cara yang berbeda dari tabel relasional sehingga bisa lebih efisien dalam skenario tertentu, terutama untuk data semi-terstruktur atau dinamis. NoSQL bukan sekadar alternatif untuk SQL, tetapi suatu pendekatan pengelolaan data yang memperluas cara pandang terhadap penyimpanan informasi. Dengan kemampuan ini, NoSQL menjadi semakin relevan di era big data dan aplikasi modern yang memerlukan skalabilitas serta fleksibilitas tinggi seperti dalam web application dan sistem informasi kompleks. ([Wikipedia][1])
+
+Salah satu tipe NoSQL yang paling populer adalah database dokumen, yaitu basis data yang menyimpan informasi dalam bentuk dokumen berformat JSON (JavaScript Object Notation) atau BSON (Binary JSON). Dokument-oriented database cocok untuk aplikasi yang membutuhkan penyimpanan data kompleks seperti objek dengan beberapa atribut bersarang, array, dan referensi yang saling berhubungan. MongoDB adalah implementasi database dokumen yang menggunakan model ini dengan baik karena setiap entitas data direpresentasikan sebagai dokumen yang memiliki struktur internal sendiri, bukan sebagai baris di dalam tabel. Penggunaan dokumen dalam MongoDB memungkinkan pengembang untuk menggabungkan berbagai atribut yang saling berhubungan ke dalam satu entitas penyimpanan sehingga mengurangi kebutuhan join tabel seperti pada RDBMS. Selain itu, MongoDB juga menyediakan fitur-fitur penting seperti replikasi data, sharding untuk distribusi beban kerja, serta kemampuan indeks dan agregasi yang kuat untuk mendukung aplikasi berskala besar. ([MongoDB][2])
+
+### Katalogisasi dalam Perpustakaan dan Metadata Bibliografis
+
+Katalogisasi dalam perpustakaan merupakan proses sistematis untuk merinci, menata, dan menyimpan informasi tentang bahan pustaka sehingga dapat diakses oleh pengguna melalui sistem pencarian. Proses katalogisasi umumnya mengikuti standar metadata tertentu seperti MARC21, Dublin Core, atau RDA yang menetapkan elemen-elemen bibliografis penting seperti judul, penulis, subjek, dan klasifikasi. Metadata ini berfungsi sebagai identitas yang menjelaskan isi dan sifat bahan pustaka sehingga pencarian berdasarkan berbagai aspek menjadi mungkin dan relevan. Struktur metadata ini sering kali bersifat berlapis dan tidak selalu homogen antar bahan pustaka satu dengan lainnya, sehingga penyimpanan dan pengelolaan metadata dapat menjadi kompleks terutama jika format data berubah atau bervariasi. Proses ini menjadi sumber data utama untuk layanan Online Public Access Catalog (OPAC) di perpustakaan yang memungkinkan pengguna menemukan bahan pustaka berdasarkan berbagai parameter metadata. Keberhasilan katalogisasi sangat bergantung pada teknologi database yang digunakan karena data katalog harus terstruktur dengan baik, fleksibel terhadap perubahan, serta mampu mendukung operasi pencarian yang cepat dan akurat. ([UNM Library][3])
+
+### Penerapan Model Dokumen dalam Database
+
+Model dokumen menawarkan cara penyimpanan data yang lebih natural bila dibandingkan dengan struktur tabel relasional karena data tidak perlu dipaksa masuk ke dalam tabel terpisah yang saling berhubungan melalui foreign key. Sebaliknya, cukup satu struktur dokumen yang memuat seluruh atribut yang relevan sekaligus. Pendekatan ini mengurangi redundansi data dan meningkatkan kinerja pada operasi baca—khususnya bila data yang dibutuhkan pengguna sering kali merupakan sekelompok atribut yang terkait erat. Dalam konteks sistem informasi yang berubah dengan cepat, model dokumen juga lebih adaptif karena perubahan skema tidak memerlukan migration tabel yang kompleks, seperti pada RDBMS. Hal ini relevan dalam aplikasi modern seperti layanan konten digital, manajemen inventaris, maupun sistem katalog perpustakaan di mana struktur data dapat berkembang seiring bertambahnya tipe koleksi atau elemen metadata baru. Model dokumen juga mendukung penyimpanan jenis data yang berbeda dalam satu entitas tanpa harus memodifikasi skema database secara menyeluruh. ([informatika.kampus5.unesa.ac.id][4])
+
+### 2.2 Kajian Pustaka
+
+Kajian pustaka mengulas penelitian dan literatur yang relevan dengan penggunaan database NoSQL serta implementasinya terhadap sistem informasi kompleks seperti katalog perpustakaan.
+
+Beberapa penelitian sebelumnya telah membahas peranan MongoDB dalam konteks pengelolaan data kompleks dan dinamis dalam berbagai sistem informasi, meskipun tidak secara khusus menargetkan katalog perpustakaan. Salah satu studi literatur yang relevan membandingkan model data NoSQL dengan RDBMS serta mengkaji keunggulan dokument-oriented database seperti MongoDB dalam mengatasi tantangan data semi-terstruktur yang sering muncul pada aplikasi modern. Temuan tersebut menunjukkan bahwa MongoDB menawarkan fleksibilitas skema dan kemampuan pengelolaan data yang baik dalam konteks perubahan struktur data yang cepat. ([Academia][5])
+
+Trend bagaimana NoSQL dan sistem database non-relasional digunakan dalam lingkungan pembelajaran dan penelitian juga telah dibahas dalam tinjauan literatur yang menyoroti meningkatnya penggunaan database dokumen seperti MongoDB dalam kurikulum pendidikan teknologi informasi. Dalam kajian ini, pentingnya pemahaman tentang NoSQL dan model data yang berbeda dijelaskan secara komprehensif untuk aplikasi masa depan yang relevan dengan data beragam. ([ScienceDirect][6])
+
+Kajian lain yang relevan membahas bagaimana struktur data dalam MongoDB dapat mengurangi redundansi dan kompleksitas data yang sering terjadi pada sistem basis data konvensional. Pendekatan ini menunjukkan keuntungan model dokumen dalam menyederhanakan penyimpanan informasi yang saling terkait, suatu karakteristik penting dalam pengelolaan metadata perpustakaan yang kompleks. ([informatika.kampus5.unesa.ac.id][4])
+
+Meskipun literatur-literatur tersebut memberikan gambaran yang kuat terkait teknologi MongoDB dan keunggulan model dokumen, terdapat gap penelitian yang nyata dalam penerapan langsung MongoDB pada sistem katalog perpustakaan—terutama yang menggabungkan standar metadata perpustakaan seperti MARC21 atau RDA. Sebagian besar kajian yang ada lebih banyak berfokus pada aplikasi umum atau domain lain seperti aplikasi akademik, manajemen dokumen, atau sistem pencarian berbasis web. Oleh karena itu, penelitian ini memiliki posisi penting untuk menyelidiki secara spesifik bagaimana MongoDB dapat dimanfaatkan dalam konteks katalogisasi perpustakaan. Gap ini menjadi dasar utama untuk pengembangan kajian yang lebih terfokus dalam konteks perpustakaan. ([E-Jurnal Kampus Akademik][7])
+
+## Kajian Terdahulu
+
+Kajian terdahulu berfokus pada studi-studi spesifik yang relevan dengan teknologi basis data NoSQL dan implementasi MongoDB.
+
+1. Pemanfaatan MongoDB dalam Sistem Informasi Akademik
+Penelitian ini menganalisis pemanfaatan MongoDB dalam konteks sistem informasi akademik untuk mengelola data mahasiswa yang kompleks. Hasilnya menunjukkan bahwa model dokumen MongoDB memberikan fleksibilitas dalam menyimpan struktur data dinamis yang berbeda antar entitas data. ([E-Jurnal Kampus Akademik][7])
+
+2. Analisis Perbandingan NoSQL dan Relasional
+Penelitian pada database NoSQL membandingkan efektivitas dan fitur MongoDB terhadap database relasional seperti MySQL dalam konteks kebutuhan data modern. Studi ini menunjukkan bahwa MongoDB unggul dalam menangani data semi-terstruktur dan scenario yang berubah cepat tetapi tidak fokus pada sistem perpustakaan. ([ITENAS E-Journal][8])
+
+3. Tinjauan Pustaka Sistematis terhadap Basis Data MongoDB 
+Studi ini mengevaluasi karakteristik, kelebihan, dan kekurangan MongoDB dalam konteks desain struktur database serta aplikasi umum. Hasil kajian tersebut menyediakan landasan teoretis kuat untuk memahami aspek fundamental MongoDB, namun tidak secara spesifik membahas domain perpustakaan. ([researchgate.net][9])
+
+4. Penggunaan Model Dokumen untuk Mengatasi Redundansi
+Kajian ini menunjukkan bagaimana model data dokumen pada MongoDB mampu mengatasi masalah redundansi data yang umum pada sistem relasional. Pendekatan ini memiliki relevansi teoretis terhadap penyimpanan metadata perpustakaan yang kompleks. ([informatika.kampus5.unesa.ac.id][4])
