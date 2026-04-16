@@ -88,10 +88,14 @@ Oleh karena itu, pengujian keabsahan data kualitatif menjadi standar krusial unt
 Dalam pengujian keabsahan data terdapat beberapa teknik, salah satu teknik yang paling sering digunakan adalah tringulasi. Triangulasi merupakan teknik krusial dalam metodologi kualitatif yang berfungsi memperkuat kepercayaan serta keabsahan temuan penelitian (Judijanto et al., 2024) . Dengan memanfaatkan berbagai perspektif, sumber data, atau metode pengumpulan yang berbeda, peneliti dapat meminimalkan bias personal dan memastikan bahwa simpulan yang dihasilkan memiliki landasan yang kokoh dan akurat. Berikut adalah jenis - jenis teknik tringulasi yang digunakan pada penelitian ini:  
 
 ## Tringulasi Sumber
+Triangulasi sumber diterapkan dengan menggunakan dari salah satu teknik pengumpulan data, seperti wawancara mendalam, namun dilakukan terhadap tiga narasumber yang berbeda guna mengonfirmasi kebenaran informasi tersebut. Teknik ini digunakan untuk memvalidasi data yang sudah dianalisis kepada 3 narasumber untuk menetapkan data yang akurat.
 
 ## Tringulasi Teknik
+Kredibilitas data dapat diuji melalui strategi triangulasi teknik, yakni proses verifikasi informasi dari sumber yang sama menggunakan berbagai metode pengumpulan data, seperti analisis data uji coba, penggunaan laboratorium, dan wawancara. Apabila ditemukan ketidaksamaan hasil dari ketiga teknik tersebut, maka diperlukan diskusi mendalam lebih lanjut guna menetapkan data mana yang paling akurat.
 
 ## Tringulasi Waktu
+Teknik ini dilakukan untuk melakukan pengecekan data dari berbagai teknik pengumpulan data seperti wawancara, penggunaan laboratorium, dan data uji coba dalam waktu yang berbeda - beda atau pada situasi tertentu. Jika data yang dihasilkan dari teknik ini tetap konsisten atau sama, maka data ini dapat dipastikan kebenarannya.
+
 
 # Tempat dan Jadwal Penelitian
 ## Tempat Penelitian
