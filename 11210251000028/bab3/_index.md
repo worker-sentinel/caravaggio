@@ -17,6 +17,8 @@ Purposive sampling merupakan strategi penentuan informan yang dilakukan secara s
 2. Pihak yang dapat menjelaskan terkait implementasi Network Bound Disk Encryption.
 3. Pihak yang bertanggung jawab dalam pengelolaan dan pemeliharaan arsip digital di lingkungan perusahaan.
 
+Berikut merupakan informan yang sesuai dengan kriteria pada perusahaan PT X: 
+
 | No | Nama  | Jabatan        |
 |----|-------| ---------------|
 | 1  | Null  | DevOps engineer|
