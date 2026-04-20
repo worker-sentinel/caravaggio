@@ -1,17 +1,17 @@
 # Landasan Teori 
-1. 
-2. Keamanan Informasi (CIA Triad)
+## 
+## Keamanan Informasi (CIA Triad)
 CIA Triad dikemukakan oleh Michael E.  Whitman menekankan adanya tiga prinsip yaitu confidentiality, Integrity, dan Availability dalam keamanan informasi yang dimana prinsip ini diterapkan di berbagai aspek keamanan informasi, mulai dari pengamanan informasi di penyimpanan (disk) hingga saat data sedang ditransmisikan melalui jaringan (Saputra et al., 2023). CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan untuk melindungi dan mengelola data atau informasi dalam sistem keamanan. 
 
 Secara umum, CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan dalam melindungi dan mengelola data atau informasi dalam suatu sistem keamanan. Dengan adanya prinsip ini, organisasi atau perusahaan dapat memahami aspek-aspek penting yang harus diperhatikan dalam menjaga keamanan informasi. Hal ini menjadi sangat penting di era digital saat ini, di mana pertukaran informasi terjadi secara cepat dan rentan terhadap berbagai risiko keamanan.
 
 Setiap prinsip dalam teori ini memiliki peran yang sangat penting dan saling melengkapi untuk memastikan bahwa data aman, kualitasnya terjaga, dan dapat diakses dengan cara yang sah. Keamanan informasi dalam CIA Triad memiliki tiga prinsip yaitu (Harahap et al., 2023):
 
-## Confidentiality (Kerahasiaan) 
+1. Confidentiality (Kerahasiaan) 
 Prinsip confidentiality (kerahasiaan) berfokus pada upaya menjaga agar informasi hanya dapat diakses oleh pihak yang berwenang. Penerapan prinsip ini umumnya dilakukan melalui mekanisme seperti enkripsi data, autentikasi pengguna, serta pengendalian akses (access control).
-## Integrity (Integritas)
+2.  Integrity (Integritas)
 prinsip integrity (integritas) menekankan bahwa data harus tetap akurat, konsisten, dan tidak mengalami perubahan tanpa izin selama proses penyimpanan maupun transmisi.Apabila integritas tidak terjaga, maka informasi yang dihasilkan dapat menjadi tidak valid dan berpotensi menimbulkan kesalahan dalam pengambilan keputusan.
-## Availability (Ketersediaan)
+3.  Availability (Ketersediaan)
 Adapun prinsip availability (ketersediaan) memastikan bahwa data dan sistem dapat diakses oleh pengguna yang berhak kapan pun dibutuhkan.Ketersediaan yang baik akan mendukung kelangsungan operasional suatu organisasi atau perusahaan, karena pengguna dapat memperoleh informasi secara tepat waktu. Oleh sebab itu, keseimbangan antara ketiga prinsip CIA Triad menjadi kunci utama dalam menciptakan sistem keamanan informasi yang efektif dan komprehensif.
 
 # Kajian Pustaka
