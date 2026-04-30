@@ -1,6 +1,7 @@
 # Landasan Teori 
-## 
-## Keamanan Informasi (CIA Triad)
+## Undang - Undang Arsip
+## ISO Arsip Digital
+## CIA Triad
 CIA Triad dikemukakan oleh Michael E.  Whitman menekankan adanya tiga prinsip yaitu confidentiality, Integrity, dan Availability dalam keamanan informasi yang dimana prinsip ini diterapkan di berbagai aspek keamanan informasi, mulai dari pengamanan informasi di penyimpanan (disk) hingga saat data sedang ditransmisikan melalui jaringan (Saputra et al., 2023). CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan untuk melindungi dan mengelola data atau informasi dalam sistem keamanan. 
 
 Secara umum, CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan dalam melindungi dan mengelola data atau informasi dalam suatu sistem keamanan. Dengan adanya prinsip ini, organisasi atau perusahaan dapat memahami aspek-aspek penting yang harus diperhatikan dalam menjaga keamanan informasi. Hal ini menjadi sangat penting di era digital saat ini, di mana pertukaran informasi terjadi secara cepat dan rentan terhadap berbagai risiko keamanan.
