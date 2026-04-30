@@ -19,9 +19,10 @@ Purposive sampling merupakan strategi penentuan informan yang dilakukan secara s
 
 Berikut merupakan informan yang sesuai dengan kriteria pada perusahaan PT X: 
 
-| No | Nama  | Jabatan        |
-|----|-------| ---------------|
-| 1  | Null  | DevOps engineer|
+| No | Nama  | Jabatan                  |
+|----|-------| -------------------------|
+| 1  | Null  | Chief Information Officer|
+| 2  | Rookit| DevOps engineer          |
 
 # Teknik Pengumpulan Data 
 Dalam penelitian, teknik pengumpulan data digunakan oleh peneliti untuk mendapatkan informasi yang dibutuhkan dari berbagai sumber atau objek yang dibahas. Pengumpulan data pada Metode  penelitian desain dan pengembangan memiliki beberapa teknik yaitu catatan kerja, try out data, kuesioner, wawancara, observasi langsung, penggunaan website, penggunaan perangkat lunak, dan penggunaan laboratorium (Richey & Klein, 2007). Dalam penelitian ini data yang akan didapatkan melalui metode sebagai berikut: 
