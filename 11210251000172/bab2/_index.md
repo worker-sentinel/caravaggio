@@ -15,41 +15,17 @@ Dari kelima hukum di atas, penulis memilih dua hukum yang paling mendasari dan m
 Pertama adalah Hukum Keempat: Save the time of the user. Hukum ini menjadi fondasi teknis mengapa implementasi Load Balancer sangat krusial. Dalam konteks infrastruktur di Organisasi N, keterlambatan respon server atau latensi tinggi saat jam sibuk secara langsung melanggar prinsip ini karena membuang waktu pengguna. Dengan menerapkan mekanisme penyeimbangan beban, waktu tanggap (response time) dapat diminimalisir, sehingga selaras dengan tujuan hukum ini yaitu efisiensi waktu akses bagi pengguna sistem (Noruzi, 2004).
 Kedua adalah Hukum Kelima: The Web is a growing organism. Hukum ini mendasari perlunya skalabilitas dan fleksibilitas dalam infrastruktur Cloud Computing. Mengingat trafik dan data di Organisasi N bersifat dinamis dan cenderung terus meningkat (tumbuh), maka sistem tidak boleh bersifat statis. Penggunaan Load Balancer memungkinkan infrastruktur organisasi untuk beradaptasi terhadap pertumbuhan tersebut tanpa harus merombak total sistem, memastikan bahwa "organisme" digital di Organisasi N tetap berfungsi optimal meskipun skala penggunaannya meluas (Noruzi, 2004).
 
-## Teknologi Informasi
+## High Availability
 
-Teknologi Informasi merupakan serangkaian perangkat lunak, perangkat keras, maupun prosedur yang digunakan untuk memproses, menyimpan, menyebarkan, dan mengelola informasi secara elektronik guna mendukung pengambilan keputusan dan aktivitas operasional (Ward & Peppard, 2016). Dalam perkembangannya, teknologi ini tidak hanya berfungsi sebagai alat bantu pemrosesan data, tetapi telah menjadi tulang punggung bagi setiap proses bisnis di berbagai organisasi. Keberadaannya memungkinkan integrasi data yang lebih cepat dan akurat, sehingga setiap informasi yang dihasilkan memiliki nilai guna yang tinggi bagi penggunanya.
+High Availability (HA) adalah karakteristik sistem yang dirancang untuk memastikan tingkat kinerja operasional dan ketersediaan layanan yang tinggi dalam durasi waktu tertentu tanpa kegagalan (F5 Networks, 2024). Tujuan utama dari HA adalah meminimalisir atau menghilangkan titik kegagalan tunggal (single point of failure) dalam sebuah arsitektur teknologi informasi. Bagi perpustakaan yang melayani ribuan pemustaka, mencapai kondisi HA berarti menjamin bahwa layanan katalog dan koleksi digital dapat diakses kapan saja tanpa terkendala kerusakan perangkat keras.
 
-Pada tingkatan infrastruktur, teknologi informasi mencakup elemen fisik seperti komputer dan jaringan kabel hingga elemen abstrak seperti algoritma dan protokol komunikasi. Sinergi antara komponen-komponen ini menciptakan sebuah ekosistem digital yang mampu menangani beban kerja dalam skala besar secara berkelanjutan. Bagi organisasi modern, penguasaan terhadap teknologi informasi merupakan kunci untuk mempertahankan efisiensi di tengah persaingan global yang semakin mengandalkan kecepatan data.
+Untuk mencapai tingkat ketersediaan yang tinggi, sistem harus memiliki mekanisme redundansi, di mana setiap komponen utama memiliki cadangan yang siap mengambil alih tugas jika terjadi kegagalan. Dalam konteks server, ini berarti memiliki lebih dari satu server yang menjalankan aplikasi yang sama secara paralel. Keberadaan redundansi ini memastikan bahwa layanan tetap berjalan stabil meskipun ada komponen fisik yang mengalami kerusakan mendadak.
 
-Implementasi teknologi informasi di sektor publik bertujuan untuk mendemokratisasi akses data sehingga masyarakat dapat memperoleh layanan dengan lebih transparan. Hal ini mencakup pengembangan sistem yang ramah pengguna serta mampu menyimpan data dalam jangka waktu lama tanpa risiko kerusakan fisik yang berarti. Dengan teknologi informasi, manajemen arsip dan dokumen berpindah dari metode manual yang lambat menuju metode digital yang instan dan terstruktur (Ward & Peppard, 2016).
+Proses pengalihan otomatis dari server yang rusak ke server cadangan dikenal dengan istilah failover. Mekanisme ini harus berjalan sangat cepat sehingga pengguna tidak menyadari bahwa telah terjadi gangguan di sisi infrastruktur. Kecepatan failover ini merupakan indikator utama seberapa baik sebuah sistem dirancang untuk mencapai standar high availability (F5 Networks, 2024).
 
-Lebih lanjut, teknologi informasi berperan penting dalam memfasilitasi komunikasi antar sistem yang berbeda melalui standarisasi protokol pertukaran data. Kemampuan interoperabilitas ini memungkinkan satu platform untuk berinteraksi dengan platform lainnya tanpa kendala teknis yang rumit. Dalam lingkup ini, teknologi informasi bukan lagi sekadar pelengkap, melainkan kebutuhan mendasar yang menggerakkan seluruh lini pelayanan dalam sebuah institusi.
+Implementasi HA juga mencakup pemantauan kesehatan sistem secara berkelanjutan melalui alat-alat monitoring. Administrator jaringan harus mendapatkan peringatan dini jika ada indikasi penurunan performa atau gejala kegagalan pada salah satu unit server. Dengan pemantauan yang proaktif, tindakan pencegahan dapat dilakukan sebelum masalah tersebut berdampak luas pada pelayanan kepada pemustaka di perpustakaan.
 
-Terakhir, aspek keamanan dalam teknologi informasi menjadi fokus utama untuk melindungi aset data dari ancaman eksternal maupun kegagalan sistem internal. Pengelolaan hak akses, enkripsi, dan prosedur pencadangan data adalah bagian tak terpisahkan dari implementasi teknologi ini. Dengan sistem informasi yang aman dan andal, organisasi dapat menjamin keberlangsungan layanannya kepada publik secara profesional dan tepercaya (Ward & Peppard, 2016).
-
-## Perpustakaan
-
-Perpustakaan merupakan sebuah institusi pengelola koleksi karya tulis, karya cetak, dan/atau karya rekam secara profesional dengan sistem yang baku guna memenuhi kebutuhan pendidikan, penelitian, pelestarian, informasi, dan rekreasi bagi para pemustaka (Undang-Undang Republik Indonesia Nomor 43, 2007). Sebagai pusat sumber belajar, perpustakaan memegang peranan strategis dalam meningkatkan literasi dan kualitas intelektual masyarakat. Standar baku yang diterapkan dalam pengelolaannya memastikan bahwa setiap koleksi dapat ditemukan dan dimanfaatkan secara optimal oleh pihak-pihak yang membutuhkan.
-
-Dalam konteks institusional, perpustakaan berfungsi sebagai memori kolektif suatu bangsa atau organisasi yang menyimpan rekam jejak ilmu pengetahuan dari berbagai generasi. Pengelolaan yang profesional menuntut pustakawan untuk terus beradaptasi dengan perubahan pola konsumsi informasi masyarakat yang kini cenderung beralih ke format digital. Oleh karena itu, perpustakaan saat ini dituntut untuk tidak hanya menyediakan ruang fisik, tetapi juga ruang virtual yang dapat diakses secara fleksibel.
-
-Modernisasi perpustakaan membawa institusi ini menuju konsep perpustakaan tanpa dinding, di mana batas geografis tidak lagi menjadi penghalang bagi pemustaka untuk mendapatkan referensi. Transformasi ini memerlukan perubahan paradigma dalam manajemen koleksi, dari yang semula berfokus pada kepemilikan fisik menjadi fokus pada aksesibilitas data. Perpustakaan kini menjadi titik temu antara tradisi pelestarian dokumen kuno dan inovasi teknologi penyebaran informasi masa kini (Saleh, 2014).
-
-Lebih jauh, perpustakaan memiliki tanggung jawab sosial untuk menyediakan informasi yang otoritatif di tengah maraknya persebaran data yang tidak terverifikasi di internet. Dengan sistem katalogisasi yang terstandar, perpustakaan memberikan kepastian bahwa sumber daya informasi yang disediakan telah melalui proses kurasi yang ketat. Peran sebagai penyaring informasi ini menjadikan perpustakaan sebagai institusi yang paling tepercaya dalam mendukung kegiatan akademik dan penelitian ilmiah.
-
-Sebagai organisasi yang melayani publik, perpustakaan juga harus memperhatikan kenyamanan dan kecepatan pelayanan kepada pemustaka. Segala bentuk inovasi yang diterapkan dalam perpustakaan, baik dari sisi gedung maupun sistem aplikasi, pada akhirnya bermuara pada satu tujuan, yaitu kepuasan pengguna. Dengan demikian, eksistensi perpustakaan akan tetap relevan selama ia mampu memberikan nilai tambah dalam pemenuhan kebutuhan informasi penggunanya secara berkelanjutan (Undang-Undang Republik Indonesia Nomor 43, 2007).
-
-## Sistem Otomasi Perpustakaan
-
-Sistem otomasi perpustakaan adalah aplikasi teknologi informasi yang digunakan untuk membantu pekerjaan manajerial dan pelayanan di perpustakaan, mulai dari pengadaan, pengolahan, hingga sirkulasi dan layanan referensi (Saleh, 2014). Sistem ini menggantikan proses pencatatan manual yang rentan terhadap kesalahan manusia dengan database yang terintegrasi secara otomatis. Dengan otomasi, alur kerja di dalam perpustakaan menjadi lebih terukur dan data mengenai koleksi maupun pemustaka dapat dipantau secara real-time.
-
-Komponen utama dalam sistem otomasi biasanya mencakup modul katalogisasi, sirkulasi, dan Online Public Access Catalog (OPAC) sebagai antarmuka bagi pengguna. Modul-modul ini saling terhubung sehingga aktivitas di satu bagian, misalnya pengembalian buku, akan langsung memperbarui status koleksi di bagian katalog. Efisiensi yang dihasilkan oleh otomasi ini memungkinkan pustakawan untuk lebih fokus pada pengembangan layanan daripada sekadar urusan administratif rutin.
-
-Penerapan otomasi juga memberikan kemudahan bagi pemustaka dalam menelusuri koleksi tanpa harus datang langsung ke rak buku. Melalui fitur pencarian yang canggih, pengguna dapat mengetahui status ketersediaan bahan pustaka hanya dalam hitungan detik. Hal ini secara langsung meningkatkan efektivitas pemanfaatan koleksi perpustakaan dan memperpendek waktu tunggu dalam proses layanan sirkulasi di meja layanan (Saleh, 2014).
-
-Selain itu, sistem otomasi memungkinkan perpustakaan untuk menghasilkan laporan statistik yang akurat mengenai pola penggunaan koleksi dan profil pemustaka. Data statistik ini sangat berguna bagi pimpinan organisasi dalam mengambil keputusan strategis, seperti kebijakan pengadaan buku baru atau pengembangan layanan tertentu. Tanpa sistem otomasi, pengambilan data semacam ini akan memakan waktu yang sangat lama dan memiliki risiko ketidakakuratan yang tinggi.
-
-Dalam jangka panjang, sistem otomasi perpustakaan menjadi fondasi utama dalam pengembangan menuju perpustakaan digital yang lebih kompleks. Integrasi dengan sistem eksternal, seperti perpustakaan lain dalam jaringan nasional, menjadi lebih mudah dilakukan jika perpustakaan sudah memiliki sistem otomasi yang mapan. Dengan demikian, otomasi bukan hanya sekadar modernisasi alat kerja, melainkan langkah awal menuju keterhubungan informasi yang lebih luas (Saleh, 2014).
+Secara keseluruhan, high availability bukan sekadar masalah teknis, melainkan investasi strategis untuk menjaga kredibilitas organisasi di mata publik. Kegagalan sistem yang berulang akan menurunkan kepercayaan pemustaka terhadap keandalan layanan digital perpustakaan. Oleh karena itu, merancang sistem dengan prinsip HA adalah keharusan bagi setiap institusi yang ingin memberikan layanan informasi yang profesional, stabil, dan berkelanjutan (F5 Networks, 2024).
 
 ## Web Server
 
@@ -92,17 +68,41 @@ Lebih lanjut, cloud computing mendukung ketersediaan data yang tinggi melalui me
 
 Terakhir, adopsi komputasi awan mendorong terciptanya kolaborasi yang lebih luas antar institusi melalui kemudahan berbagi sumber daya informasi di platform yang seragam. Perpustakaan dapat saling terhubung dan berbagi katalog digital dengan lebih efisien tanpa harus merisaukan batasan kompatibilitas perangkat keras. Dengan demikian, cloud computing bukan sekadar inovasi penyimpanan data, melainkan katalisator utama bagi transformasi digital yang memungkinkan organisasi untuk fokus pada inovasi layanan daripada kerumitan pemeliharaan infrastruktur (Mell & Grance, 2011).
 
-## High Availability
+## Sistem Otomasi Perpustakaan
 
-High Availability (HA) adalah karakteristik sistem yang dirancang untuk memastikan tingkat kinerja operasional dan ketersediaan layanan yang tinggi dalam durasi waktu tertentu tanpa kegagalan (F5 Networks, 2024). Tujuan utama dari HA adalah meminimalisir atau menghilangkan titik kegagalan tunggal (single point of failure) dalam sebuah arsitektur teknologi informasi. Bagi perpustakaan yang melayani ribuan pemustaka, mencapai kondisi HA berarti menjamin bahwa layanan katalog dan koleksi digital dapat diakses kapan saja tanpa terkendala kerusakan perangkat keras.
+Sistem otomasi perpustakaan adalah aplikasi teknologi informasi yang digunakan untuk membantu pekerjaan manajerial dan pelayanan di perpustakaan, mulai dari pengadaan, pengolahan, hingga sirkulasi dan layanan referensi (Saleh, 2014). Sistem ini menggantikan proses pencatatan manual yang rentan terhadap kesalahan manusia dengan database yang terintegrasi secara otomatis. Dengan otomasi, alur kerja di dalam perpustakaan menjadi lebih terukur dan data mengenai koleksi maupun pemustaka dapat dipantau secara real-time.
 
-Untuk mencapai tingkat ketersediaan yang tinggi, sistem harus memiliki mekanisme redundansi, di mana setiap komponen utama memiliki cadangan yang siap mengambil alih tugas jika terjadi kegagalan. Dalam konteks server, ini berarti memiliki lebih dari satu server yang menjalankan aplikasi yang sama secara paralel. Keberadaan redundansi ini memastikan bahwa layanan tetap berjalan stabil meskipun ada komponen fisik yang mengalami kerusakan mendadak.
+Komponen utama dalam sistem otomasi biasanya mencakup modul katalogisasi, sirkulasi, dan Online Public Access Catalog (OPAC) sebagai antarmuka bagi pengguna. Modul-modul ini saling terhubung sehingga aktivitas di satu bagian, misalnya pengembalian buku, akan langsung memperbarui status koleksi di bagian katalog. Efisiensi yang dihasilkan oleh otomasi ini memungkinkan pustakawan untuk lebih fokus pada pengembangan layanan daripada sekadar urusan administratif rutin.
 
-Proses pengalihan otomatis dari server yang rusak ke server cadangan dikenal dengan istilah failover. Mekanisme ini harus berjalan sangat cepat sehingga pengguna tidak menyadari bahwa telah terjadi gangguan di sisi infrastruktur. Kecepatan failover ini merupakan indikator utama seberapa baik sebuah sistem dirancang untuk mencapai standar high availability (F5 Networks, 2024).
+Penerapan otomasi juga memberikan kemudahan bagi pemustaka dalam menelusuri koleksi tanpa harus datang langsung ke rak buku. Melalui fitur pencarian yang canggih, pengguna dapat mengetahui status ketersediaan bahan pustaka hanya dalam hitungan detik. Hal ini secara langsung meningkatkan efektivitas pemanfaatan koleksi perpustakaan dan memperpendek waktu tunggu dalam proses layanan sirkulasi di meja layanan (Saleh, 2014).
 
-Implementasi HA juga mencakup pemantauan kesehatan sistem secara berkelanjutan melalui alat-alat monitoring. Administrator jaringan harus mendapatkan peringatan dini jika ada indikasi penurunan performa atau gejala kegagalan pada salah satu unit server. Dengan pemantauan yang proaktif, tindakan pencegahan dapat dilakukan sebelum masalah tersebut berdampak luas pada pelayanan kepada pemustaka di perpustakaan.
+Selain itu, sistem otomasi memungkinkan perpustakaan untuk menghasilkan laporan statistik yang akurat mengenai pola penggunaan koleksi dan profil pemustaka. Data statistik ini sangat berguna bagi pimpinan organisasi dalam mengambil keputusan strategis, seperti kebijakan pengadaan buku baru atau pengembangan layanan tertentu. Tanpa sistem otomasi, pengambilan data semacam ini akan memakan waktu yang sangat lama dan memiliki risiko ketidakakuratan yang tinggi.
 
-Secara keseluruhan, high availability bukan sekadar masalah teknis, melainkan investasi strategis untuk menjaga kredibilitas organisasi di mata publik. Kegagalan sistem yang berulang akan menurunkan kepercayaan pemustaka terhadap keandalan layanan digital perpustakaan. Oleh karena itu, merancang sistem dengan prinsip HA adalah keharusan bagi setiap institusi yang ingin memberikan layanan informasi yang profesional, stabil, dan berkelanjutan (F5 Networks, 2024).
+Dalam jangka panjang, sistem otomasi perpustakaan menjadi fondasi utama dalam pengembangan menuju perpustakaan digital yang lebih kompleks. Integrasi dengan sistem eksternal, seperti perpustakaan lain dalam jaringan nasional, menjadi lebih mudah dilakukan jika perpustakaan sudah memiliki sistem otomasi yang mapan. Dengan demikian, otomasi bukan hanya sekadar modernisasi alat kerja, melainkan langkah awal menuju keterhubungan informasi yang lebih luas (Saleh, 2014).
+
+## Teknologi Informasi
+
+Teknologi Informasi merupakan serangkaian perangkat lunak, perangkat keras, maupun prosedur yang digunakan untuk memproses, menyimpan, menyebarkan, dan mengelola informasi secara elektronik guna mendukung pengambilan keputusan dan aktivitas operasional (Ward & Peppard, 2016). Dalam perkembangannya, teknologi ini tidak hanya berfungsi sebagai alat bantu pemrosesan data, tetapi telah menjadi tulang punggung bagi setiap proses bisnis di berbagai organisasi. Keberadaannya memungkinkan integrasi data yang lebih cepat dan akurat, sehingga setiap informasi yang dihasilkan memiliki nilai guna yang tinggi bagi penggunanya.
+
+Pada tingkatan infrastruktur, teknologi informasi mencakup elemen fisik seperti komputer dan jaringan kabel hingga elemen abstrak seperti algoritma dan protokol komunikasi. Sinergi antara komponen-komponen ini menciptakan sebuah ekosistem digital yang mampu menangani beban kerja dalam skala besar secara berkelanjutan. Bagi organisasi modern, penguasaan terhadap teknologi informasi merupakan kunci untuk mempertahankan efisiensi di tengah persaingan global yang semakin mengandalkan kecepatan data.
+
+Implementasi teknologi informasi di sektor publik bertujuan untuk mendemokratisasi akses data sehingga masyarakat dapat memperoleh layanan dengan lebih transparan. Hal ini mencakup pengembangan sistem yang ramah pengguna serta mampu menyimpan data dalam jangka waktu lama tanpa risiko kerusakan fisik yang berarti. Dengan teknologi informasi, manajemen arsip dan dokumen berpindah dari metode manual yang lambat menuju metode digital yang instan dan terstruktur (Ward & Peppard, 2016).
+
+Lebih lanjut, teknologi informasi berperan penting dalam memfasilitasi komunikasi antar sistem yang berbeda melalui standarisasi protokol pertukaran data. Kemampuan interoperabilitas ini memungkinkan satu platform untuk berinteraksi dengan platform lainnya tanpa kendala teknis yang rumit. Dalam lingkup ini, teknologi informasi bukan lagi sekadar pelengkap, melainkan kebutuhan mendasar yang menggerakkan seluruh lini pelayanan dalam sebuah institusi.
+
+Terakhir, aspek keamanan dalam teknologi informasi menjadi fokus utama untuk melindungi aset data dari ancaman eksternal maupun kegagalan sistem internal. Pengelolaan hak akses, enkripsi, dan prosedur pencadangan data adalah bagian tak terpisahkan dari implementasi teknologi ini. Dengan sistem informasi yang aman dan andal, organisasi dapat menjamin keberlangsungan layanannya kepada publik secara profesional dan tepercaya (Ward & Peppard, 2016).
+
+## Perpustakaan
+
+Perpustakaan merupakan sebuah institusi pengelola koleksi karya tulis, karya cetak, dan/atau karya rekam secara profesional dengan sistem yang baku guna memenuhi kebutuhan pendidikan, penelitian, pelestarian, informasi, dan rekreasi bagi para pemustaka (Undang-Undang Republik Indonesia Nomor 43, 2007). Sebagai pusat sumber belajar, perpustakaan memegang peranan strategis dalam meningkatkan literasi dan kualitas intelektual masyarakat. Standar baku yang diterapkan dalam pengelolaannya memastikan bahwa setiap koleksi dapat ditemukan dan dimanfaatkan secara optimal oleh pihak-pihak yang membutuhkan.
+
+Dalam konteks institusional, perpustakaan berfungsi sebagai memori kolektif suatu bangsa atau organisasi yang menyimpan rekam jejak ilmu pengetahuan dari berbagai generasi. Pengelolaan yang profesional menuntut pustakawan untuk terus beradaptasi dengan perubahan pola konsumsi informasi masyarakat yang kini cenderung beralih ke format digital. Oleh karena itu, perpustakaan saat ini dituntut untuk tidak hanya menyediakan ruang fisik, tetapi juga ruang virtual yang dapat diakses secara fleksibel.
+
+Modernisasi perpustakaan membawa institusi ini menuju konsep perpustakaan tanpa dinding, di mana batas geografis tidak lagi menjadi penghalang bagi pemustaka untuk mendapatkan referensi. Transformasi ini memerlukan perubahan paradigma dalam manajemen koleksi, dari yang semula berfokus pada kepemilikan fisik menjadi fokus pada aksesibilitas data. Perpustakaan kini menjadi titik temu antara tradisi pelestarian dokumen kuno dan inovasi teknologi penyebaran informasi masa kini (Saleh, 2014).
+
+Lebih jauh, perpustakaan memiliki tanggung jawab sosial untuk menyediakan informasi yang otoritatif di tengah maraknya persebaran data yang tidak terverifikasi di internet. Dengan sistem katalogisasi yang terstandar, perpustakaan memberikan kepastian bahwa sumber daya informasi yang disediakan telah melalui proses kurasi yang ketat. Peran sebagai penyaring informasi ini menjadikan perpustakaan sebagai institusi yang paling tepercaya dalam mendukung kegiatan akademik dan penelitian ilmiah.
+
+Sebagai organisasi yang melayani publik, perpustakaan juga harus memperhatikan kenyamanan dan kecepatan pelayanan kepada pemustaka. Segala bentuk inovasi yang diterapkan dalam perpustakaan, baik dari sisi gedung maupun sistem aplikasi, pada akhirnya bermuara pada satu tujuan, yaitu kepuasan pengguna. Dengan demikian, eksistensi perpustakaan akan tetap relevan selama ia mampu memberikan nilai tambah dalam pemenuhan kebutuhan informasi penggunanya secara berkelanjutan (Undang-Undang Republik Indonesia Nomor 43, 2007).
 
 ## Kerangka Berpikir
 
@@ -112,6 +112,27 @@ Kondisi tersebut melanggar prinsip dasar Grand Theory Alireza Noruzi, khususnya 
 
 Solusi yang ditawarkan dalam penelitian ini adalah implementasi Load Balancer. Dengan menempatkan Load Balancer di depan beberapa node server, lalu lintas data tidak lagi bertumpu pada satu titik, melainkan didistribusikan secara merata berdasarkan algoritma tertentu. Langkah ini diambil untuk mencapai kondisi High Availability, di mana layanan perpustakaan tetap dapat diakses meskipun salah satu server mengalami kegagalan teknis. Hal ini juga selaras dengan hukum kelima Noruzi, yaitu "The Web is a growing organism", di mana infrastruktur organisasi harus mampu beradaptasi dengan pertumbuhan jumlah pemustaka dan data.
 Secara skematis, alur kerangka berpikir ini dimulai dari tahap identifikasi masalah (beban server tidak merata), diikuti dengan tahap intervensi teknis (penerapan Load Balancer), dan diakhiri dengan tahap evaluasi performa. Hasil akhir yang diharapkan adalah terciptanya infrastruktur server yang tangguh, responsif, dan memiliki tingkat ketersediaan yang tinggi demi mendukung produktivitas di Organisasi N.
+
+```mermaid
+graph TD
+    subgraph Awal ["1. Kondisi Awal (Masalah)"]
+        A1["Trafik Pemustaka Tinggi (Organisasi N)"] --> A2["Beban Kerja Menumpuk (Overload)"]
+        A2 --> A3["Waktu Tanggap Lambat <br>(Melanggar Hukum ke-4 Noruzi)"]
+    end
+
+    subgraph Tindakan ["2. Tindakan (Solusi)"]
+        B1["Implementasi Load Balancer"] --> B2["Pengujian Berbagai Algoritma Distribusi"]
+        B2 --> B3["Konfigurasi Skalabilitas & Ketahanan"]
+    end
+
+    subgraph Akhir ["3. Kondisi Akhir (Hasil)"]
+        C1["Distribusi Beban Kerja Merata"] --> C2["Peningkatan Response Time & Throughput"]
+        C2 --> C3["High Availability <br>(Sesuai Hukum ke-5 Noruzi)"]
+    end
+
+    A3 ==> B1
+    B3 ==> C1
+```
 
 ## alur bagan
 
