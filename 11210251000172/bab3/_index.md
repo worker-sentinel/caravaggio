@@ -40,60 +40,17 @@ Teknik ini diterapkan ketika penelitian memerlukan dukungan teknologi yang kompl
 
 Seluruh spesifikasi perangkat keras dan perangkat lunak yang membangun lingkungan laboratorium dalam penelitian ini akan dijabarkan secara rinci sebagai berikut:
 
-| Perangkat Keras    | Perangkat Lunak          |
-|--------------------|--------------------------|
-| 2 monitor          | Github                   |
-| 6 peladen (server) | sistem operasi Archlinux |
-| 2 keyboard         | Obsidian                 |
-| 2 mouse            | Perekam layar            |
-| 1 speaker          |                          |
-| 1 switch cisco     |                          |
-| 1 mikrotik         |                          |
-| 1 router wireless  |                          |
-
-### Metode Penelitian
-
-Penelitian ini menerapkan metode *Design and Development* (D&D) melalui pendekatan kualitatif. Menurut Richey & Klein (2007), metode ini merupakan studi sistematis mengenai proses perancangan, pengembangan, dan evaluasi yang bertujuan membangun basis empiris untuk menciptakan produk, perangkat instruksional maupun non-instruksional, serta pengembangan atau pembaruan model yang sudah ada.
-
-Strategi yang digunakan menghubungkan fase desain dengan fase pengembangan produk secara berkesinambungan. Seluruh tahapan pengembangan didokumentasikan secara terstruktur untuk menjaga transparansi serta validitas desain. Di era saat ini, pendekatan ini jamak diaplikasikan oleh para peneliti dalam memvalidasi pengembangan perangkat berbasis teknologi.
-
-Fokus penelitian D&D dapat mencakup aspek analisis, perencanaan, produksi, hingga evaluasi, baik pada produk fisik maupun pada validasi model desain. Output akhir dari studi ini diharapkan mampu menghasilkan kebaruan pengetahuan, baik berupa model desain orisinal maupun penyempurnaan dari model yang telah tersedia.
-
-### Informan Penelitian
-
-Informan dalam studi ini mencakup seluruh elemen atau kelompok yang memenuhi kriteria penelitian, yang berperan tidak hanya sebagai objek, tetapi juga sumber data yang valid (Asrulla et al., 2023). Dalam kerangka D&D, informan dapat dikategorikan menjadi sumber manusia dan non-manusia (Richey & Klein, 2007).
-
-Subjek penelitian ini terbagi menjadi dua klasifikasi utama. Informan non-manusia direpresentasikan oleh proyek penelitian itu sendiri, sedangkan informan manusia melibatkan peran perancang (*designer*) dan pengembang (*developer*) (Richey & Klein, 2007).
-
-Secara spesifik, informan non-manusia dalam penelitian ini adalah infrastruktur teknologi **Load Balancer** sebagai objek utama data teknis. Sementara itu, informan manusia terdiri dari praktisi divisi DevOps PT X yang berperan sebagai informan kunci dalam memberikan wawasan operasional terkait implementasi sistem.
-
-Teknik pemilihan informan menggunakan *purposive sampling*, yakni strategi penentuan sampel secara sengaja berdasarkan karakteristik spesifik yang relevan dengan tujuan studi. Teknik ini digunakan untuk memperoleh sumber data yang paling kompeten dalam mengeksplorasi fenomena penelitian secara mendalam (Richey & Klein, 2007). Kriteria kualifikasi informan yang ditetapkan adalah:
-
-1. Pihak yang memahami mengenai sistem keamanan dan distribusi trafik digital.
-2. Pihak yang dapat menjelaskan terkait implementasi **Load Balancer**.
-3. Pihak yang bertanggung jawab dalam pengelolaan dan pemeliharaan infrastruktur digital di lingkungan perusahaan.
-
-Berikut merupakan informan yang sesuai dengan kriteria pada perusahaan PT X:
-
-
-| No | Nama | Jabatan |
-|---|---|---|
-| 1 | Null | Chief Information Officer |
-| 2 | Rookit | DevOps Engineer |
-
-### Teknik Pengumpulan Data
-
-Peneliti menggunakan berbagai teknik untuk menghimpun informasi yang diperlukan dari sumber penelitian. Merujuk pada Richey & Klein (2007), pengumpulan data dalam D&D dapat dilakukan melalui catatan kerja, uji coba data, kuesioner, wawancara, observasi, hingga penggunaan perangkat lunak atau laboratorium. Dalam penelitian ini, data akan dikumpulkan melalui:
-
-**Data Uji Coba**
-Data ini didapatkan langsung melalui penggunaan sumber daya yang diteliti untuk menjelaskan tingkat keberhasilan maupun kegagalan model (Richey & Klein, 2007). Prosedur pengujian dilakukan secara terstruktur dan sistematis untuk menghimpun data eksperimental. 
-
-Tahapan ini melibatkan pengamatan mendalam pada performa sistem, identifikasi kendala teknis, serta perumusan solusi atas masalah yang muncul selama pengujian. Data yang dihasilkan mencerminkan dinamika proses dan anomali sistem yang ditemukan selama operasional berlangsung.
-
-**Penggunaan Laboratorium**
-Teknik ini diterapkan ketika penelitian memerlukan dukungan teknologi yang kompleks. Standarisasi laboratorium sangat bergantung pada ketersediaan pendanaan yang menjadi variabel penting dalam menyediakan infrastruktur yang mampu menjamin akurasi hasil pengembangan (Richey & Klein, 2007).
-
-Seluruh spesifikasi perangkat keras dan perangkat lunak yang membangun lingkungan laboratorium dalam penelitian ini akan dijabarkan secara rinci sebagai berikut:
+| Perangkat Keras        | Perangkat Lunak          |
+|------------------------|--------------------------|
+| 2 Monitor              | Github                   |
+| 3 Peladen (**server**) | sistem operasi Archlinux |
+| 1 PC Testing           | Obsidian                 |
+| 2 Keyboard             | Perekam layar            |
+| 2 Mouse                | Docker                   |
+| 1 Speaker              |                          | 
+| 1 Switch cisco         |                          |
+| 1 Mikrotik             |                          |
+| 1 Router wireless      |                          |
 
 ## Wawancara
 Wawancara merupakan metode pertukaran informasi secara verbal yang dilakukan secara terorganisir untuk mencapai tujuan perolehan data tertentu. Mekanisme ini melibatkan interaksi dua arah antara pewawancara (*interviewer*) sebagai pemandu diskusi dan narasumber (*informant*) yang menyajikan informasi atau respon atas stimulus pertanyaan yang diberikan (Moleong, 2016).
