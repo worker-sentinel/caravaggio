@@ -134,18 +134,3 @@ graph TD
     B3 ==> C1
 ```
 
-## alur bagan
-
-1. Kondisi Awal (Masalah):
-   a. Trafik pemustaka tinggi di Organisasi N.
-   b. Beban kerja menumpuk pada satu server (Overload).
-   c. Waktu tanggap lambat (Melanggar Hukum ke-4 Noruzi).
-2. Tindakan (Solusi):
-   b. Implementasi Load Balancer pada infrastruktur server.
-   c. Pengujian berbagai algoritma distribusi beban.
-   d. Konfigurasi sistem untuk skalabilitas dan ketahanan.
-3. Kondisi Akhir (Hasil yang Diharapkan):
-   a. Distribusi beban kerja merata.
-   b. Peningkatan Response Time dan Throughput.
-   c. Tercapainya High Availability (Sesuai Hukum ke-5 Noruzi).
-
