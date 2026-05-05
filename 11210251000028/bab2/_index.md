@@ -1,5 +1,8 @@
 # Landasan Teori 
 ## Undang - Undang Arsip
+Menurut Undang - Undang Nomor 43 Tahun 2009 arsip didefinisikan sebagai rekaman autentik dari berbagai peristiwa atau aktivitas yang dihasilkan maupun diterima oleh entitas negara, organisasi, hingga individu. Dokumentasi ini dikelola dalam berbagai format media yang relevan dengan kemajuan teknologi informasi, berfungsi sebagai instrumen vital dalam pelaksanaan tata kelola kehidupan bermasyarakat dan bernegara.
+
+Pemeliharaan arsip merupakan upaya komprehensif untuk menjaga integritas fisik serta kandungan informasi dokumen melalui standarisasi gedung dan sistem penyimpanan yang efektif (Wahyudi et al., 2024). Menurut Ramadhani dan Desriyeni (2019), lingkungan penyimpanan yang kondusif sangat krusial demi menjamin kelestarian arsip. Oleh karena itu, implementasi manajemen kearsipan yang optimal dan berkelanjutan akan memberikan kontribusi signifikan terhadap efisiensi operasional suatu organisasi.
 ## ISO Arsip Digital
 ## CIA Triad
 CIA Triad dikemukakan oleh Michael E.  Whitman menekankan adanya tiga prinsip yaitu confidentiality, Integrity, dan Availability dalam keamanan informasi yang dimana prinsip ini diterapkan di berbagai aspek keamanan informasi, mulai dari pengamanan informasi di penyimpanan (disk) hingga saat data sedang ditransmisikan melalui jaringan (Saputra et al., 2023). CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan untuk melindungi dan mengelola data atau informasi dalam sistem keamanan. 
