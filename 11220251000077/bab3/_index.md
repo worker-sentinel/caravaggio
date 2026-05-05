@@ -123,22 +123,20 @@
 
 19. ## **Teknik Pengujian Keabsahan Data** {#teknik-pengujian-keabsahan-data}
 
-    Validitas data dalam penelitian ini dilakukan dengan menggunakan teknik triangulasi, yang dipilih karena dianggap paling tepat untuk menjamin keabsahan temuan dalam penelitian kualitatif studi kasus.
-     Menurut Sugiyono (2019), triangulasi merupakan teknik pemeriksaan data yang memanfaatkan berbagai sumber, metode, dan teori untuk memastikan konsistensi informasi yamicrong diperoleh. Pendapat
-    ini diperkuat oleh Miles, Huberman, dan Saldaña (2014) yang menyatakan bahwa triangulasi diperlukan untuk memperkuat kredibilitas data melalui proses pengecekan silang antar hasil pengumpulan data.
+    Dalam penelitian kualitatif, pengujian keabsahan data berfokus pada aspek validitas, reliabilitas, dan objektivitas terhadap data yang diperoleh dari lapangan. Hal ini berbeda dengan pendekatan kuantitatif yang lebih menitikberatkan pada pengujian instrumen penelitian. Dengan demikian, penelitian kuantitatif cenderung menguji keandalan alat ukur, sedangkan penelitian kualitatif lebih menekankan pada keabsahan temuan yang dihasilkan dari proses pengumpulan dan analisis data.
 
-    
+Oleh karena itu, pengujian keabsahan data dalam penelitian kualitatif menjadi aspek yang sangat krusial untuk memastikan bahwa seluruh temuan memiliki tingkat kepercayaan yang tinggi dan dapat dipertanggungjawabkan secara ilmiah. Tujuan utama dari pengujian keabsahan data bukanlah untuk menemukan kebenaran tunggal atau absolut, melainkan untuk menilai sejauh mana kedalaman pemahaman peneliti terhadap fenomena yang diteliti (Anggito & Setiawan, 2018).
 
-    Dalam penelitian ini, triangulasi sumber dilakukan dengan membandingkan data hasil wawancara dari arsiparis, staf teknis, dan pihak manajerial di Organisasi N yang terlibat langsung dalam
-    pengelolaan arsip digital berbasis flat file. Selanjutnya, triangulasi metode dilakukan dengan mengonfirmasi data wawancara melalui observasi lapangan dan penelaahan dokumen internal perusahaan.
-    Sementara itu, triangulasi teori diterapkan dengan mengaitkan temuan penelitian dengan teori  dan model utama, yaitu Difusi Inovasi, Empat Pilar Pengelolaan Arsip Kelembagaan dan Model Metric for
-    Critical Infrastructure Cyber Resilience.
+Dalam praktiknya, terdapat berbagai teknik yang dapat digunakan untuk menguji keabsahan data, salah satunya adalah triangulasi. Triangulasi merupakan teknik penting dalam metodologi penelitian kualitatif yang bertujuan untuk memperkuat kredibilitas dan keabsahan temuan penelitian (Judijanto et al., 2024). Dengan memanfaatkan berbagai perspektif, sumber data, maupun metode pengumpulan data yang berbeda, peneliti dapat meminimalkan bias serta memastikan bahwa simpulan yang dihasilkan memiliki dasar yang kuat. Adapun teknik triangulasi yang digunakan dalam penelitian ini meliputi triangulasi sumber, triangulasi teknik, dan triangulasi waktu.
 
-    
+Triangulasi Sumber
+Triangulasi sumber dilakukan dengan membandingkan data yang diperoleh dari beberapa narasumber yang berbeda, namun menggunakan teknik pengumpulan data yang sama, seperti wawancara mendalam. Dalam penelitian ini, data diperoleh dari tiga kelompok informan, yaitu arsiparis, staf teknis, dan pihak manajerial. Perbandingan antar sumber tersebut bertujuan untuk mengonfirmasi konsistensi informasi serta memperoleh gambaran yang lebih komprehensif terhadap fenomena yang diteliti.
 
-    Melalui penerapan triangulasi tersebut, data yang diperoleh dalam penelitian ini dapat dipertanggungjawabkan kredibilitas dan validitasnya. Pendekatan ini juga memberikan gambaran yang lebih
-    komprehensif mengenai efektivitas protokol flat file dalam sistem arsip digital kelembagaan.
+Triangulasi Teknik
+Triangulasi teknik dilakukan dengan menggunakan berbagai metode pengumpulan data terhadap sumber yang sama, seperti wawancara, observasi, dan analisis dokumen. Melalui pendekatan ini, peneliti dapat membandingkan hasil dari masing-masing teknik untuk memastikan kesesuaian data yang diperoleh. Apabila terdapat perbedaan hasil, maka dilakukan analisis lebih lanjut guna menentukan data yang paling valid dan relevan.
 
+Triangulasi Waktu
+Triangulasi waktu dilakukan dengan mengumpulkan data pada waktu yang berbeda untuk melihat tingkat konsistensi informasi yang diperoleh. Pengambilan data dilakukan dalam beberapa kesempatan dan kondisi yang berbeda, baik melalui wawancara, observasi, maupun pengujian sistem. Apabila data yang diperoleh menunjukkan konsistensi, maka tingkat kepercayaan terhadap data tersebut semakin tinggi.
     
 
 21. ## **Tempat dan Jadwal Penelitian** {#tempat-dan-jadwal-penelitian}
