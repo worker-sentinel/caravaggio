@@ -1,41 +1,35 @@
   # **BAB II** 
 
-   # **KERANGKA TEORI**
+   # **LANDASAN TEORI**
 
 7. ## **Arsip Digital Native** {#arsip-digital-native}
+Arsip digital native adalah arsip yang sejak awal diciptakan dalam format elektronik tanpa melalui proses konversi dari media fisik. Dalam konteks regulasi nasional, konsep ini sejalan dengan definisi arsip elektronik dalam Undang-Undang Nomor 43 Tahun 2009 tentang Kearsipan, yang menyatakan bahwa arsip adalah rekaman kegiatan atau peristiwa dalam berbagai bentuk dan media sesuai dengan perkembangan teknologi informasi dan komunikasi (Republik Indonesia, 2009). Dengan demikian, arsip digital native dapat dipahami sebagai bagian dari arsip elektronik yang lahir langsung dari sistem digital dan tidak memiliki bentuk analog sebelumnya. Jenis arsip ini memiliki karakteristik unik karena otentisitas dan integritasnya sangat bergantung pada perangkat lunak, format file, serta sistem yang digunakan saat penciptaannya.
 
-   Arsip digital native adalah arsip yang sejak awal diciptakan dalam format elektronik tanpa melalui proses konversi dari media fisik. Jenis arsip ini memiliki karakteristik unik karena otentisitas
-   dan integritasnya bergantung pada perangkat lunak, format file, serta sistem yang digunakan saat penciptaannya. Menurut Gilliland (2020), arsip digital native memiliki risiko tinggi kehilangan
-   konteks dan makna jika tidak disertai metadata yang lengkap sejak awal. Oleh karena itu, keberadaan standar deskriptif sangat penting untuk menjamin arsip digital native tetap dapat dipahami dan
-   dimanfaatkan di masa depan. Dalam konteks hukum nasional, Undang-Undang Nomor 43 Tahun 2009 tentang Kearsipan menegaskan bahwa arsip elektronik, termasuk arsip digital native, memiliki kekuatan
-   hukum yang sama dengan arsip konvensional (Republik Indonesia, 2009). Hal ini mengimplikasikan bahwa lembaga kearsipan wajib mengembangkan protokol pengelolaan yang mampu menjamin keberlanjutan
-   arsip digital native. 
+Menurut Gilliland (2020), arsip digital native memiliki risiko tinggi kehilangan konteks dan makna jika tidak disertai metadata yang lengkap sejak awal. Hal ini disebabkan karena informasi yang terkandung di dalamnya tidak hanya bergantung pada isi dokumen, tetapi juga pada struktur data dan lingkungan sistem yang mendukungnya. Oleh karena itu, keberadaan standar deskriptif dan metadata yang terstruktur menjadi sangat penting untuk menjamin bahwa arsip digital native tetap dapat dipahami, diakses, dan dimanfaatkan dalam jangka panjang.
 
-9. ## **Protokol Keamanan informasi** {#protokol-kearsipan}
+Dalam konteks hukum nasional, Undang-Undang Nomor 43 Tahun 2009 tentang Kearsipan juga menegaskan bahwa arsip elektronik, termasuk arsip digital native, memiliki kekuatan hukum yang sama dengan arsip konvensional (Republik Indonesia, 2009). Ketentuan ini mengimplikasikan bahwa setiap lembaga kearsipan maupun organisasi wajib mengelola arsip digital native dengan prinsip keautentikan, keutuhan, keamanan, dan ketersediaan. Oleh karena itu, diperlukan pengembangan protokol pengelolaan arsip digital yang tidak hanya berfokus pada penyimpanan, tetapi juga pada keberlanjutan akses dan preservasi jangka panjang. 
 
-   Protokol dalam konteks kearsipan digital adalah seperangkat aturan, standar, dan mekanisme yang digunakan untuk mengatur penciptaan, penyimpanan, akses, serta preservasi arsip. Menurut Duranti
-   dan Franks (2019), protokol berfungsi untuk menjaga agar arsip digital tetap otentik, dapat dipercaya, dan konsisten meskipun berada dalam sistem teknologi yang berbeda. Dalam praktiknya, protokol
-   tidak hanya mengatur aspek teknis, tetapi juga mencakup kebijakan akses, keamanan, dan interoperabilitas agar arsip dapat digunakan lintas lembaga. Bagi arsip digital berbasis *Flat file*, protokol
-   sangat diperlukan untuk menghindari inkonsistensi penamaan file, ketiadaan metadata, serta lemahnya perlindungan terhadap manipulasi data. Di Indonesia, urgensi penggunaan protokol dalam pengelolaan
-   arsip juga sejalan dengan amanat UU No. 43 Tahun 2009 yang menekankan perlunya standar baku dalam penyelenggaraan kearsipan (Republik Indonesia, 2009). Dengan demikian, teori protokol menjadi pondasi
-   penting untuk merancang pedoman yang dapat diadopsi dalam pengelolaan arsip digital sederhana. Protokol arsip berbasis *Flat file* diharapkan mampu menjembatani kebutuhan praktis dengan prinsip
-   ilmiah kearsipan digital.
+9. ## **Protokol informasi**
+
+ Protokol dalam konteks kearsipan digital pada lingkungan Yuros dipahami sebagai seperangkat aturan, standar, dan mekanisme yang dirancang untuk mengatur proses penciptaan, penyimpanan, akses, serta preservasi arsip digital secara sistematis. Dalam praktik internal Yuros, protokol tidak hanya berfungsi sebagai pedoman teknis, tetapi juga sebagai kerangka kerja yang memastikan setiap arsip memiliki struktur yang konsisten dan mudah ditelusuri. Sejalan dengan pandangan Luciana Duranti dan Patricia C. Franks (2019), protokol berperan penting dalam menjaga keautentikan, keandalan, dan konsistensi arsip digital meskipun dikelola dalam lingkungan sistem yang sederhana.
+
+Dalam implementasinya di Yuros, protokol mencakup pengaturan penamaan file, struktur folder, serta penggunaan metadata dasar yang disesuaikan dengan kebutuhan operasional. Pendekatan ini menjadi penting mengingat sistem yang digunakan berbasis flat file, yang secara alami tidak memiliki mekanisme relasional seperti basis data. Oleh karena itu, tanpa adanya protokol yang jelas, risiko inkonsistensi data, kehilangan konteks, serta potensi manipulasi arsip menjadi lebih tinggi.
+
+Selain aspek teknis, protokol di Yuros juga mencakup kebijakan akses dan pengamanan data untuk memastikan bahwa arsip hanya dapat diakses oleh pihak yang berwenang. Hal ini selaras dengan amanat Undang-Undang Nomor 43 Tahun 2009 tentang Kearsipan yang menekankan pentingnya standar baku dalam penyelenggaraan kearsipan nasional (Republik Indonesia, 2009). Dengan demikian, protokol yang dikembangkan dalam lingkungan Yuros tidak hanya bersifat praktis, tetapi juga berlandaskan pada prinsip-prinsip ilmiah kearsipan digital.
+
+Melalui pendekatan ini, protokol arsip berbasis flat file di Yuros diharapkan mampu menjembatani kebutuhan operasional yang sederhana dengan tuntutan keandalan arsip digital, sehingga arsip tetap terjaga keberlanjutan, keutuhan, dan kemanfaatannya dalam jangka panjang.
 
    
 
 11. ## **Flat file** {#flat-file}
 
-   *Flat file* adalah bentuk penyimpanan data sederhana yang menggunakan struktur tabel dua dimensi atau file teks dengan pemisah tertentu tanpa adanya relasi antar tabel. Sistem ini berbeda dengan 
-   basis data relasional karena tidak memiliki mekanisme *query* yang kompleks, sehingga lebih mudah digunakan untuk penyimpanan data dalam skala kecil hingga menengah. Menurut Silberschatz, Korth, 
-   dan Sudarshan (2020), *Flat file* sering dipakai sebagai solusi penyimpanan awal sebelum organisasi beralih ke sistem basis data yang lebih kompleks. Dalam konteks kearsipan digital, *Flat file* 
-   tetap relevan terutama bagi lembaga dengan keterbatasan infrastruktur teknologi karena sifatnya yang ringan dan mudah dioperasikan. Namun, kelemahan utama *Flat file* adalah rawan duplikasi data, 
-   kesulitan dalam menjaga konsistensi, serta minimnya fitur keamanan. Oleh sebab itu, penerapan protokol yang tepat menjadi penting agar *Flat file* dapat mendukung prinsip kearsipan digital seperti 
-   autentisitas, integritas, dan aksesibilitas. Dengan demikian, *Flat file* dapat diposisikan sebagai alternatif media arsip digital yang layak jika dilengkapi aturan dan standar pengelolaan yang 
-   jelas.
+Flat file adalah bentuk penyimpanan data sederhana yang menggunakan struktur tabel dua dimensi atau file teks dengan pemisah tertentu tanpa adanya relasi antar tabel. Sistem ini berbeda dengan basis data relasional karena tidak memiliki mekanisme query yang kompleks, sehingga lebih mudah diimplementasikan dan dioperasikan, terutama dalam lingkungan dengan kebutuhan teknis yang terbatas. Menurut Abraham Silberschatz, Henry F. Korth, dan S. Sudarshan (2020), flat file sering digunakan sebagai solusi penyimpanan awal sebelum organisasi beralih ke sistem basis data yang lebih kompleks dan terintegrasi.
 
-   
+Dalam konteks kearsipan digital, flat file tetap memiliki relevansi, khususnya bagi organisasi seperti Yuros yang mengedepankan efisiensi, fleksibilitas, dan kemudahan implementasi. Karakteristiknya yang ringan memungkinkan proses penyimpanan dan distribusi arsip dilakukan tanpa memerlukan infrastruktur teknologi yang tinggi. Namun demikian, sistem ini memiliki sejumlah keterbatasan, antara lain potensi duplikasi data, kesulitan dalam menjaga konsistensi informasi, serta minimnya fitur pengamanan bawaan.
 
-   
+Dalam praktik di Yuros, kelemahan tersebut diantisipasi melalui penerapan protokol pengelolaan arsip yang terstruktur, meliputi standar penamaan file, pengelompokan direktori, serta penggunaan metadata dasar. Pendekatan ini bertujuan untuk menjaga keteraturan dan keterlacakan arsip meskipun tidak didukung oleh sistem basis data relasional. Dengan demikian, protokol menjadi elemen kunci yang memungkinkan flat file tetap memenuhi prinsip kearsipan digital, seperti autentisitas, integritas, dan aksesibilitas.
+
+Oleh karena itu, flat file dapat diposisikan sebagai alternatif media arsip digital yang layak dalam konteks operasional Yuros, selama didukung oleh aturan dan standar pengelolaan yang jelas, konsisten, dan berkelanjutan.
 
 11. ## **Operation System** {#operation-system}
 
