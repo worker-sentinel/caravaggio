@@ -1,6 +1,6 @@
 # Landasan Teori 
 ## Undang - Undang Arsip
-Berdasarkan landasan yuridis Undang-Undang Nomor 43 Tahun 2009, arsip merupakan rekaman autentik dari dinamika aktivitas yang dihasilkan oleh lembaga negara, organisasi, maupun perseorangan. Dalam bentuk konvensional, arsip tersebut memiliki kedudukan krusial sebagai instrumen hukum dan memori kolektif yang mendasari pelaksanaan tata kelola kehidupan bermasyarakat. Oleh karena itu, negara memberikan mandat bagi setiap pencipta arsip untuk menjamin ketersediaan arsip yang autentik dan terpercaya sebagai alat bukti yang sah.
+Berdasarkan landasan Undang-Undang Nomor 43 Tahun 2009, arsip merupakan rekaman autentik dari dinamika aktivitas yang dihasilkan oleh lembaga negara, organisasi, maupun perseorangan. Dalam bentuk konvensional, arsip tersebut memiliki kedudukan krusial sebagai instrumen hukum dan memori kolektif yang mendasari pelaksanaan tata kelola kehidupan bermasyarakat. Oleh karena itu, negara memberikan mandat bagi setiap pencipta arsip untuk menjamin ketersediaan arsip yang autentik dan terpercaya sebagai alat bukti yang sah.
 
 Aspek pemeliharaan menjadi pilar utama dalam menjaga eksistensi media fisik tersebut. Pemeliharaan arsip merupakan upaya komprehensif untuk menjaga integritas fisik serta kandungan informasi melalui standarisasi gedung dan sistem penyimpanan yang efektif (Wahyudi et al., 2024). Merujuk pada pemikiran Ramadhani dan Desriyeni (2019), penciptaan lingkungan penyimpanan yang kondusif sangat vital demi menjamin kelestarian arsip. Hal ini mencakup pengendalian faktor perusak sistematis seperti pengaturan suhu, kelembapan, serta perlindungan dari gangguan hama biologi di ruang preservasi.
 
@@ -9,6 +9,7 @@ dimensi keamanan arsip  wajib mencakup perlindungan terhadap kerahasiaan informa
 Implementasi manajemen kearsipan yang optimal dan berkelanjutan akan memberikan kontribusi signifikan terhadap efisiensi operasional organisasi. Pengelolaan yang tertata secara sistematis, yang mengintegrasikan standar pemeliharaan fisik dan protokol keamanan sesuai regulasi, menjamin bahwa aset informasi dapat ditemukan kembali dengan cepat saat dibutuhkan. Dengan demikian, penguatan tata kelola arsip tidak hanya melindungi memori organisasi, tetapi juga meningkatkan kredibilitas dan akuntabilitas institusi di masa depan.
 
 ## ISO Arsip Digital
+
 ## CIA Triad
 CIA Triad dikemukakan oleh Michael E.  Whitman menekankan adanya tiga prinsip yaitu confidentiality, Integrity, dan Availability dalam keamanan informasi yang dimana prinsip ini diterapkan di berbagai aspek keamanan informasi, mulai dari pengamanan informasi di penyimpanan (disk) hingga saat data sedang ditransmisikan melalui jaringan (Saputra et al., 2023). CIA Triad bertujuan untuk membentuk prinsip dasar yang digunakan untuk melindungi dan mengelola data atau informasi dalam sistem keamanan. 
 
