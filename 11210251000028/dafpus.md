@@ -52,3 +52,4 @@ Rosdakarya.
 25. Anggito, Albi & Setiawan, Johan. (2018). Metode Penelitian Kualitatif. CV Jejak
 
 26. Judijanto, L., Wibowo, A., G., Karimuddin, Samsuddin, H., Patahuddin, A., Anggraeni, F., A., Raharjo, Simorangkir, F., M., A. (2024). Research Design : Pendekatan Kualitatif dan Kuantitatif. PT Sonpedia Publishing Indonesia.
+27. Wahyudi, H., Nairobi, N., Ambya, A., Usman, M., & Suparta, I. W. (2024). PENYULUHAN ARSIP DINAMIS DAN UNDANG-UNDANG TENTANG KEARSIPAN. BEGAWI : Jurnal Pengabdian Kepada Masyarakat, 2(1), 20–24. https://doi.org/10.23960/begawi.v2i1.36
