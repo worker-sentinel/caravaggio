@@ -42,15 +42,20 @@ Seluruh spesifikasi perangkat keras dan perangkat lunak yang membangun lingkunga
 
 | Perangkat Keras        | Perangkat Lunak          |
 |------------------------|--------------------------|
-| 2 Monitor              | Github                   |
-| 3 Peladen (**server**) | sistem operasi Archlinux |
-| 1 PC Testing           | Obsidian                 |
-| 2 Keyboard             | Perekam layar            |
-| 2 Mouse                | Docker                   |
+| 7 Monitor              | Github                   |
+| 7 Peladen (**server**) | sistem operasi Archlinux |
+| 1 PC control           | Obsidian                 |
+| 1 Laptop testing       | Docker                   |
+| 1 Laptop dokumentasi   | Perekam layar            |
+| 6 Keyboard             |                          |
+| 6 Mouse                |                          |
 | 1 Speaker              |                          | 
-| 1 Switch cisco         |                          |
+| 1 Switch cisco 24 port |                          |
+| 1 Switch cisco 8 port  |                          |
+| 1 Switch ryujie 5 port |                          |
 | 1 Mikrotik             |                          |
 | 1 Router wireless      |                          |
+| 1 Access Point         |                          |
 
 ## Wawancara
 Wawancara merupakan metode pertukaran informasi secara verbal yang dilakukan secara terorganisir untuk mencapai tujuan perolehan data tertentu. Mekanisme ini melibatkan interaksi dua arah antara pewawancara (*interviewer*) sebagai pemandu diskusi dan narasumber (*informant*) yang menyajikan informasi atau respon atas stimulus pertanyaan yang diberikan (Moleong, 2016).
