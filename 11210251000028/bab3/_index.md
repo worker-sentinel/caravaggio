@@ -37,16 +37,20 @@ Pengumpulan data menggunakan laboratorium digunakan pada peneliti jika membutuhk
 
 Spesifikasi infrastruktur laboratorium yang digunakan dalam penelitian ini diuraikan secara lengkap. Penjabaran ini mencakup seluruh perangkat keras dan perangkat lunak yang membentuk lingkungan laboratorium. Berikut spesifikasi laboratorium pada penelitian ini :
 
-| Perangkat Keras    | Perangkat Lunak          |
-|--------------------|--------------------------|
-| 2 monitor          | Github                   |
-| 6 peladen (server) | sistem operasi Archlinux |
-| 2 keyboard         | Obsidian                 |
-| 2 mouse            | Perekam layar            |
-| 1 speaker          |                          |
-| 1 switch cisco     |                          |
-| 1 mikrotik         |                          |
-| 1 router wireless  |                          |
+| Perangkat Keras       | Perangkat Lunak          |
+|------------------------|--------------------------|
+| 7 monitor              | Github                   |
+| 6 peladen (server)     | sistem operasi Archlinux |
+| 1 laptop dokumentasi   | Obsidian                 |
+| 2 keyboard             | Perekam layar            |
+| 2 mouse                |                          |
+| 1 speaker              |                          |
+| 1 switch cisco 24 port |                          |
+| 1 switch cisco 8 port  |                          |
+| 1 switch ryuji 5 port  |                          |
+| 1 mikrotik             |                          |
+| 1 access point         |                          |
+| 1 modem                |                          |
 
 ## Wawancara
 Wawancara didefinisikan sebagai sebuah metode interaksi verbal yang diselenggarakan secara terstruktur dengan tujuan spesifik untuk perolehan data penelitian. Proses ini melibatkan sinergi antara dua pihak utama, yakni pewawancara (interviewer) yang berperan sebagai penanya sekaligus pengarah pembicaraan, dan narasumber (informant) yang bertindak sebagai penyedia informasi atau jawaban atas serangkaian stimulus pertanyaan yang diajukan (Moleong, 2016).
