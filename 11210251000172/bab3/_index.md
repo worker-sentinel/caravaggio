@@ -40,13 +40,13 @@ Teknik ini diterapkan ketika penelitian memerlukan dukungan teknologi yang kompl
 
 Seluruh spesifikasi perangkat keras dan perangkat lunak yang membangun lingkungan laboratorium dalam penelitian ini akan dijabarkan secara rinci sebagai berikut:
 
-| Perangkat Keras        | Perangkat Lunak          |
+| Perangkat Keras        | Perangkat Lunak        |
 |------------------------|--------------------------|
 | 7 Monitor              | Github                   |
 | 7 Peladen (**server**) | sistem operasi Archlinux |
 | 1 PC control           | Obsidian                 |
 | 1 Laptop testing       | Docker                   |
-| 1 Laptop dokumentasi   | Perekam layar            |
+| 1 Laptop dokumentasi   |                          |
 | 6 Keyboard             |                          |
 | 6 Mouse                |                          |
 | 1 Speaker              |                          | 
@@ -56,6 +56,7 @@ Seluruh spesifikasi perangkat keras dan perangkat lunak yang membangun lingkunga
 | 1 Mikrotik             |                          |
 | 1 Router wireless      |                          |
 | 1 Access Point         |                          |
+| 1 Lighting             |                          |
 
 ## Wawancara
 Wawancara merupakan metode pertukaran informasi secara verbal yang dilakukan secara terorganisir untuk mencapai tujuan perolehan data tertentu. Mekanisme ini melibatkan interaksi dua arah antara pewawancara (*interviewer*) sebagai pemandu diskusi dan narasumber (*informant*) yang menyajikan informasi atau respon atas stimulus pertanyaan yang diberikan (Moleong, 2016).
@@ -63,6 +64,24 @@ Wawancara merupakan metode pertukaran informasi secara verbal yang dilakukan sec
 Proses wawancara ini kemudian diintegrasikan dengan analisis penilaian kebutuhan (*needs assessment*). Fokus utamanya adalah menggali kompetensi fundamental yang diperlukan oleh seorang perancang agar proses penilaian kebutuhan dapat berjalan efektif dan mencapai keberhasilan (Richey & Klein, 2007).
 
 Penerapan teknik wawancara juga berfungsi memperkuat kredibilitas serta validitas temuan penelitian. Melalui komunikasi langsung, peneliti memiliki peluang untuk mengeksplorasi sudut pandang partisipan secara mendalam, baik dalam situasi spesifik maupun fenomena teknologi yang sedang diteliti.
+
+### Draft Wawancara
+
+### A. Analisis Teknis Masalah (Overload Server)
+1. Bisa Anda jelaskan spesifikasi dan arsitektur infrastruktur server tunggal (*single server*) yang digunakan sebelum adanya pembaruan?
+2. Pada jam-jam berapa saja biasanya terjadi puncak trafik pemustaka (*peak hours*) yang memicu beban kerja menumpuk (*overload*)?
+3. Berapa rata-rata metrik *Response Time* (waktu tanggap) dan *Throughput* sistem saat kondisi trafik tinggi sebelum dipasang *Load Balancer*? 
+4. Di bagian mana titik sumbatan utama (*bottleneck*) terjadi? Apakah pada utilisasi CPU, RAM, atau *I/O storage*?
+
+### B. Eksperimen dan Implementasi Load Balancer
+5. Perangkat lunak atau platform *Load Balancer* apa yang Anda pilih untuk diimplementasikan pada lingkungan laboratorium/uji coba ini? Mengapa?
+6. Apa saja jenis algoritma distribusi beban (seperti *Round Robin, Least Connections,* atau *IP Hash*) yang Anda uji dalam penelitian ini?
+7. Bagaimana prosedur Anda dalam menyimulasikan lonjakan trafik pemustaka yang tinggi selama pengujian di laboratorium?
+
+### C. Evaluasi Hasil Akhir (Kondisi yang Diharapkan)
+8. Berdasarkan data uji coba, algoritma mana yang menunjukkan hasil paling optimal dalam meratakan distribusi beban kerja antar-simpul server?
+9. Berapa persentase peningkatan *Response Time* dan *Throughput* yang berhasil dicatat setelah *Load Balancer* dikonfigurasi?
+10. Bagaimana Anda mengonfigurasi sistem ini untuk menjamin *High Availability* atau ketersediaan tinggi saat ada salah satu simpul server yang mengalami kendala teknis?
 
 # Teknik Analisis Data
 Seluruh data yang telah dihimpun melalui metode uji coba, pemanfaatan laboratorium, dan wawancara kemudian dianalisis untuk menghasilkan informasi valid. Tahapan analisis yang dilakukan adalah sebagai berikut:
@@ -113,4 +132,4 @@ Penelitian ini dilakukan di Organisasi N yang berlokasi di Jl. Lele V No 231, RT
 2. Jadwal Penelitian
 Peneliti melakukan tahap observasi awal pada bulan April tahun 2026, setelah melakukan observasi awal dan menemukan masalah yang ada pada tempat penelitian peneliti menyusun proposal pada bulan September hingga bulan November dengan bimbingan dari dosen pembimbing. Setelah disetujuinya proposal, peneliti melakukan seminar pada bulan Desember.
 
-Setelah disetujui oleh dosen penguji I dan dosen penguji II, peneliti melanjutkan bimbingan untuk melakukan penyusunan skripsi pada bulan Januari hingga bulan Maret. Peneliti berharap pada bulan April sudah melakukan sidang skripsi.
+Setelah disetujui oleh dosen penguji I dan dosen penguji II, peneliti melanjutkan bimbingan untuk melakukan penyusunan skripsi pada bulan Januari hingga bulan Maret. Peneliti berharap pada bulan juni sudah melakukan sidang skripsi.
