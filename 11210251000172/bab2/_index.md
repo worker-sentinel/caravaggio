@@ -110,8 +110,8 @@ Kerangka penelitian ini berawal dari masalah penumpukan trafik (web server) di P
 
 ```mermaid
 flowchart TD
-    A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web]
-    A2 --> A3[Implementasi monolitik sistem otomasi perpustakaan]
+    A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web : save the timr of the user]
+    A2 --> A3[Implementasi non load balancer sistem otomasi perpustakaan]
     A2 --> A4[Implementasi load balancer pada sistem otomasi perpustakaan]
     A3 --> A5[Hasil Implementasi dari kedua cara yang lebih baik yang mana]
     A4 --> A5
