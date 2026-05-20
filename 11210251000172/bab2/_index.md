@@ -114,23 +114,11 @@ Solusi yang ditawarkan dalam penelitian ini adalah implementasi Load Balancer. D
 Secara skematis, alur kerangka berpikir ini dimulai dari tahap identifikasi masalah (beban server tidak merata), diikuti dengan tahap intervensi teknis (penerapan Load Balancer), dan diakhiri dengan tahap evaluasi performa. Hasil akhir yang diharapkan adalah terciptanya infrastruktur server yang tangguh, responsif, dan memiliki tingkat ketersediaan yang tinggi demi mendukung produktivitas di Organisasi N.
 
 ```mermaid
-graph TD
-    subgraph Awal ["1. Kondisi Awal (Masalah)"]
-        A1["Trafik Pemustaka Tinggi (Organisasi N)"] --> A2["Beban Kerja Menumpuk (Overload)"]
-        A2 --> A3["Waktu Tanggap Lambat <br>(Melanggar Hukum ke-4 Noruzi)"]
-    end
-
-    subgraph Tindakan ["2. Tindakan (Solusi)"]
-        B1["Implementasi Load Balancer"] --> B2["Pengujian Berbagai Algoritma Distribusi"]
-        B2 --> B3["Konfigurasi Skalabilitas & Ketahanan"]
-    end
-
-    subgraph Akhir ["3. Kondisi Akhir (Hasil)"]
-        C1["Distribusi Beban Kerja Merata"] --> C2["Peningkatan Response Time & Throughput"]
-        C2 --> C3["High Availability <br>(Sesuai Hukum ke-5 Noruzi)"]
-    end
-
-    A3 ==> B1
-    B3 ==> C1
+flowchart TD
+    A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web]
+    A2 --> A3[Implementasi 1 server sistem otomasi perpustakaan]
+    A2 --> A4[Implementasi load balancer pada sistem otomasi perpustakaan]
+    A3 --> A5[Hasil Implementasi dari kedua cara yang lebih baik yang mana]
+    A4 --> A5
 ```
 
