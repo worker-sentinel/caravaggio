@@ -106,17 +106,12 @@ Sebagai organisasi yang melayani publik, perpustakaan juga harus memperhatikan k
 
 ## Kerangka Berpikir
 
-Kerangka berpikir dalam penelitian ini berawal dari pengamatan terhadap kondisi infrastruktur Teknologi Informasi di Organisasi N, khususnya pada unit Perpustakaan yang telah menerapkan Sistem Otomasi Perpustakaan. Sebagai organisasi yang melayani banyak pemustaka, tuntutan akan ketersediaan layanan yang cepat dan stabil menjadi hal yang mutlak. Namun, pada kenyataannya, sering terjadi penumpukan beban kerja pada satu Web Server tertentu saat jam sibuk, yang mengakibatkan penurunan performa sistem dan waktu tanggap yang lambat bagi pengguna.
-
-Kondisi tersebut melanggar prinsip dasar Grand Theory Alireza Noruzi, khususnya hukum keempat yaitu "Save the time of the user". Ketika sistem informasi perpustakaan mengalami latensi atau sulit diakses, waktu pemustaka terbuang sia-sia, sehingga nilai guna dari sumber daya web tersebut menurun. Untuk mengatasi masalah ini, diperlukan sebuah solusi teknis yang mampu mengelola distribusi trafik secara dinamis guna memastikan sistem tetap berjalan optimal meskipun beban kerja meningkat.
-
-Solusi yang ditawarkan dalam penelitian ini adalah implementasi Load Balancer. Dengan menempatkan Load Balancer di depan beberapa node server, lalu lintas data tidak lagi bertumpu pada satu titik, melainkan didistribusikan secara merata berdasarkan algoritma tertentu. Langkah ini diambil untuk mencapai kondisi High Availability, di mana layanan perpustakaan tetap dapat diakses meskipun salah satu server mengalami kegagalan teknis. Hal ini juga selaras dengan hukum kelima Noruzi, yaitu "The Web is a growing organism", di mana infrastruktur organisasi harus mampu beradaptasi dengan pertumbuhan jumlah pemustaka dan data.
-Secara skematis, alur kerangka berpikir ini dimulai dari tahap identifikasi masalah (beban server tidak merata), diikuti dengan tahap intervensi teknis (penerapan Load Balancer), dan diakhiri dengan tahap evaluasi performa. Hasil akhir yang diharapkan adalah terciptanya infrastruktur server yang tangguh, responsif, dan memiliki tingkat ketersediaan yang tinggi demi mendukung produktivitas di Organisasi N.
+Kerangka penelitian ini berawal dari masalah penumpukan trafik (web server) di Perpustakaan Organisasi N saat jam sibuk yang melanggar hukum keempat Noruzi ("Save the time of the user"). Solusinya adalah implementasi Load Balancer untuk mendistribusikan beban kerja ke beberapa node server (High Availability), sekaligus memenuhi hukum kelima Noruzi ("The Web is a growing organism"). Alur penelitian bergerak dari identifikasi ketidakseimbangan beban, intervensi teknis, hingga evaluasi performa guna menciptakan infrastruktur server yang responsif dan tangguh bagi pemustaka.
 
 ```mermaid
 flowchart TD
     A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web]
-    A2 --> A3[Implementasi 1 server sistem otomasi perpustakaan]
+    A2 --> A3[Implementasi monolitik sistem otomasi perpustakaan]
     A2 --> A4[Implementasi load balancer pada sistem otomasi perpustakaan]
     A3 --> A5[Hasil Implementasi dari kedua cara yang lebih baik yang mana]
     A4 --> A5
