@@ -106,11 +106,11 @@ Sebagai organisasi yang melayani publik, perpustakaan juga harus memperhatikan k
 
 ## Kerangka Berpikir
 
-Kerangka penelitian ini berawal dari masalah penumpukan trafik (web server) di Perpustakaan Organisasi N saat jam sibuk yang melanggar hukum keempat Noruzi ("Save the time of the user"). Solusinya adalah implementasi Load Balancer untuk mendistribusikan beban kerja ke beberapa node server (High Availability), sekaligus memenuhi hukum kelima Noruzi ("The Web is a growing organism"). Alur penelitian bergerak dari identifikasi ketidakseimbangan beban, intervensi teknis, hingga evaluasi performa guna menciptakan infrastruktur server yang responsif dan tangguh bagi pemustaka.
+Kerangka penelitian ini berawal dari masalah penumpukan trafik (web server) di Perpustakaan Organisasi N saat jam sibuk yang melanggar hukum keempat Noruzi ("Save the time of the user"). Solusinya adalah implementasi Load Balancer untuk mendistribusikan beban kerja ke beberapa node server (High Availability), sekaligus memenuhi hukum kelima Noruzi ("The Web is a growing organism"). Alur penelitian bergerak dari Penurunan performa sistem otomasi perpustakaan pada organisasi N, grand teori 5 hukum perpustakaan pada poin save the time of the user, implementasi non load balancer pada sistem otomasi perpustakaan, implementasi load balancer pada sistem otomasi perpustakaan, hingga hasil dari kedua implementasi tersebut.
 
 ```mermaid
 flowchart TD
-    A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web : save the timr of the user]
+    A1[Penurunan performa sistem otomasi perpustakaan pada organisasi N] --> A2[The Five Laws of the Web : save the time of the user]
     A2 --> A3[Implementasi non load balancer sistem otomasi perpustakaan]
     A2 --> A4[Implementasi load balancer pada sistem otomasi perpustakaan]
     A3 --> A5[Hasil Implementasi dari kedua cara yang lebih baik yang mana]
