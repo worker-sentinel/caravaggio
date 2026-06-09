@@ -108,8 +108,7 @@
 
    Berdasarkan uraian latar belakang yang telah dijelaskan, maka rumusan masalah dalam penelitian ini adalah 
 
-1. Bagaimana proses penerapan protokol informasi dalam sistem arsip digital berbasis *Flat file?*  
-   
+1. Bagaimana proses penerapan protokol informasi dalam sistem arsip digital berbasis flat file ditinjau dari aspek difusi inovasi, ketahanan infrastruktur, dan regulasi arsip dinamis?   
 
 5. ## **Tujuan dan Manfaat Penelitian** {#tujuan-dan-manfaat-penelitian}
 
