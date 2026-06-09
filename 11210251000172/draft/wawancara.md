@@ -30,7 +30,7 @@ Tujuan: Menggali masalah nyata di lapangan terkait beban server, latensi, dan ke
 Tujuan: Meminta umpan balik teknis dari informan ahli setelah penulis mendemonstrasikan purwarupa sistem Load Balancer yang telah dikembangkan.
 
    1. Setelah melihat demonstrasi purwarupa sistem Load Balancer yang saya kembangkan, bagaimana penilaian Anda terhadap alur distribusi trafik dan arsitektur jaringan yang baru ini?
-   2. Menurut pandangan teknis Anda, apakah implementasi algoritma (seperti Round Robin atau Least Connection) dalam sistem ini sudah cukup adaptif untuk memecahkan masalah penumpukan beban di Organisasi N?
+   2. Menurut pandangan teknis Anda, apakah implementasi algoritma *Round Robin* dalam sistem ini sudah cukup adaptif untuk memecahkan masalah penumpukan beban di Organisasi N?
    3. Apakah mekanisme pengalihan otomatis (failover) pada sistem Load Balancer ini dinilai sudah efektif dalam menjamin ketersediaan layanan koleksi tanpa downtime saat salah satu server mati?
    4. Apa saja kelebihan dan kekurangan dari purwarupa sistem Load Balancer ini jika ditinjau dari sisi kemudahan pemeliharaan (maintenance) oleh tim TI Organisasi N ke depan?
    5. Masukan atau rekomendasi apa yang perlu saya tambahkan agar produk arsitektur jaringan ini lebih optimal, aman, dan siap diimplementasikan secara permanen di Organisasi N?
