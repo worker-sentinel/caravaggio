@@ -13,3 +13,7 @@ untuk mendecrypt ketika tetap ada didalam jaringan yang di verifikasi, lalu jika
 
 ada layer layer otorisasi dikita ada untuk di layer hardisk, untuk memitigasi jaringan yang tidak sah ada di layer network, untuk memitigasi anomali di aplikasi ada di layer aplikasi namun semua berada di dalam 1 server makanya disini disebut authentikasi dan otorisasi berlapis lapis.
 
+untuk di layer aplikasi forgejo untuk aksesnya terdapat 2 layer otoritasi, ketika ada yang ingin akses forgejo mereka harus tervalidasi di layer network dan tervalidasi di keanggotaaan yag di atur di aplikasi authelia dan lldap. di forgejo tidak ada login karena kita sudah menggunakan otoritasi tersebut jadi hanya user yang terverifikasi yang bisa mengakses forgejo. 
+
+
+
