@@ -8,6 +8,8 @@ ada aplikasi untuk keamanan network jadi tidak bisa di pisahkan setiap infrastur
 di sini ada standar pengujian server yang dimana harus dipatuhi karena jika itu tidak di patuha maka tidak di install dengan standar dan harus install ulang, sekecil
 meskipun sekecil copot flashdisk tapi tidak sesuai standar harus di lakukan instalasi ulang.
 
-untuk fungsi nbde adalah misal yang tau password hanyalah superadmin otomatis jika ingin membuka hardisk hanya bisa superadmin yang membukanya makanya ada fitur nbde 
-untuk mendecrypt ketika tetap ada didalam jaringan yang di verifikasi, lalu jika nantinya ada kerusakan fisik atau kemalingan ketika keluar dari jaringan internet yang 
-diverfikasi tidak akan bisa di buka hardisknya, kecuali dibuka oleh superadmin. karena disini memliki doktrin informasi lebih baik rusak dari pada kebocoran data
+untuk fungsi nbde adalah untuk memitigasi celah celah keamanan di sisi hardisk misal yang tau password hanyalah superadmin otomatis jika ingin membuka hardisk hanya bisa superadmin yang membukanya makanya ada fitur nbde 
+untuk mendecrypt ketika tetap ada didalam jaringan yang di verifikasi, lalu jika nantinya ada kerusakan fisik atau kemalingan ketika keluar dari jaringan internet yang diverfikasi tidak akan bisa di buka hardisknya, kecuali dibuka oleh superadmin. karena disini memliki doktrin informasi lebih baik rusak dari pada kebocoran data
+
+ada layer layer otorisasi dikita ada untuk di layer hardisk, untuk memitigasi jaringan yang tidak sah ada di layer network, untuk memitigasi anomali di aplikasi ada di layer aplikasi namun semua berada di dalam 1 server makanya disini disebut authentikasi dan otorisasi berlapis lapis.
+
