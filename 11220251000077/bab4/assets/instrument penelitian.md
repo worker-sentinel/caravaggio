@@ -123,10 +123,9 @@ F. Closing — Refleksi
 
 # untuk ketua organisasi
 1. bisa dijelaskan apa yang melatarbelakangi pembangunan ifrastruktur protokol informasi untuk arsip digital ini
-2. bisa dijelaskan apa yang mendasari penggunaan podman sebagai platform container dibandingkan alternatif lain seperti docker
-3. bisa dijelaskan apa yang membedakan infrastruktur server ini dibanding dengan server server lain diluarsana.
-4. bisa di jelaskan apa saja konfigurasi dalam server ini yang menjadi pembeda dari pembagian hardisk dan lainya
-5. bisa anda jelaskan bagaimana pola berjalanya sistem ini dari jaringan, keserver, keaplikasi, dan ke client
+2. bisa anda jelaskan bagaimana pola berjalanya sistem ini dari jaringan, keserver, keaplikasi, dan ke client
+3. bisa di jelaskan kebijakan apa saja yang diberikan kepada anggota dan non anggota di organisasi ini dalam konteks arsipnya
+4. bisa anda jelaskan konsep arsip in out, out in, in in
    
 ### 4pilar kearsipan
 ---
