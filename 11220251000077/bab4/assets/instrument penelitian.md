@@ -126,13 +126,17 @@ F. Closing — Refleksi
 2. bisa dijelaskan apa yang mendasari penggunaan podman sebagai platform container dibandingkan alternatif lain seperti docker
 3. bisa dijelaskan apa yang membedakan infrastruktur server ini dibanding dengan server server lain diluarsana.
 4. bisa di jelaskan apa saja konfigurasi dalam server ini yang menjadi pembeda dari pembagian hardisk dan lainya
-5. Bisa Anda ceritakan bagaimana Tata Naskah Dinas diterjemahkan ke dalam sistem ini secara teknis, termasuk bagaimana standar penciptaan dan format naskah dinas diakomodasi dalam struktur file Markdown yang digunakan?
-6. Bisa Anda jelaskan bagaimana Klasifikasi Arsip diimplementasikan dalam ekosistem sistem ini, termasuk bagaimana skema klasifikasi tersebut tercermin dalam struktur repositori di Gitrock?
-7. Bisa Anda ceritakan bagaimana Jadwal Retensi Arsip diterapkan dalam sistem ini secara teknis, termasuk bagaimana logika retensi dan pengelolaan masa simpan arsip dirancang agar berjalan otomatis atau terkontrol dalam ekosistem ini?
-8. Bisa Anda jelaskan bagaimana Sistem Klasifikasi Keamanan dan Akses Arsip diimplementasikan dalam sistem ini, termasuk bagaimana tingkatan keamanan dan hak akses arsip diterjemahkan ke dalam konfigurasi teknis di level aplikasi maupun infrastruktur?
-9. Bisa Anda ceritakan bagaimana Anda merancang sistem ini agar tetap resilient dan mampu bertahan ketika terjadi gangguan atau kegagalan pada salah satu komponennya, termasuk mekanisme pemulihan apa yang sudah disiapkan?
-10. Bisa Anda jelaskan bagaimana Anda memastikan kemandirian data organisasi dalam sistem ini, termasuk keputusan teknis dan kebijakan apa saja yang diambil untuk memastikan sistem tidak bergantung pada infrastruktur pihak ketiga?
-11. Bisa Anda ceritakan bagaimana Anda memimpin dan mengkoordinasikan tim teknis selama proses deployment berlangsung, termasuk bagaimana pembagian kerja dan pengambilan keputusan teknis bersama dilakukan?
+4pilar kearsipan
+---
+6. Bisa Anda ceritakan bagaimana Tata Naskah Dinas diterjemahkan ke dalam sistem ini secara teknis, termasuk bagaimana standar penciptaan dan format naskah dinas diakomodasi dalam struktur file Markdown yang digunakan?
+7. Bisa Anda jelaskan bagaimana Klasifikasi Arsip diimplementasikan dalam ekosistem sistem ini, termasuk bagaimana skema klasifikasi tersebut tercermin dalam struktur repositori di Gitrock?
+8. Bisa Anda ceritakan bagaimana Jadwal Retensi Arsip diterapkan dalam sistem ini secara teknis, termasuk bagaimana logika retensi dan pengelolaan masa simpan arsip dirancang agar berjalan otomatis atau terkontrol dalam ekosistem ini?
+9. Bisa Anda jelaskan bagaimana Sistem Klasifikasi Keamanan dan Akses Arsip diimplementasikan dalam sistem ini, termasuk bagaimana tingkatan keamanan dan hak akses arsip diterjemahkan ke dalam konfigurasi teknis di level aplikasi maupun infrastruktur?
+model cyber resillent
+---
+10. Bisa Anda ceritakan bagaimana Anda merancang sistem ini  mampu bertahan ketika terjadi gangguan atau kegagalan sistem atau humanis, termasuk mekanisme pemulihan apa yang sudah disiapkan?
+11. Bisa Anda jelaskan bagaimana Anda memastikan kemandirian data organisasi dalam sistem ini, termasuk keputusan teknis dan kebijakan apa saja yang diambil untuk memastikan data tidak bisa di akses oleh orang luar organisasi.
+13. Bisa Anda ceritakan bagaimana Anda memimpin dan mengkoordinasikan tim teknis selama proses deployment berlangsung, termasuk bagaimana pembagian kerja dan pengambilan keputusan teknis bersama dilakukan?
 
 
 
