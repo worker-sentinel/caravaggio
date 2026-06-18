@@ -12,7 +12,6 @@
 1. Ancaman apa saja yang paling sering dihadapi dalam pengelolaan arsip digital?
 2. Apakah pernah terjadi insiden keamanan seperti kehilangan data, akses tidak sah, atau kebocoran arsip digital?
 3. Bagaimana perusahaan melakukan mitigasi terhadap risiko keamanan arsip digital?
-4. Menurut Anda, sejauh mana tingkat keamanan arsip digital saat ini?
 
 ---
 
