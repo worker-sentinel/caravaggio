@@ -10,7 +10,7 @@
     dan strategi yang dihadapi oleh organisasi yang menjadi objek kajian.
 
      Pemilihan studi kasus pada satu organisasi dilakukan dengan pertimbangan bahwa organisasi tersebut telah menggunakan sistem arsip digital berbasis *Flat file* dalam praktik pengelolaannya. Hal
-    ini memberikan peluang untuk menganalisis secara rinci efektivitas protokol yang digunakan, termasuk sejauh mana protokol tersebut mendukung prinsip autentisitas, integritas, keamanan, dan
+    ini memberikan peluang untuk menganalisis secara rinci pemanfaatan protokol yang digunakan, termasuk sejauh mana protokol tersebut mendukung prinsip autentisitas, integritas, keamanan, dan
     aksesibilitas arsip. Dengan berfokus pada satu organisasi, penelitian dapat menggali informasi secara lebih intensif melalui wawancara, observasi, dan analisis dokumen, sehingga hasil yang
     diperoleh
     diharapkan mampu memberikan pemahaman yang komprehensif tentang kelebihan dan kelemahan protokol *Flat file* dalam konteks kearsipan digital.
@@ -103,21 +103,7 @@
    Tahap akhir adalah menarik kesimpulan berdasarkan pola, keterkaitan, serta makna yang muncul dari data yang telah disajikan. Kesimpulan bersifat sementara pada awalnya, namun diperkuat melalui
    proses verifikasi berulang, termasuk membandingkan dengan teori yang ada.
 
-   
-
-   Analisis ini mengacu pada Empat Pilar Pengelolaan Arsip yang menjadi dasar utama dalam menjaga keteraturan dan keberlanjutan arsip kelembagaan. Tata Naskah Dinas (TND) berfungsi untuk memastikan
-   konsistensi format, struktur, dan penomoran dalam komunikasi resmi sehingga arsip digital tetap sahih secara administratif**.** Klasifikasi Arsip (KA) memberikan kerangka pengelompokan dan pengaturan
-   file, termasuk flat file, berdasarkan fungsi dan topik sehingga pencarian dan penataan menjadi lebih sistematis. Jadwal Retensi Arsip (JRA) berperan menentukan siklus hidup arsip digital, apakah
-   harus dimusnahkan atau disimpan permanen, sehingga kapasitas penyimpanan tetap efisien dan relevan dengan kebutuhan organisasi. Sementara itu, Sistem Klasifikasi Keamanan dan Akses Arsip (SKKAA)
-   menjamin bahwa arsip digital terlindungi dari akses yang tidak berwenang dengan menetapkan tingkat kerahasiaan dan hak akses. Keempat pilar ini sangat relevan untuk penelitian mengenai protokol
-   arsip digital berbasis flat file, karena keberhasilan flat file sebagai media penyimpanan sangat dipengaruhi oleh sejauh mana implementasi protokolnya selaras dengan prinsip pengelolaan arsip
-   yang baik
-
-   Selain itu, analisis juga dilakukan dengan menggunakan Model Metric for Critical Infrastructure Cyber Resilience yang membagi ketahanan siber ke dalam tiga domain: *cyber as a shield*
-   (pencegahan serangan dan perlindungan data), *cyber as a space* (resiliensi sistem dan manajemen risiko), dan *cyber as a sword* (kesiapan serta pemulihan insiden). Data lapangan dikaji untuk
-   menilai sejauh mana protokol *Flat file* mampu memenuhi ketiga aspek tersebut, misalnya melalui mekanisme keamanan, prosedur pemulihan arsip, serta kemampuan sistem bertahan terhadap ancaman digital.
-   Dengan menggabungkan teori empat pilar kearsipan dan model ketahanan siber, penelitian ini menghasilkan analisis yang komprehensif mengenai kelebihan, kelemahan, serta peluang pengembangan protokol
-   *Flat file* dalam mendukung arsip digital yang aman, terjamin, dan berkelanjutan.
+  
 
    
 
