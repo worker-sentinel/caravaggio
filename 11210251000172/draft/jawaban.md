@@ -203,7 +203,3 @@ Ya, karena penambahan node baru dapat dilakukan tanpa perubahan besar pada arsit
 
 **Jawaban (simulasi):**
 Secara umum implementasi berhasil meningkatkan performa sekaligus mendukung konsep High Availability.
-
----
-
-Nanti saat masuk ke **BAB IV**, jawaban ini tidak ditulis format tanya-jawab lagi, tetapi diubah menjadi **narasi hasil wawancara + kutipan informan**.
