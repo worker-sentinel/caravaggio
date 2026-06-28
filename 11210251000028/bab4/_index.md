@@ -95,23 +95,38 @@ Konfigurasi parameter kernel command line merupakan tahap akhir sebelum dilakuka
 
 ## binding
 ![cek ip address](../bab4/assets/images/cek-ipaddress.png)
+hasil pemeriksaan konfigurasi jaringan pada perangkat klien menggunakan perintah ip a. Pemeriksaan ini bertujuan untuk memastikan bahwa antarmuka jaringan telah memperoleh konfigurasi alamat IP sesuai dengan parameter yang sebelumnya ditetapkan pada kernel command line. Ketersediaan koneksi jaringan merupakan syarat utama agar Clevis dapat berkomunikasi dengan server Tang selama proses booting.
+
+Hasil pemeriksaan menunjukkan bahwa antarmuka jaringan enp6s0 berada pada status UP dengan alamat IP 10.10.1.51/24. Selain itu, antarmuka tersebut telah memiliki alamat MAC (Media Access Control) serta alamat IPv6 lokal (link-local address). Status LOWER_UP menunjukkan bahwa koneksi fisik jaringan telah aktif dan perangkat berhasil mendeteksi media transmisi yang digunakan.
+
+Pada sisi lain, antarmuka jaringan nirkabel wlp7s0 masih berada pada status DOWN, yang mengindikasikan bahwa antarmuka tersebut tidak digunakan dalam implementasi penelitian. Hal ini sesuai dengan rancangan sistem yang memanfaatkan jaringan kabel (Ethernet) sebagai media komunikasi antara perangkat klien dan server Tang untuk memperoleh stabilitas koneksi selama proses autentikasi berlangsung.
+
+Keberhasilan konfigurasi alamat IP pada antarmuka enp6s0 menunjukkan bahwa perangkat klien telah siap melakukan komunikasi dengan server Tang. Dengan adanya konektivitas jaringan yang aktif, proses pertukaran informasi kunci (key exchange) antara Clevis dan Tang dapat berlangsung secara otomatis sehingga mendukung implementasi Network Bound Disk Encryption sesuai dengan tujuan penelitian.
 ![cek list binding server](../bab4/assets/images/cek-tangpadaserver.png)
-![gagal binding](../bab4/assets/images/gagal-binding.png)
+proses verifikasi terhadap konfigurasi binding yang telah diterapkan pada volume LUKS menggunakan perintah clevis luks list. Tahapan ini dilakukan untuk memastikan bahwa metadata LUKS telah berhasil menyimpan konfigurasi Clevis sehingga proses dekripsi otomatis dapat dilakukan ketika sistem melakukan booting. Verifikasi merupakan langkah penting untuk memastikan implementasi NBDE telah berhasil dikonfigurasi.
+
+Pada percobaan awal, perintah dijalankan tanpa hak akses administrator sehingga sistem menampilkan pesan kesalahan yang menyatakan bahwa perangkat tidak dapat diakses (access denied). Selain itu, sistem juga memberikan informasi bahwa tidak ditemukan slot pengguna pada perangkat tersebut. Kondisi ini menunjukkan bahwa pembacaan metadata LUKS memerlukan hak akses root agar informasi konfigurasi dapat ditampilkan secara lengkap.
+
+Setelah perintah dijalankan menggunakan sudo, sistem berhasil membaca metadata LUKS dan menampilkan informasi mengenai slot Clevis yang telah dikonfigurasi. Hasil keluaran menunjukkan bahwa metode autentikasi yang digunakan adalah Tang, disertai alamat URL server Tang yaitu http://10.10.1.73:7500. Informasi tersebut menandakan bahwa proses binding sebelumnya telah berhasil disimpan ke dalam metadata volume LUKS.
+
+Keberhasilan verifikasi ini menjadi indikator bahwa implementasi NBDE telah berjalan sesuai dengan rancangan penelitian. Metadata LUKS kini telah menyimpan informasi mengenai server Tang yang akan digunakan sebagai sumber kunci dekripsi. Dengan demikian, sistem dapat melakukan proses autentikasi secara otomatis pada tahap booting tanpa memerlukan intervensi pengguna untuk memasukkan passphrase secara manual.
 ![sukses binding](../bab4/assets/images/berhasil-binding.png) 
+proses binding antara volume terenkripsi LUKS dengan server Tang menggunakan utilitas Clevis. Proses dilakukan melalui perintah clevis luks bind dengan metode autentikasi Tang, sehingga volume LUKS dapat memperoleh kunci dekripsi secara otomatis ketika sistem melakukan proses booting. Pada implementasi ini, pengguna terlebih dahulu memasukkan passphrase LUKS sebagai bentuk autentikasi sebelum konfigurasi binding diterapkan.
+
+Berdasarkan gambar, percobaan pertama menggunakan alamat server 10.10.1.51 mengalami kegagalan. Sistem menampilkan pesan bahwa advertisement dari server Tang tidak dapat diambil (Unable to fetch advertisement), sehingga proses enkripsi dengan metode Tang tidak dapat dilanjutkan. Kondisi tersebut menunjukkan bahwa alamat IP yang digunakan tidak mengarah pada server Tang yang aktif atau layanan Tang belum dapat diakses melalui jaringan.
+
+Setelah dilakukan koreksi terhadap alamat server menjadi 10.10.1.73, proses binding berhasil dilanjutkan. Sistem berhasil mengambil advertisement dari server Tang yang berisi informasi mengenai signing key. Informasi tersebut kemudian ditampilkan kepada pengguna sebagai mekanisme verifikasi identitas server sebelum hubungan kepercayaan (trust relationship) dibangun.
+
+Tahap terakhir dilakukan dengan memberikan persetujuan terhadap signing key yang ditampilkan oleh sistem. Setelah pengguna memilih opsi Yes, konfigurasi binding berhasil disimpan pada metadata LUKS. Dengan demikian, volume terenkripsi telah terhubung dengan server Tang sehingga proses pembukaan (unlocking) partisi dapat dilakukan secara otomatis selama server Tang tersedia pada jaringan.
 ![generate mkinitcpio](../bab4/assets/images/generate-mkinitcpio.png) 
+proses pembangunan ulang (rebuild) berkas initramfs menggunakan perintah mkinitcpio -P setelah dilakukan perubahan konfigurasi pada berkas default.conf. Proses ini bertujuan untuk memperbarui citra initramfs agar seluruh konfigurasi yang telah ditambahkan, khususnya hook yang berkaitan dengan Network Bound Disk Encryption (NBDE), dapat dimuat pada saat sistem melakukan proses booting. Tahapan ini merupakan langkah penting karena perubahan pada konfigurasi mkinitcpio tidak akan diterapkan sebelum citra initramfs dibangun kembali.
+
+Pada proses pembangunan initramfs, sistem menjalankan seluruh hook yang telah didefinisikan pada variabel HOOKS secara berurutan. Berdasarkan gambar, terlihat bahwa hook base, systemd, autodetect, microcode, modconf, kms, keyboard, sd-vconsole, net, clevis, sd-encrypt, lvm2, block, filesystems, dan fsck berhasil dijalankan. Keberhasilan pemuatan hook net dan clevis menunjukkan bahwa lingkungan initramfs telah mendukung komunikasi jaringan serta mekanisme autentikasi otomatis terhadap server Tang.
+
+Selama proses berlangsung, sistem juga menghasilkan beberapa peringatan (warning), seperti kegagalan mengaktifkan warna terminal (Failed to enable color) dan kemungkinan tidak ditemukannya firmware untuk modul jaringan tertentu. Peringatan tersebut tidak menghentikan proses pembangunan initramfs karena tidak berkaitan secara langsung dengan mekanisme dekripsi maupun proses booting. Hal ini dibuktikan dengan keberhasilan sistem dalam menyelesaikan seluruh tahapan pembangunan citra initramfs.
+
+Tahap akhir memperlihatkan bahwa sistem berhasil menghasilkan Unified Kernel Image (UKI) yang menggabungkan kernel Linux, initramfs, serta parameter kernel command line ke dalam satu berkas EFI. Keberhasilan proses ini mengindikasikan bahwa konfigurasi NBDE telah terintegrasi ke dalam lingkungan booting sehingga sistem siap melanjutkan proses implementasi, yaitu melakukan binding antara volume LUKS dengan server Tang.
  
  
   
  
-
-
-
-
-
-## isi
-
-Salah satu implementasi enkripsi yang populer dalam sistem operasi berbasis Linux adalah LUKS (Linux Unified Key Setup). LUKS dikembangkan sebagai standar untuk mengelola enkripsi disk pada sistem Linux untuk manajemen kunci enkripsi. LUKS menyimpan informasi header yang memungkinkan pengguna mengelola beberapa kunci enkripsi pada satu volume penyimpanan (Onishchenko et al., 2024). Tantangan utama dalam sistem enkripsi adalah pengelolaan kunci yang aman dan efisien. Ketika sistem menggunakan satu kunci utama untuk seluruh media penyimpanan, maka seluruh data dapat diakses pihak luar. Dalam beberapa skenario, LUKS bergantung pada input manual pengguna untuk membuka partisi terenkripsi saat proses booting. Hal ini menimbulkan keterbatasan bagi sistem yang membutuhkan proses otomatis, seperti server atau sistem penyimpanan terpusat.
-
-Salah satu pendekatan yang berkembang untuk mengatasi masalah pengelolaan kunci enkripsi adalah Network Bound Disk Encryption (NBDE). NBDE memungkinkan perangkat terenkripsi melakukan proses dekripsi hanya jika terkoneksi dengan jaringan dan server otentikasi yang sah (Red Hat, 2022). Dengan demikian, walaupun media penyimpanan dipindahkan ke sistem lain, data di dalamnya tetap tidak dapat diakses tanpa koneksi ke server kunci. Konsep ini memperluas keamanan LUKS dengan menambahkan lapisan verifikasi berbasis jaringan. Hal ini relevan bagi organisasi yang mengelola arsip digital pada lingkungan multi-server atau sistem terdistribusi.
-
-Penerapan NBDE biasanya melibatkan dua komponen utama, yaitu Tang Server sebagai penyedia kunci dan Clevis Client sebagai agen dekripsi otomatis. Clevis melakukan proses binding terhadap volume terenkripsi dan secara otomatis meminta kunci dari Tang saat sistem boot . Desain ini memastikan bahwa sistem dapat berjalan tanpa intervensi manual namun tetap mempertahankan keamanan. Dengan mekanisme ini, NBDE memberikan keseimbangan antara keamanan dan efisiensi operasional.
