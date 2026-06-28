@@ -1,49 +1,133 @@
-## PANDUAN WAWANCARA PENELITIAN
-Informasi Sesi Wawancara
+Karena penelitian Anda menggunakan **Design and Development (D&D)** dan fokusnya bukan sekadar mengukur performa tetapi juga **mengembangkan serta mengevaluasi produk (Load Balancer)**, maka wawancaranya sebaiknya tidak hanya teknis. Pertanyaan perlu mengikuti alur D&D:
 
-* Hari/Tanggal: Jumat, 12 Juni 2026
-* Waktu: 09.00 - 16.00
-* Tempat/Media: Organisasi N
-* Informan/Narasumber: Ketua Organisasi N, Sysadmin Organisasi N
+1. **Analisis kebutuhan (Analysis)**
+2. **Perancangan (Design)**
+3. **Pengembangan & Implementasi (Development)**
+4. **Evaluasi hasil (Evaluation)**
 
-------------------------------
+Selain itu karena informan Anda ada **CIO dan DevOps Engineer**, pertanyaannya sebaiknya semi-terstruktur supaya nanti jawabannya mudah diolah menjadi narasi BAB IV.
 
-## BAGIAN I: PROTOKOL PEMBUKA (PENGANTAR)
-Selamat pagi/siang Bapak/Ibu. Terima kasih atas kesediaannya meluangkan waktu untuk sesi wawancara ini.
-Perkenalkan, saya [Nama Anda], mahasiswa program studi [Nama Prodi]. Saat ini saya sedang melaksanakan penelitian skripsi dengan metode Design and Development Research (DDR) terkait dengan "Implementasi dan Optimasi Load Balancing untuk Meningkatkan High Availability Sistem Otomasi Perpustakaan di Organisasi N".
-Wawancara ini bertujuan untuk mengumpulkan data substantif mengenai kondisi infrastruktur jaringan saat ini, hambatan ketersediaan layanan koleksi, serta melakukan validasi terhadap sistem Load Balancer yang telah saya kembangkan. Seluruh data yang diperoleh akan dijaga kerahasiaannya dan hanya digunakan untuk kepentingan akademik penelitian ini. Sesi ini akan berlangsung sekitar 15–20 menit. Apakah Bapak/Ibu bersedia untuk direkam? Jika bersedia, kita dapat memulai pertanyaan pertama.
+---
 
-------------------------------
+# Pedoman Wawancara Penelitian
 
-## BAGIAN II: DAFTAR PERTANYAAN INTI
+**Judul:**
+*Implementasi Load Balancer untuk Meningkatkan High Availability Sistem Otomasi Perpustakaan pada Organisasi N*
 
-## Fase 1: Analisis Kebutuhan Jaringan & Masalah Ketersediaan (Needs Analysis)
-Tujuan: Menggali masalah nyata di lapangan terkait beban server, latensi, dan ketersediaan koleksi digital sebelum sistem dibangun.
+**Jenis Wawancara:** Semi Terstruktur
 
-   1. Bagaimana karakteristik dan pola trafik pemustaka saat mengakses sistem otomasi perpustakaan di Organisasi N harian, khususnya pada jam-jam sibuk?
-   2. Apakah infrastruktur web server yang ada saat ini pernah mengalami penurunan performa (latensi tinggi) atau kondisi mati total (downtime) akibat lonjakan trafik tersebut?
-   3. Bagaimana dampak dari kendala teknis server tersebut terhadap ketersediaan layanan bahan koleksi digital dan produktivitas operasional pustakawan di Organisasi N?
-   4. Mekanisme atau strategi apa yang saat ini sudah diterapkan oleh tim TI Organisasi N untuk mengatasi penumpukan beban kerja pada server tunggal?
-   5. Menurut Anda, kendala utama apa yang membuat infrastruktur jaringan saat ini belum mampu mencapai standar High Availability (ketersediaan tinggi) secara maksimal?
+**Tujuan:** Menggali kebutuhan sistem, proses pengembangan, implementasi, dan evaluasi penerapan Load Balancer.
 
-## Fase 2: Evaluasi Usulan Desain & Validasi Sistem (Evaluation & Validation)
-Tujuan: Meminta umpan balik teknis dari informan ahli setelah penulis mendemonstrasikan purwarupa sistem Load Balancer yang telah dikembangkan.
+---
 
-   1. Setelah melihat demonstrasi purwarupa sistem Load Balancer yang saya kembangkan, bagaimana penilaian Anda terhadap alur distribusi trafik dan arsitektur jaringan yang baru ini?
-   2. Menurut pandangan teknis Anda, apakah implementasi algoritma *Round Robin* dalam sistem ini sudah cukup adaptif untuk memecahkan masalah penumpukan beban di Organisasi N?
-   3. Apakah mekanisme pengalihan otomatis (failover) pada sistem Load Balancer ini dinilai sudah efektif dalam menjamin ketersediaan layanan koleksi tanpa downtime saat salah satu server mati?
-   4. Apa saja kelebihan dan kekurangan dari purwarupa sistem Load Balancer ini jika ditinjau dari sisi kemudahan pemeliharaan (maintenance) oleh tim TI Organisasi N ke depan?
-   5. Masukan atau rekomendasi apa yang perlu saya tambahkan agar produk arsitektur jaringan ini lebih optimal, aman, dan siap diimplementasikan secara permanen di Organisasi N?
+# A. Tahap Analisis Kebutuhan (Analysis)
 
-------------------------------
+## Tujuan:
 
-## BAGIAN III: PROTOKOL PENUTUP
-Baik Bapak/Ibu, semua pertanyaan inti telah selesai didiskusikan. Informasi dan perspektif teknis yang Bapak/Ibu berikan sangat berharga untuk melengkapi fase analisis dan evaluasi dalam metodologi DDR penelitian saya. Data ini akan segera saya transkripsikan dan analisis secara objektif untuk menyempurnakan luaran sistem ini.
-Sebelum saya akhiri, apakah ada poin tambahan atau dokumen teknis pendukung yang ingin Bapak/Ibu sampaikan terkait topik kita hari ini?
-Jika tidak ada, saya ucapkan terima kasih yang sebesar-besarnya atas dukungan, waktu, dan ilmu yang diberikan dalam wawancara ini. Selamat pagi/siang.
+Mengidentifikasi kondisi awal dan masalah sebelum pengembangan.
 
-------------------------------
+### Untuk CIO
 
-## DAFTAR PUSTAKA
-Richey, R. C., & Klein, J. D. (2007). Design and Development Research: Methods, Strategies, and Issues. Lawrence Erlbaum Associates, Publishers.
+1. Bagaimana kondisi layanan sistem otomasi perpustakaan sebelum dilakukan pengembangan infrastruktur?
+2. Permasalahan apa yang paling sering muncul ketika jumlah pengguna meningkat?
+3. Bagaimana dampak gangguan performa sistem terhadap aktivitas operasional organisasi?
+4. Mengapa peningkatan performa dan ketersediaan layanan menjadi kebutuhan penting bagi organisasi?
 
+### Untuk DevOps Engineer
+
+5. Bagaimana arsitektur sistem yang digunakan sebelum implementasi Load Balancer?
+6. Komponen mana yang paling sering menjadi titik bottleneck?
+7. Pada kondisi seperti apa penurunan performa mulai terlihat?
+8. Apakah sebelumnya pernah dilakukan optimasi selain Load Balancer?
+
+---
+
+# B. Tahap Perancangan Sistem (Design)
+
+## Tujuan:
+
+Menggali alasan pemilihan desain dan teknologi.
+
+### Untuk DevOps Engineer
+
+9. Apa pertimbangan dalam memilih pendekatan Load Balancer dibanding peningkatan spesifikasi server?
+10. Mengapa menggunakan pendekatan container dibanding instalasi langsung pada server fisik?
+11. Bagaimana proses menentukan jumlah node server pada penelitian ini?
+12. Mengapa seluruh container dibuat menggunakan spesifikasi CPU dan RAM yang sama?
+13. Algoritma distribusi beban apa yang dipilih dan apa alasan pemilihannya?
+14. Bagaimana desain arsitektur sistem sebelum dan sesudah pengembangan?
+
+---
+
+# C. Tahap Pengembangan dan Implementasi (Development)
+
+## Tujuan:
+
+Menggali proses implementasi produk.
+
+### Untuk DevOps Engineer
+
+15. Jelaskan tahapan implementasi Load Balancer pada lingkungan laboratorium.
+16. Teknologi apa saja yang digunakan selama proses implementasi?
+17. Bagaimana proses integrasi beberapa container SLiMS agar dapat berjalan bersamaan?
+18. Kendala teknis apa yang muncul selama proses pengembangan?
+19. Bagaimana cara memastikan setiap node menerima distribusi trafik secara merata?
+20. Bagaimana konfigurasi sistem agar tetap berjalan ketika salah satu node mengalami kegagalan?
+
+---
+
+# D. Tahap Pengujian Produk (Testing)
+
+## Tujuan:
+
+Mengumpulkan data eksperimen.
+
+### Untuk DevOps Engineer
+
+21. Bagaimana skenario pengujian yang digunakan untuk mensimulasikan beban pengguna?
+22. Mengapa menggunakan K6 sebagai alat pengujian?
+23. Parameter apa saja yang diamati selama pengujian?
+24. Bagaimana proses pencatatan hasil pengujian dilakukan?
+25. Bagaimana cara memastikan hasil pengujian konsisten?
+
+---
+
+# E. Tahap Evaluasi Produk (Evaluation)
+
+## Tujuan:
+
+Mengevaluasi keberhasilan implementasi.
+
+### Untuk CIO dan DevOps
+
+26. Bagaimana perbandingan performa sistem sebelum dan sesudah implementasi?
+27. Apakah terdapat perubahan pada waktu tanggap sistem?
+28. Bagaimana perubahan jumlah permintaan yang dapat dilayani?
+29. Apakah sistem menjadi lebih mudah dikembangkan setelah implementasi?
+30. Menurut Anda apakah penerapan Load Balancer berhasil menjawab kebutuhan organisasi?
+
+---
+
+# F. Validasi Teori Penelitian
+
+## Tujuan:
+
+Menghubungkan hasil dengan landasan teori.
+
+### Untuk CIO
+
+31. Apakah implementasi ini membantu mempercepat layanan kepada pemustaka?
+32. Apakah sistem saat ini lebih siap menghadapi pertumbuhan pengguna?
+33. Bagaimana pandangan Anda terhadap keberlanjutan infrastruktur ini?
+
+### Untuk DevOps
+
+34. Apakah implementasi ini mendukung konsep High Availability?
+35. Apakah hasil yang diperoleh sesuai dengan ekspektasi awal?
+
+---
+
+## Pertanyaan Penutup
+
+36. Apakah terdapat rekomendasi pengembangan lebih lanjut terhadap sistem ini?
+37. Apakah ada informasi tambahan yang ingin disampaikan terkait penelitian ini?
