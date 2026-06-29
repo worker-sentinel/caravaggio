@@ -4,7 +4,7 @@
 
 15. ## **Jenis penelitian**  {#jenis-penelitian}
 
-    Penelitian ini menggunakan metode kualitatif dengan pendekatan studi kasus. Metode ini dipilih karena penelitian berfokus pada pemahaman mendalam mengenai efektivitas protokol informasi dalam
+    Penelitian ini menggunakan metode kualitatif dengan pendekatan studi kasus. Metode ini dipilih karena penelitian berfokus pada pemahaman mendalam mengenai penerapan protokol informasi dalam
     sistem arsip digital berbasis *Flat file*. Studi kasus memungkinkan peneliti menelaah fenomena yang terjadi dalam konteks nyata secara holistik, sehingga dapat mengungkap faktor-faktor spesifik
     yang mempengaruhi penerapan protokol *Flat file*. Dengan pendekatan ini, penelitian tidak hanya menggambarkan kondisi secara deskriptif, tetapi juga menekankan pemaknaan terhadap proses, kendala,
     dan strategi yang dihadapi oleh organisasi yang menjadi objek kajian.
@@ -62,26 +62,14 @@
     bertujuan agar data yang diperoleh dapat lebih lengkap, akurat, dan dapat dipertanggungjawabkan secara ilmiah. Dengan demikian, instrumen penelitian dalam studi ini tidak hanya mendukung pengumpulan
     data, tetapi juga memastikan bahwa proses analisis dapat dilakukan secara sistematis sesuai dengan pendekatan kualitatif studi kasus.
 
-1. Wawancara  
-   Wawancara digunakan untuk memperoleh informasi mendalam dari informan yang terlibat langsung dalam pengelolaan arsip digital di Organisasi N. Teknik ini dilakukan secara semi-terstruktur,
-   sehingga peneliti dapat menggali lebih jauh pengalaman dan pandangan responden terkait penerapan protokol arsip berbasis *flat file*. Informan dalam penelitian ini meliputi arsiparis, staf
-   teknis pengelola data, serta pejabat yang bertanggung jawab terhadap kebijakan kearsipan digital. Instrumen yang digunakan berupa pedoman wawancara yang disusun berdasarkan teori Empat Pilar P
-   engelolaan Arsip yakni Tata Naskah Dinas, Klasifikasi Arsip, Jadwal Retensi Arsip, dan Sistem Klasifikasi Keamanan dan Akses Arsip Serta Model Cyber Resilience yang mencakup aspek *Cyber as a
-   Shield*, *Cyber as a Space*, dan *Cyber as a Sword*. Melalui wawancara ini, diharapkan diperoleh pemahaman yang komprehensif mengenai penerapan, kendala, dan upaya peningkatan efektivitas protokol
-   arsip digital berbasis *flat file*.
+1. Wawancara
+Wawancara digunakan untuk memperoleh informasi mendalam dari informan yang terlibat langsung dalam pengelolaan arsip digital di Organisasi N. Teknik ini dilakukan secara semi-terstruktur, sehingga peneliti dapat menggali lebih jauh pengalaman dan pandangan responden terkait penerapan protokol arsip berbasis flat file. Sebagaimana dikemukakan oleh Sugiyono (2019), wawancara semi-terstruktur bertujuan untuk menemukan permasalahan secara lebih terbuka, di mana pihak yang diajak wawancara diminta pendapat dan ide-idenya. Informan dalam penelitian ini meliputi arsiparis, staf teknis pengelola data, serta pejabat yang bertanggung jawab terhadap kebijakan kearsipan digital. Instrumen yang digunakan berupa pedoman wawancara yang disusun berdasarkan teori Empat Pilar Pengelolaan Arsip yakni Tata Naskah Dinas, Klasifikasi Arsip, Jadwal Retensi Arsip, dan Sistem Klasifikasi Keamanan dan Akses Arsip, serta Model Cyber Resilience yang mencakup aspek Cyber as a Shield, Cyber as a Space, dan Cyber as a Sword. Creswell (2018) menegaskan bahwa dalam penelitian kualitatif, wawancara menjadi salah satu strategi pengumpulan data yang paling dominan karena memungkinkan peneliti memperoleh perspektif langsung dari partisipan yang berpengalaman dalam fenomena yang diteliti. Melalui wawancara ini, diharapkan diperoleh pemahaman yang komprehensif mengenai penerapan, kendala, dan upaya peningkatan efektivitas protokol arsip digital berbasis flat file.
 
-3. Observasi  
-   Teknik observasi digunakan untuk mengamati secara langsung aktivitas dan praktik pengelolaan arsip digital di lokasi penelitian. Observasi dilakukan secara non**\-**partisipatif, di mana
-   peneliti tidak terlibat dalam kegiatan operasional tetapi hanya mencatat proses dan pola kerja yang terjadi di lingkungan pengarsipan digital. Fokus pengamatan meliputi struktur direktori arsip
-   digital, prosedur penyimpanan file, sistem keamanan akses, serta penerapan prinsip-prinsip TND, KA, JRA, dan SKKAA dalam sistem berbasis *flat file*. Data yang diperoleh dari observasi membantu
-   memverifikasi hasil wawancara dan memberikan gambaran nyata tentang sejauh mana pelaksanaan protokol arsip digital telah sesuai dengan ketentuan kelembagaan. Peralatan yang digunakan meliputi buku
-   catatan lapangan, lembar observasi, dan dokumentasi visual yang mendukung hasil pengamatan.
+2. Observasi
+Teknik observasi digunakan untuk mengamati secara langsung aktivitas dan praktik pengelolaan arsip digital di lokasi penelitian. Observasi dilakukan secara non-partisipatif, di mana peneliti tidak terlibat dalam kegiatan operasional tetapi hanya mencatat proses dan pola kerja yang terjadi di lingkungan pengarsipan digital. Menurut Sugiyono (2019), observasi non-partisipatif menempatkan peneliti sebagai pengamat independen yang tidak ikut serta dalam aktivitas subjek yang diamati, sehingga objektivitas data yang diperoleh dapat lebih terjaga. Fokus pengamatan meliputi struktur direktori arsip digital, prosedur penyimpanan file, sistem keamanan akses, serta penerapan prinsip-prinsip TND, KA, JRA, dan SKKAA dalam sistem berbasis flat file. Yin (2018) menjelaskan bahwa observasi langsung pada studi kasus memberikan informasi tambahan tentang topik yang sedang diteliti, khususnya dalam mengungkap perilaku dan kondisi lingkungan yang tidak dapat diperoleh melalui teknik lain. Data yang diperoleh dari observasi membantu memverifikasi hasil wawancara dan memberikan gambaran nyata tentang sejauh mana pelaksanaan protokol arsip digital telah sesuai dengan ketentuan kelembagaan. Peralatan yang digunakan meliputi buku catatan lapangan, lembar observasi, dan dokumentasi visual yang mendukung hasil pengamatan.
 
-5. Dokumentasi  
-   Metode dokumentasi digunakan sebagai pelengkap data hasil wawancara dan observasi dengan menelaah berbagai dokumen yang relevan. Dokumen yang dikumpulkan meliputi pedoman internal perusahaan tentang
-   pengelolaan arsip digital, struktur dan format penyimpanan file, kebijakan keamanan informasi, serta laporan audit kearsipan. Data dokumentasi berfungsi untuk memverifikasi keakuratan temuan lapangan
-   serta memperkuat analisis terhadap implementasi protokol arsip berbasis *flat file*. Proses pengumpulan dilakukan dengan menyalin atau mencatat isi dokumen tanpa mengubah data aslinya, kemudian
-   mengelompokkannya sesuai dengan pilar arsip yang terkait. Dengan demikian, metode dokumentasi memberikan dasar administratif yang kuat untuk mendukung hasil penelitian secara empiris dan teoritis.
+3. Dokumentasi
+Metode dokumentasi digunakan sebagai pelengkap data hasil wawancara dan observasi dengan menelaah berbagai dokumen yang relevan. Bungin (2017) mendefinisikan metode dokumentasi sebagai salah satu metode pengumpulan data yang digunakan dalam metodologi penelitian sosial untuk menelusuri data historis dan administratif yang tersimpan dalam bentuk dokumen. Dokumen yang dikumpulkan meliputi pedoman internal perusahaan tentang pengelolaan arsip digital, struktur dan format penyimpanan file, kebijakan keamanan informasi, serta laporan audit kearsipan. Data dokumentasi berfungsi untuk memverifikasi keakuratan temuan lapangan serta memperkuat analisis terhadap implementasi protokol arsip berbasis flat file. Sejalan dengan hal tersebut, Creswell (2018) menyatakan bahwa dokumen merupakan sumber data yang berharga dalam penelitian kualitatif karena mencerminkan bahasa dan kata-kata partisipan serta dapat diakses tanpa harus mengganggu setting penelitian. Proses pengumpulan dilakukan dengan menyalin atau mencatat isi dokumen tanpa mengubah data aslinya, kemudian mengelompokkannya sesuai dengan pilar arsip yang terkait. Dengan demikian, metode dokumentasi memberikan dasar administratif yang kuat untuk mendukung hasil penelitian secara empiris dan teoritis.
 
 18. ## **Teknik Analisis Data** {#teknik-analisis-data}
 
