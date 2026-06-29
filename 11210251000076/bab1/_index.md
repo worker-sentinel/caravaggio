@@ -108,5 +108,30 @@ Penelitian ini diharapkan dapat memperkaya kajian mengenai pemanfaatan teknologi
 
 Penelitian ini diharapkan dapat menjadi referensi dalam pengembangan penelitian terkait otomasi perpustakaan, deployment aplikasi berbasis kontainer, maupun optimalisasi infrastruktur sistem informasi perpustakaan.
 
-REVIEW KAJIAN TERDAHULU
+## KAJIAN TERDAHULU
 
+Kajian terdahulu dilakukan untuk mengetahui penelitian-penelitian yang telah dilakukan sebelumnya serta mengidentifikasi persamaan, perbedaan, dan celah penelitian (*research gap*) yang menjadi dasar pelaksanaan penelitian ini.
+
+### Penelitian oleh Yuniar dan Hidayat (2022)
+
+Penelitian yang dilakukan oleh Yuniar dan Hidayat (2022) dengan judul **"Implementasi Aplikasi Senayan Library Management System (SLiMS) dalam Proses Katalogisasi Bahan Pustaka di Perpustakaan SMK Negeri 3 Bandung"** bertujuan untuk mengetahui implementasi aplikasi SLiMS dalam proses katalogisasi bahan pustaka serta dampaknya terhadap pengelolaan perpustakaan. Hasil penelitian menunjukkan bahwa penerapan SLiMS mampu meningkatkan efektivitas dan efisiensi proses katalogisasi, mempermudah pekerjaan pustakawan, serta mendukung pengelolaan koleksi yang lebih baik. Meskipun demikian, penelitian tersebut juga menemukan bahwa masih terdapat beberapa kekurangan pada pengisian deskripsi bibliografi sehingga pemanfaatan SLiMS belum sepenuhnya optimal.
+
+Persamaan penelitian tersebut dengan penelitian yang penulis lakukan terletak pada penggunaan **Senayan Library Management System (SLiMS)** sebagai objek utama penelitian. Kedua penelitian juga sama-sama bertujuan mendukung peningkatan kualitas pengelolaan perpustakaan melalui pemanfaatan teknologi informasi.
+
+Perbedaan penelitian tersebut dengan penelitian yang penulis lakukan terletak pada fokus penelitian. Penelitian Yuniar dan Hidayat berfokus pada implementasi SLiMS dalam proses katalogisasi bahan pustaka, sedangkan penelitian ini berfokus pada **perancangan Docker image** sebagai media deployment aplikasi SLiMS sehingga proses instalasi, konfigurasi, dan pemeliharaan sistem menjadi lebih mudah, konsisten, dan efisien.
+
+### Penelitian oleh Aprilianto dkk. (2025)
+
+Penelitian yang dilakukan oleh Aprilianto dkk. (2025) dengan judul **"Pemanfaatan Docker pada Virtualisasi Server untuk Mengoptimalkan Kinerja Aplikasi Berbasis Web Menggunakan Multiserver"** bertujuan untuk mengoptimalkan kinerja aplikasi berbasis web melalui penerapan teknologi Docker pada lingkungan virtualisasi server. Hasil penelitian menunjukkan bahwa penggunaan Docker mampu meningkatkan efisiensi pemanfaatan sumber daya server, mempermudah proses deployment aplikasi, serta menghasilkan lingkungan aplikasi yang lebih konsisten dibandingkan metode instalasi konvensional. Penelitian tersebut juga menunjukkan bahwa penerapan Docker pada arsitektur multiserver mampu meningkatkan fleksibilitas pengelolaan aplikasi berbasis web.
+
+Persamaan penelitian tersebut dengan penelitian yang penulis lakukan adalah sama-sama memanfaatkan **teknologi Docker** sebagai solusi dalam proses deployment aplikasi berbasis web. Selain itu, kedua penelitian juga memiliki tujuan untuk meningkatkan efisiensi penggunaan sumber daya komputasi serta mempermudah proses pengelolaan aplikasi.
+
+Perbedaan penelitian tersebut dengan penelitian yang penulis lakukan terletak pada objek implementasi. Penelitian Aprilianto dkk. berfokus pada optimalisasi virtualisasi server menggunakan arsitektur multiserver untuk aplikasi berbasis web secara umum, sedangkan penelitian ini secara khusus merancang Docker image untuk aplikasi SLiMS sebagai sistem otomasi perpustakaan sehingga dapat diterapkan pada berbagai lingkungan perpustakaan.
+
+### Penelitian oleh Sari dkk. (2022)
+
+Penelitian yang dilakukan oleh Sari dkk. (2022) dengan judul **"Implementasi Docker untuk Deployment Aplikasi Berbasis Web"** bertujuan untuk menerapkan teknologi Docker sebagai media deployment aplikasi berbasis web guna meningkatkan portabilitas aplikasi, kemudahan implementasi, dan efisiensi pengelolaan server. Hasil penelitian menunjukkan bahwa Docker mampu menyederhanakan proses deployment karena seluruh dependensi aplikasi dapat dikemas dalam satu container sehingga instalasi menjadi lebih cepat dan konsisten pada berbagai lingkungan sistem.
+
+Persamaan penelitian tersebut dengan penelitian yang penulis lakukan terletak pada penggunaan Docker sebagai teknologi utama dalam proses deployment aplikasi. Kedua penelitian juga mengevaluasi kemudahan implementasi dan efisiensi pengelolaan aplikasi setelah menggunakan Docker.
+
+Perbedaan penelitian tersebut dengan penelitian yang penulis lakukan adalah penelitian Sari dkk. hanya membahas implementasi Docker pada aplikasi berbasis web secara umum, sedangkan penelitian ini berfokus pada penyusunan **rancangan Docker image** yang secara khusus ditujukan untuk aplikasi SLiMS sebagai sistem otomasi perpustakaan dengan mempertimbangkan kebutuhan implementasi pada lingkungan perpustakaan.
