@@ -122,8 +122,9 @@ F. Closing — Refleksi
 # untuk ketua organisasi
 1. bisa dijelaskan apa yang melatarbelakangi pembangunan ifrastruktur protokol informasi untuk arsip digital ini
 2. bisa anda jelaskan bagaimana pola berjalanya sistem ini dari jaringan, keserver, keaplikasi, dan ke client
-3. bisa di jelaskan kebijakan apa saja yang diberikan kepada anggota dan non anggota di organisasi ini dalam konteks arsipnya
-4. bisa anda jelaskan konsep arsip in out, out in, in in
+3. bisa anda jelaskan standar protokol informasi untuk di sisi client seperti apa 
+4. bisa di jelaskan kebijakan apa saja yang diberikan kepada anggota dan non anggota di organisasi ini dalam konteks arsipnya
+5. bisa anda jelaskan konsep arsip in out, out in, in in
    
 ### 4pilar kearsipan
 ---
