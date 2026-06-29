@@ -135,6 +135,34 @@ C --> D[(MariaDB)]
 Keterangan:
 Masukkan screenshot container, konfigurasi, dan hasil implementasi.
 
+### 4.5.1.1 Membuat Jaringan Docker 
+
+![](../../11210251000172/new-data/01-create-nerwork-docker.png)
+
+### 4.5.1.2 Menjalankan _image database_
+
+![](../../11210251000172/new-data/02-run-iamge-db.png)
+
+### 4.5.1.3 Status _service database_
+
+![](../../11210251000172/new-data/03-status-db-service.png)
+
+### 4.5.1.4 Menjalankan _image sistem otomasi perpustakaan_
+
+![](../../11210251000172/new-data/04-run-image-slims-1.png)
+
+### 4.5.1.5 Status _service sistem otomasi perpustakaan_
+
+![](../../11210251000172/new-data/05-status-slims-1-service.png)
+
+### 4.5.1.6 Memindahkan folder sistem otomasi perpustakaan
+
+![](../../11210251000172/new-data/06-move-slims-directory.png)
+
+### 4.5.1.7 Konfigurasi _stress test_
+
+![](../../11210251000172/new-data/07-configure-test-js.png)
+
 ---
 
 ## 4.5.2 Implementasi Arsitektur Load Balancing
@@ -185,9 +213,13 @@ Pengujian dilakukan pada dua skenario:
 
 ---
 
+## 4.6.1 Menjalankan Pengujian Monolitik
+
+![](../../11210251000172/new-data/08-run-test-js.png)
+
 ## 4.6.1 Hasil Pengujian Monolitik
 
-![ss](11210251000172/new-data/09-result-monolitik.png)
+![](../../11210251000172/new-data/09-result-monolitik.png)
 
 **Gambar 4.4 Hasil Pengujian Monolitik**
 
@@ -205,7 +237,7 @@ Hasil tersebut menunjukkan bahwa ketika beban meningkat hingga 500 pengguna virt
 
 ## 4.6.2 Hasil Pengujian Load Balancing
 
-### (TEMPAT FOTO HASIL K6 LOAD BALANCING)
+![](../../11210251000172/new-data/16-result-load-balancer.png)
 
 **Gambar 4.5 Hasil Pengujian Load Balancing**
 
