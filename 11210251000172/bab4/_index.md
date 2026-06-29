@@ -1,54 +1,126 @@
 # BAB IV HASIL DAN PEMBAHASAN
 
-## 4.1 Gambaran Umum Pengembangan Sistem
+Bab ini menyajikan hasil penelitian yang diperoleh melalui tahapan pengembangan sistem menggunakan pendekatan **Design and Development Research (DDR)**. Sesuai dengan karakteristik metode DDR, penelitian tidak hanya berfokus pada hasil akhir berupa produk, tetapi juga menggambarkan proses identifikasi masalah, analisis kebutuhan, perancangan, implementasi, pengujian, hingga evaluasi terhadap sistem yang dikembangkan (Richey & Klein, 2007).
 
-Pada tahap ini peneliti melakukan pengembangan infrastruktur sistem otomasi perpustakaan dengan menerapkan mekanisme Load Balancer pada lingkungan komputasi berbasis kontainer. Pengembangan dilakukan sebagai respons terhadap permasalahan performa yang ditemukan pada sistem sebelumnya, di mana seluruh permintaan pengguna diproses oleh satu instansi aplikasi sehingga berpotensi menimbulkan penumpukan trafik pada saat beban akses meningkat.
+Tahapan pembahasan dimulai dari identifikasi kondisi eksisting sistem otomasi perpustakaan yang digunakan pada Organisasi N melalui observasi dan wawancara, kemudian dilanjutkan dengan proses pengembangan infrastruktur menggunakan pendekatan **Load Balancing** untuk meningkatkan performa layanan dan mendukung **High Availability**.
 
-Pendekatan yang digunakan dalam penelitian ini mengacu pada metode Design and Development (D&D) yang menekankan proses perancangan, pembangunan, implementasi, dan evaluasi terhadap produk yang dikembangkan. Produk yang dimaksud dalam penelitian ini bukan berupa perangkat lunak baru, melainkan berupa rancangan arsitektur infrastruktur yang bertujuan meningkatkan ketersediaan layanan serta efisiensi distribusi beban akses pada sistem otomasi perpustakaan.
+---
 
-Pengembangan dilakukan pada lingkungan laboratorium menggunakan teknologi virtualisasi berbasis kontainer. Infrastruktur yang dibangun terdiri atas beberapa komponen utama yang saling terhubung, yaitu peladen basis data, beberapa instansi aplikasi otomasi perpustakaan, serta layanan reverse proxy yang berfungsi sebagai pengatur distribusi trafik.
+# 4.1 Analisis Kebutuhan Sistem
 
-Melalui pendekatan tersebut, sistem yang sebelumnya hanya berjalan pada satu titik layanan dikembangkan menjadi arsitektur yang mampu mendistribusikan permintaan pengguna secara lebih merata. Tahapan pengembangan dilakukan secara bertahap dimulai dari penyusunan rancangan sistem, implementasi lingkungan uji, konfigurasi layanan, hingga pengujian performa menggunakan simulasi beban.
+Tahap awal penelitian dilakukan melalui proses identifikasi kebutuhan sistem berdasarkan kondisi operasional yang berjalan pada lingkungan Organisasi N. Analisis kebutuhan menjadi tahapan penting dalam pendekatan Design and Development Research karena berfungsi sebagai dasar dalam menentukan bentuk pengembangan yang akan dilakukan terhadap sistem (Richey & Klein, 2007).
 
-## 4.2 Tahap Perancangan (Design)
+Analisis dilakukan melalui observasi langsung terhadap infrastruktur yang digunakan serta pengumpulan informasi melalui wawancara kepada informan yang memiliki keterlibatan dalam pengelolaan sistem.
 
-Tahap perancangan dilakukan untuk menentukan struktur infrastruktur yang akan digunakan selama proses pengembangan. Aktivitas pada tahap ini meliputi identifikasi kebutuhan sistem, penentuan arsitektur layanan, serta penyusunan mekanisme komunikasi antar komponen.
+Tujuan analisis kebutuhan pada penelitian ini meliputi:
 
-Perancangan dilakukan dengan mempertimbangkan hasil observasi awal yang menunjukkan bahwa penggunaan satu instansi aplikasi menyebabkan seluruh permintaan terkonsentrasi pada satu titik pemrosesan. Kondisi tersebut berpotensi meningkatkan waktu tanggap sistem dan menurunkan kualitas pelayanan ketika jumlah pengguna meningkat secara bersamaan.
+1. Mengidentifikasi kondisi sistem otomasi perpustakaan sebelum dilakukan pengembangan.
+2. Mengidentifikasi kendala performa ketika terjadi peningkatan trafik pengguna.
+3. Menentukan kebutuhan teknis yang diperlukan untuk meningkatkan performa sistem.
+4. Menentukan rancangan solusi yang sesuai dengan kebutuhan organisasi.
 
-Untuk mengatasi kondisi tersebut, peneliti merancang arsitektur berbasis distribusi layanan menggunakan beberapa instansi aplikasi yang berada di belakang mekanisme Load Balancer. Pada rancangan ini, seluruh permintaan pengguna diarahkan terlebih dahulu menuju layanan distribusi sebelum diteruskan ke peladen aplikasi yang tersedia.
+Hasil analisis kebutuhan ini menjadi dasar dalam penyusunan rancangan pengembangan sistem menggunakan pendekatan distribusi beban.
 
-Komponen yang dirancang terdiri atas satu peladen basis data, dua peladen aplikasi otomasi perpustakaan, serta satu layanan reverse proxy yang bertugas melakukan distribusi trafik. Seluruh komponen ditempatkan dalam satu jaringan internal agar komunikasi berlangsung secara terisolasi dan konsisten selama pengujian.
+---
 
-Rancangan ini disusun dengan mempertimbangkan prinsip High Availability dan skalabilitas horizontal sehingga kapasitas layanan dapat ditingkatkan tanpa melakukan perubahan besar terhadap struktur sistem yang telah dibangun.
+# 4.2 Hasil Wawancara Informan
 
-## 4.3 Implementasi Sistem
+Tahap berikutnya dilakukan pengumpulan data melalui wawancara kepada informan penelitian yang telah ditentukan pada Bab III. Wawancara dilakukan untuk memperoleh gambaran kondisi sistem, kebutuhan operasional, serta kendala yang terjadi pada infrastruktur sebelum dilakukan implementasi pengembangan.
 
-Tahapan implementasi dilakukan setelah proses perancangan sistem selesai dan seluruh kebutuhan infrastruktur telah ditentukan berdasarkan hasil observasi awal serta wawancara dengan informan penelitian. Implementasi pada penelitian ini dilakukan menggunakan pendekatan **Design and Development (D&D)** yang menempatkan produk teknologi sebagai objek utama yang dikembangkan dan dievaluasi secara sistematis.
+Data hasil wawancara kemudian digunakan sebagai dasar interpretasi kebutuhan pengembangan sistem.
 
-Pengembangan sistem dilakukan dalam lingkungan laboratorium dengan tujuan memperoleh kondisi yang terkontrol sehingga seluruh variabel teknis dapat diamati secara objektif. Infrastruktur dibangun menggunakan pendekatan **Cloud Computing berbasis containerization** dengan memanfaatkan Docker sebagai media virtualisasi aplikasi.
+## 4.2.1 Profil Informan
 
-Tahap implementasi dibagi menjadi dua kondisi pengujian, yaitu:
+Tabel berikut menunjukkan informan yang terlibat dalam penelitian.
 
-1. Implementasi sistem **tanpa Load Balancer (arsitektur monolitik/single server)**.
-2. Implementasi sistem **dengan Load Balancer (arsitektur High Availability).**
+| No | Nama   | Jabatan                   |
+| -- | ------ | ------------------------- |
+| 1  | Null   | Chief Information Officer |
+| 2  | Rookit | DevOps Engineer           |
+| 3  | Neckle | DevOps Engineer           |
 
-Kedua implementasi tersebut diuji menggunakan parameter dan beban kerja yang sama agar hasil pengamatan dapat dibandingkan secara adil.
+---
 
-### 4.3.1 Implementasi Sistem Tanpa Load Balancer (Single Server)
+## 4.2.2 Hasil Wawancara
 
-Tahap pertama dilakukan dengan membangun sistem otomasi perpustakaan menggunakan pendekatan monolitik, yaitu seluruh layanan dijalankan pada satu instansi aplikasi.
+### a. Kondisi Sistem Sebelum Pengembangan
 
-Arsitektur ini terdiri dari:
+Berdasarkan hasil wawancara diperoleh informasi bahwa sistem otomasi perpustakaan telah berjalan dan digunakan dalam operasional sehari-hari. Namun ketika terjadi peningkatan akses secara bersamaan, performa sistem mulai mengalami penurunan.
 
-* 1 Container SLiMS
-* 1 Container Database MariaDB
-* 1 Reverse Proxy
-* 1 Node pengujian (K6)
+**Kutipan wawancara:**
 
-Pada pendekatan ini seluruh permintaan pemustaka diproses oleh satu simpul layanan sehingga seluruh konsumsi CPU, RAM, koneksi aktif, dan proses PHP terkonsentrasi pada satu titik.
+> “Pada kondisi trafik tinggi sistem masih dapat berjalan, tetapi waktu tanggap mulai meningkat dibanding kondisi normal.”
 
-Secara konseptual arsitektur dapat digambarkan sebagai berikut:
+Interpretasi:
+
+Temuan tersebut menunjukkan bahwa infrastruktur awal masih memiliki keterbatasan dalam menangani peningkatan jumlah akses secara simultan.
+
+---
+
+### b. Kendala Infrastruktur
+
+Informan menyampaikan bahwa kendala utama berasal dari terpusatnya seluruh permintaan pada satu layanan aplikasi.
+
+**Kutipan wawancara:**
+
+> “Ketika permintaan meningkat, seluruh proses tetap diproses oleh satu layanan sehingga terjadi penumpukan beban.”
+
+Interpretasi:
+
+Kondisi tersebut menunjukkan adanya risiko bottleneck yang menyebabkan waktu respons meningkat.
+
+---
+
+### c. Kebutuhan Pengembangan
+
+Berdasarkan hasil wawancara diperoleh kebutuhan pengembangan berupa:
+
+* peningkatan kapasitas akses simultan;
+* peningkatan ketersediaan layanan;
+* distribusi beban kerja yang lebih merata;
+* peningkatan kemampuan skalabilitas sistem.
+
+---
+
+# 4.3 Analisis Kebutuhan Pengembangan
+
+Data hasil observasi dan wawancara kemudian dianalisis untuk menentukan bentuk pengembangan sistem yang sesuai.
+
+### Tabel 4.1 Analisis Kebutuhan Pengembangan
+
+| Permasalahan        | Temuan                             | Solusi                     |
+| ------------------- | ---------------------------------- | -------------------------- |
+| Respons meningkat   | Sistem melambat saat trafik tinggi | Implementasi Load Balancer |
+| Beban terpusat      | Request diproses satu layanan      | Distribusi beban           |
+| Skalabilitas rendah | Penambahan kapasitas sulit         | Multi-instance aplikasi    |
+| Risiko downtime     | Tidak tersedia redundansi          | High Availability          |
+
+Berdasarkan hasil analisis tersebut dipilih implementasi **Load Balancer** menggunakan beberapa container aplikasi yang menerima distribusi permintaan dari reverse proxy.
+
+Keputusan pengembangan ini dipilih karena secara teoritis sesuai dengan prinsip **Save the time of the user** dan **The Web is a growing organism** yang telah dijelaskan pada Bab II (Noruzi, 2004).
+
+---
+
+# 4.4 Perancangan Pengembangan Sistem
+
+Tahap perancangan dilakukan berdasarkan kebutuhan yang telah diidentifikasi sebelumnya.
+
+Pengembangan sistem dirancang menggunakan komponen:
+
+* Container aplikasi SLiMS;
+* Database MariaDB;
+* Reverse Proxy Nginx sebagai Load Balancer;
+* Jaringan internal container.
+
+---
+
+# 4.5 Implementasi Sistem
+
+Tahap implementasi dilakukan dengan membangun dua kondisi pengujian sebagai bahan evaluasi.
+
+## 4.5.1 Implementasi Arsitektur Monolitik
+
+Pada tahap ini aplikasi dijalankan menggunakan satu instance layanan.
 
 ```mermaid
 flowchart LR
@@ -58,50 +130,16 @@ B --> C[SLiMS Container]
 C --> D[(MariaDB)]
 ```
 
-Seluruh pengujian dilakukan menggunakan skenario trafik bertahap (*ramping virtual users*) hingga mencapai **500 Virtual Users (VUs)**.
+**Gambar 4.2 Implementasi Arsitektur Monolitik**
 
-### 4.3.2 Hasil Implementasi Tanpa Load Balancer
+Keterangan:
+Masukkan screenshot container, konfigurasi, dan hasil implementasi.
 
-Setelah lingkungan monolitik berhasil dijalankan, dilakukan pengujian menggunakan K6 selama **4 menit**.
+---
 
-Hasil pengujian menunjukkan bahwa sistem masih mampu mempertahankan tingkat keberhasilan permintaan sebesar **100%**, namun ditemukan gejala peningkatan waktu tanggap ketika jumlah pengguna meningkat.
+## 4.5.2 Implementasi Arsitektur Load Balancing
 
-Tabel berikut menyajikan hasil pengamatan.
-
-#### Tabel 4.1 Hasil Pengujian Sistem Tanpa Load Balancer
-
-| Parameter               |      Hasil |
-| ----------------------- | ---------: |
-| Virtual Users Maksimum  |        500 |
-| Total Request           |     27.297 |
-| Request Berhasil        |       100% |
-| Request Gagal           |         0% |
-| Rata-rata Response Time | 1,09 detik |
-| Median Response Time    | 1,01 detik |
-| P95 Response Time       | 1,08 detik |
-| Throughput              |  113 req/s |
-| Data Diterima           |     916 MB |
-
-Berdasarkan data tersebut terlihat bahwa sistem masih berada dalam kondisi stabil, namun waktu tanggap mulai meningkat seiring bertambahnya koneksi aktif.
-
-Fenomena ini menunjukkan adanya keterbatasan pendekatan monolitik karena seluruh proses komputasi dilakukan pada satu simpul layanan.
-
-Kondisi tersebut mulai menunjukkan gejala yang berkaitan dengan hukum keempat Noruzi yaitu **Save the time of the user**, di mana peningkatan waktu tunggu berpotensi menurunkan kualitas pengalaman pengguna.
-
-### 4.3.3 Implementasi Sistem Dengan Load Balancer
-
-Setelah dilakukan evaluasi terhadap pendekatan monolitik, tahap berikutnya adalah membangun sistem menggunakan pendekatan **Load Balancer**.
-
-Pada implementasi ini dilakukan perubahan struktur arsitektur dengan menambahkan:
-
-* 1 Container Nginx Load Balancer
-* 2 Container SLiMS
-* 1 Database terpusat
-* Health checking
-
-Seluruh container aplikasi dikonfigurasi menggunakan spesifikasi sumber daya yang sama agar tidak terjadi bias performa.
-
-Arsitektur implementasi ditunjukkan sebagai berikut.
+Tahap berikutnya dilakukan implementasi pengembangan menggunakan dua instance aplikasi dan satu reverse proxy.
 
 ```mermaid
 flowchart LR
@@ -119,74 +157,100 @@ C --> E[(MariaDB)]
 D --> E
 ```
 
-Pada tahap ini algoritma distribusi menggunakan metode **Round Robin** karena seluruh container memiliki spesifikasi identik.
+**Gambar 4.3 Implementasi Arsitektur Load Balancing**
 
-Pemilihan metode ini dilakukan berdasarkan prinsip distribusi beban yang merata pada lingkungan homogen.
+Keterangan:
+Masukkan screenshot topologi, container, dan konfigurasi.
 
 ---
 
-### 4.3.4 Hasil Implementasi Dengan Load Balancer
+# 4.6 Pengujian Sistem
 
-Pengujian dilakukan menggunakan skenario identik dengan implementasi sebelumnya.
+Pengujian dilakukan menggunakan metode **load testing** menggunakan K6.
 
-Parameter pengujian tetap menggunakan:
+### Tabel 4.2 Skenario Pengujian
 
-* Durasi: 4 menit
-* Maksimum: 500 VUs
-* Endpoint: halaman utama SLiMS
-* Interval pengguna meningkat bertahap
+| Parameter    |              Nilai |
+| ------------ | ------------------: |
+| Virtual User |                 500 |
+| Durasi       |             4 menit |
+| Metode       |        Load Testing |
+| Tool         |                  K6 |
+| Endpoint     | Halaman utama SLiMS |
 
-Hasil pengujian diperoleh sebagai berikut.
+Pengujian dilakukan pada dua skenario:
 
-#### Tabel 4.2 Hasil Pengujian Sistem Dengan Load Balancer
+1. Arsitektur monolitik
+2. Arsitektur load balancing
 
-| Parameter               |     Hasil |
-| ----------------------- | --------: |
-| Virtual Users Maksimum  |       500 |
-| Total Request           |    53.561 |
-| Request Berhasil        |      100% |
-| Request Gagal           |        0% |
-| Rata-rata Response Time |  11,31 ms |
-| Median Response Time    |   9,23 ms |
-| P95 Response Time       |  19,27 ms |
-| Throughput              | 222 req/s |
-| Data Diterima           |    1,8 GB |
+---
 
-Hasil menunjukkan peningkatan signifikan dibanding implementasi sebelumnya.
+## 4.6.1 Hasil Pengujian Monolitik
 
-Jumlah permintaan yang berhasil diproses meningkat hampir dua kali lipat, sementara waktu tanggap turun dari skala detik menjadi milidetik.
+![ss](11210251000172/new-data/09-result-monolitik.png)
 
-Penurunan waktu tanggap tersebut menunjukkan bahwa distribusi trafik berhasil mengurangi antrean proses pada masing-masing simpul layanan.
+**Gambar 4.4 Hasil Pengujian Monolitik**
 
-Selain itu tidak ditemukan kegagalan permintaan selama pengujian berlangsung.
+Berdasarkan hasil pengujian monolitik diperoleh bahwa:
 
-## 4.4 Evaluasi Produk (Development Evaluation)
+Total request berhasil diproses sebesar 27.306 request
+Tingkat keberhasilan pengujian sebesar 99,39%
+Request gagal sebesar 0,60%
+Rata-rata waktu respons sebesar 1,09 detik
+Persentil ke-95 (P95) sebesar 84,56 ms
 
-Tahap evaluasi dilakukan sebagai bagian akhir dari pendekatan **Design and Development Research**.
+Hasil tersebut menunjukkan bahwa ketika beban meningkat hingga 500 pengguna virtual secara bersamaan, sistem monolitik mulai menunjukkan keterbatasan kapasitas yang ditandai dengan meningkatnya waktu respons dan munculnya request yang gagal diproses.
 
-Evaluasi difokuskan pada tiga indikator utama:
+---
 
-1. Efektivitas distribusi beban.
-2. Efisiensi waktu tanggap.
-3. Kemampuan mendukung High Availability.
+## 4.6.2 Hasil Pengujian Load Balancing
 
-#### Tabel 4.3 Perbandingan Implementasi
+### (TEMPAT FOTO HASIL K6 LOAD BALANCING)
 
-| Parameter    |  Tanpa LB | Dengan LB |
-| ------------ | --------: | --------: |
-| Request      |    27.297 |    53.561 |
-| Success Rate |      100% |      100% |
-| Avg Response |    1,09 s |  11,31 ms |
-| Throughput   | 113 req/s | 222 req/s |
+**Gambar 4.5 Hasil Pengujian Load Balancing**
 
-Berdasarkan perbandingan tersebut diperoleh:
+Berdasarkan hasil pengujian load balancing diperoleh bahwa:
 
-* Throughput meningkat sekitar **96%**
-* Response time turun sekitar **98%**
-* Tidak ditemukan kegagalan layanan
+Total request berhasil diproses sebesar 53.561 request
+Tingkat keberhasilan mencapai 100%
+Tidak ditemukan request gagal
+Rata-rata waktu respons sebesar 11,31 ms
+Persentil ke-95 (P95) sebesar 19,27 ms
 
-Temuan ini memperlihatkan bahwa implementasi Load Balancer memberikan peningkatan nyata terhadap kemampuan sistem dalam menangani lonjakan trafik.
+Hasil tersebut menunjukkan bahwa distribusi beban berhasil meningkatkan kemampuan sistem dalam menangani permintaan secara simultan.
 
-Secara teoritis hasil ini memperkuat hukum Noruzi **Save the time of the user** karena waktu tunggu pengguna berhasil ditekan secara signifikan.
+---
 
-Selain itu kemampuan menambah simpul layanan tanpa perubahan besar pada arsitektur mendukung hukum **The Web is a growing organism**, yang menekankan pentingnya kemampuan sistem untuk berkembang secara dinamis.
+# 4.7 Analisis Hasil Pengujian
+
+Tahap ini dilakukan untuk membandingkan performa kedua arsitektur.
+
+### Tabel 4.3 Perbandingan Hasil Pengujian
+
+| Indikator         | Monolitik | Load Balancing |
+| ----------------- | --------: | -------------: |
+| Total Request     |    27.306 |         53.561 |
+| Success Rate      |    99,39% |           100% |
+| Failed Request    |     0,60% |             0% |
+| Avg Response Time |    1,09 s |       11,31 ms |
+| P95               |  84,56 ms |       19,27 ms |
+
+Berdasarkan hasil pengujian dilakukan interpretasi terhadap perubahan performa sistem setelah diterapkan distribusi beban.
+
+---
+
+# 4.8 Evaluasi Pengembangan Berdasarkan Design and Development Research
+
+Tahap evaluasi dilakukan sebagai bagian akhir dari pendekatan DDR.
+
+Evaluasi dilakukan dengan membandingkan kondisi sebelum dan sesudah pengembangan berdasarkan hasil implementasi dan pengujian.
+
+Hasil evaluasi menjadi dasar untuk menentukan apakah sistem yang dikembangkan telah memenuhi tujuan penelitian yaitu meningkatkan performa, efisiensi distribusi beban, serta mendukung ketersediaan layanan.
+
+---
+
+### Referensi
+
+Richey, R. C., & Klein, J. D. (2007). *Design and Development Research: Methods, Strategies, and Issues*. Routledge.
+
+Noruzi, A. (2004). *Application of Ranganathan’s Laws to the Web*. Webology.
