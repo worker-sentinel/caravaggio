@@ -2,85 +2,111 @@ Rancangan docker image untuk aplikasi slims
 
 # LATAR BELAKANG MASALAH
 
-Perkembangan teknologi informasi pada era digital telah menjadi elemen krusial bagi berbagai institusi, termasuk perusahaan, lembaga pemerintah, maupun organisasi pendidikan. Teknologi informasi tidak hanya berperan sebagai pendukung operasional, tetapi juga sebagai sistem yang memastikan informasi dapat dikelola dan disampaikan secara efektif kepada pengguna. Seiring dengan meningkatnya penggunaan internet, aplikasi berbasis web berkembang pesat dan menjadi pilihan utama bagi banyak instansi karena kemudahan implementasi, fleksibilitas akses, serta kemampuan integrasinya dengan berbagai platform komputasi. Kondisi ini menegaskan bahwa kebutuhan terhadap teknologi informasi yang efisien, adaptif, dan mudah dikelola semakin tidak terhindarkan.
+Perpustakaan merupakan lembaga pengelola informasi yang memiliki peran penting dalam mendukung kegiatan pendidikan, penelitian, pelestarian pengetahuan, dan penyebaran informasi kepada masyarakat. Seiring dengan perkembangan teknologi informasi, perpustakaan dituntut untuk mampu beradaptasi dengan perubahan kebutuhan pengguna yang semakin mengutamakan kecepatan, kemudahan akses, dan ketersediaan informasi secara digital. Kondisi tersebut mendorong perpustakaan untuk memanfaatkan teknologi informasi dalam berbagai aktivitas pengelolaan layanan dan sumber daya informasi yang dimiliki.
 
-Aplikasi berbasis web juga semakin banyak digunakan karena penggunaannya yang mudah. Aplikasi berbasis web dapat diimplementasikan ke berbagai komputer dengan mudah hanya dengan menjalankan sebuah web browser. Untuk mendukung kemudahan tersebut dibutuhkan proses deployment (penyebaran) aplikasi yang mudah beserta aplikasi pendukungnya seperti aplikasi database, web server, serta dependensi dan environment lainnya. Ada dua metode yang sering digunakan untuk melakukan deployment aplikasi web ke dalam server. Metode yang pertama adalah menggunakan metode deployment konvensional dengan melakukan penginstalan langsung ke dalam server tunggal. Kelebihan dari metode ini adalah proses persiapan yang cukup mudah, simple, dan cepat dalam proses deploymentnya. Namun, dalam metode ini aplikasi yang diinstall tidak terisolasi, maka dari itu jika melakukan deploy untuk beberapa aplikasi pada server tunggal maka dapat terjadi konflik antar dependensi aplikasi yang diinstall. Metode kedua adalah menggunakan virtualisasi. Dalam metode ini, setiap aplikasi beserta dependensinya dijalankan di dalam virtual machine (VM) yang terpisah. Menurut Morabito (2017), keunggulan utama virtualisasi terletak pada skalabilitasnya, karena aplikasi dapat berjalan pada sumber daya yang terisolasi sehingga penambahan kapasitas menjadi lebih fleksibel. Namun demikian, penggunaan VM berbasis hypervisor memerlukan sumber daya komputasi yang besar, sehingga kurang efisien ketika dijalankan pada lingkungan dengan keterbatasan sumber daya.
+Pemanfaatan teknologi informasi di perpustakaan telah mengubah berbagai proses kerja yang sebelumnya dilakukan secara manual menjadi terkomputerisasi. Salah satu bentuk penerapan teknologi informasi di perpustakaan adalah penggunaan sistem otomasi perpustakaan. Sistem otomasi perpustakaan memungkinkan berbagai kegiatan seperti pengatalogan, sirkulasi, inventarisasi koleksi, pengelolaan anggota, hingga penyediaan katalog daring (Online Public Access Catalog/OPAC) dapat dilakukan secara lebih efektif dan efisien. Penerapan sistem otomasi perpustakaan tidak hanya membantu pustakawan dalam meningkatkan produktivitas kerja, tetapi juga meningkatkan kualitas layanan informasi yang diterima oleh pemustaka.
+
+Perkembangan sistem otomasi perpustakaan di Indonesia turut didukung oleh hadirnya berbagai perangkat lunak sumber terbuka (Open Source Software) yang dapat digunakan secara bebas oleh perpustakaan. Penggunaan perangkat lunak sumber terbuka menjadi alternatif yang menarik bagi perpustakaan karena dapat mengurangi biaya pengadaan perangkat lunak sekaligus memberikan fleksibilitas dalam proses pengembangan dan pemeliharaan sistem. Salah satu perangkat lunak otomasi perpustakaan sumber terbuka yang paling banyak digunakan di Indonesia adalah Senayan Library Management System (SLiMS).
+
+SLiMS merupakan aplikasi otomasi perpustakaan berbasis web yang dikembangkan oleh komunitas pengembang Indonesia dan didistribusikan di bawah lisensi GNU General Public License versi 3 (GPL v3). Aplikasi ini pertama kali diperkenalkan pada tahun 2007 dan terus mengalami perkembangan hingga saat ini. Berbagai fitur yang tersedia pada SLiMS memungkinkan perpustakaan untuk mengelola koleksi, layanan sirkulasi, keanggotaan, pelaporan, hingga penyediaan katalog daring dalam satu sistem yang terintegrasi. Kemudahan penggunaan, sifatnya yang terbuka, serta dukungan komunitas yang aktif menjadikan SLiMS sebagai salah satu sistem otomasi perpustakaan yang banyak diadopsi oleh berbagai jenis perpustakaan.
+
+Perkembangan SLiMS tidak terlepas dari kontribusi komunitas pengembang yang secara aktif melakukan pembaruan dan pengembangan fitur sesuai kebutuhan perpustakaan. Hingga saat ini, SLiMS telah digunakan oleh berbagai jenis perpustakaan, mulai dari perpustakaan sekolah, perpustakaan perguruan tinggi, perpustakaan umum, perpustakaan pemerintah, hingga perpustakaan khusus. Berdasarkan data komunitas pengembang SLiMS, pada tahun 2019 tercatat sebanyak 1.923 institusi di Indonesia dan 75 institusi di luar Indonesia telah menggunakan SLiMS sebagai sistem otomasi perpustakaan. Jumlah tersebut menunjukkan bahwa SLiMS memiliki tingkat adopsi yang tinggi dan menjadi salah satu perangkat lunak otomasi perpustakaan yang berpengaruh dalam perkembangan layanan informasi perpustakaan di Indonesia.
+
+Meskipun memiliki tingkat penggunaan yang tinggi, implementasi SLiMS masih menghadapi berbagai tantangan, terutama pada aspek instalasi, konfigurasi, deployment, dan pemeliharaan sistem. Sebagai aplikasi berbasis web, SLiMS memerlukan beberapa komponen pendukung seperti web server, database server, serta berbagai dependensi lainnya agar dapat berjalan dengan baik. Setiap perpustakaan umumnya memiliki lingkungan teknologi informasi yang berbeda, baik dari sisi perangkat keras, sistem operasi, maupun konfigurasi jaringan. Perbedaan tersebut sering kali menyebabkan proses instalasi dan deployment SLiMS menjadi lebih kompleks dan membutuhkan kemampuan teknis tertentu dari pengelola sistem.
+
+Untuk mendukung implementasi aplikasi berbasis web, terdapat beberapa pendekatan yang umum digunakan dalam proses deployment. Pendekatan pertama adalah instalasi langsung pada sistem operasi server. Metode ini relatif mudah diterapkan pada lingkungan yang sederhana karena tidak memerlukan lapisan virtualisasi tambahan. Namun, ketika beberapa aplikasi dijalankan dalam satu server, perbedaan versi perangkat lunak dan dependensi dapat menimbulkan konflik yang memengaruhi stabilitas sistem. Kondisi tersebut dapat menyulitkan proses pemeliharaan maupun pembaruan aplikasi pada masa mendatang.
+
+Pendekatan kedua adalah menggunakan teknologi virtualisasi melalui virtual machine (VM). Pada metode ini, setiap aplikasi dijalankan pada lingkungan virtual yang terpisah sehingga memiliki tingkat isolasi yang lebih baik dibandingkan instalasi langsung pada server. Menurut Morabito (2017), virtualisasi memberikan fleksibilitas dalam pengelolaan aplikasi karena setiap sistem dapat dijalankan secara independen. Namun, penggunaan virtual machine memerlukan sumber daya komputasi yang relatif besar karena setiap VM harus menjalankan sistem operasi secara penuh. Akibatnya, kebutuhan penggunaan prosesor, memori, dan penyimpanan menjadi lebih tinggi dibandingkan metode lainnya.
+
+Perkembangan teknologi kontainerisasi memberikan alternatif yang lebih efisien dibandingkan virtualisasi konvensional. Teknologi ini memungkinkan aplikasi dan seluruh dependensinya dikemas dalam satu lingkungan yang terisolasi tanpa memerlukan sistem operasi terpisah. Menurut Merkel (2014), Docker merupakan salah satu platform kontainerisasi yang memungkinkan aplikasi dijalankan secara konsisten pada berbagai lingkungan komputasi. Selain itu, Pahl (2015) menjelaskan bahwa teknologi kontainerisasi mampu meningkatkan portabilitas aplikasi sekaligus menyederhanakan proses deployment karena seluruh komponen yang dibutuhkan aplikasi dapat dikemas dalam satu paket yang terstandarisasi.
+
+Penerapan teknologi Docker pada sistem otomasi perpustakaan berpotensi memberikan berbagai keuntungan. Docker memungkinkan proses instalasi dan deployment aplikasi dilakukan secara lebih cepat, konsisten, dan mudah direplikasi pada berbagai lingkungan server. Selain itu, penggunaan Docker dapat membantu perpustakaan yang memiliki keterbatasan sumber daya teknologi informasi karena proses implementasi sistem menjadi lebih sederhana dibandingkan metode instalasi konvensional. Dengan demikian, Docker dapat menjadi solusi yang mendukung keberlangsungan layanan informasi perpustakaan melalui pengelolaan sistem yang lebih efisien.
+
+Namun demikian, berdasarkan hasil observasi awal terhadap berbagai sumber distribusi Docker image SLiMS yang tersedia secara publik, ditemukan bahwa pembaruan image belum dilakukan secara berkelanjutan. Beberapa image yang tersedia masih menggunakan komponen perangkat lunak yang sudah tidak diperbarui dalam waktu yang cukup lama. Kondisi tersebut berpotensi menimbulkan masalah kompatibilitas dengan versi terbaru SLiMS maupun perangkat lunak pendukung lainnya. Selain itu, belum tersedia rancangan Docker image yang secara khusus dirancang untuk mendukung kebutuhan implementasi SLiMS dengan mempertimbangkan efisiensi penggunaan sumber daya, kemudahan deployment, dan kemudahan pemeliharaan sistem.
+
+Menurut Sommerville (2016), perangkat lunak perlu dikelola dan diperbarui secara berkelanjutan agar tetap mampu memenuhi kebutuhan pengguna, menjaga kualitas sistem, serta mengurangi risiko permasalahan yang dapat muncul akibat perubahan teknologi. Dalam konteks perpustakaan, pemeliharaan sistem otomasi perpustakaan merupakan faktor penting karena secara langsung memengaruhi kualitas layanan informasi yang diberikan kepada pemustaka. Oleh karena itu, diperlukan suatu solusi yang dapat membantu pengelola perpustakaan dalam melakukan implementasi dan pemeliharaan SLiMS secara lebih efektif.
+
+Berbagai penelitian sebelumnya telah membahas implementasi SLiMS pada berbagai jenis perpustakaan serta pemanfaatan Docker dalam deployment aplikasi berbasis web. Namun, penelitian yang secara khusus membahas perancangan Docker image untuk aplikasi SLiMS sebagai upaya mendukung implementasi sistem otomasi perpustakaan masih relatif terbatas. Padahal, kebutuhan terhadap solusi deployment yang mudah, konsisten, dan efisien semakin meningkat seiring dengan berkembangnya penggunaan SLiMS pada berbagai jenis perpustakaan.
+
+Sebagai mahasiswa Program Studi Ilmu Perpustakaan, peneliti memandang bahwa pengembangan teknologi pendukung sistem otomasi perpustakaan merupakan bagian penting dalam mendukung penyelenggaraan layanan informasi yang berkualitas. Penelitian ini tidak berfokus pada pengembangan fitur aplikasi SLiMS, melainkan pada penyediaan solusi deployment yang dapat mempermudah implementasi dan pemeliharaan sistem otomasi perpustakaan. Dengan tersedianya Docker image yang terancang dengan baik, diharapkan perpustakaan dapat mengimplementasikan SLiMS secara lebih mudah, konsisten, dan efisien.
+
+Berdasarkan uraian tersebut, penelitian ini dilakukan dengan judul “Rancangan Docker Image untuk Aplikasi SLiMS”. Penelitian ini menggunakan metode Design and Development Research (DDR) karena metode tersebut memungkinkan proses perancangan, pengembangan, dan evaluasi produk dilakukan secara sistematis dan iteratif. Menurut Pressman dan Maxim (2015), proses pengembangan yang dilakukan secara bertahap dan berkelanjutan dapat menghasilkan produk yang lebih sesuai dengan kebutuhan pengguna. Melalui penelitian ini diharapkan dapat dihasilkan rancangan Docker image yang mampu mendukung implementasi SLiMS secara lebih efektif, efisien, dan berkelanjutan dalam lingkungan perpustakaan.
 
 Morabito, R. (2017). Virtualization on Internet of Things edge devices with container technologies: a performance evaluation. IEEE Access, 5, 8835–8850. https://doi.org/10.1109/ACCESS.2017.2704444
-
-Perkembangan teknologi kontainerisasi telah membawa perubahan signifikan dalam cara aplikasi dikembangkan, didistribusikan, dan dijalankan. Tidak seperti virtualisasi tradisional yang membutuhkan resource besar karena setiap VM menjalankan sistem operasinya sendiri, kontainerisasi memungkinkan aplikasi berjalan dalam lingkungan terisolasi di atas sistem operasi host yang sama. Menurut Merkel (2014), teknologi ini yang dipopulerkan oleh platform seperti Docker memberikan keunggulan berupa efisiensi penggunaan resource, kecepatan deployment, serta kemudahan skalabilitas. Dengan kontainerisasi, proses pengembangan hingga produksi menjadi lebih konsisten karena aplikasi beserta dependensinya dapat dikemas dalam satu paket yang dapat dijalankan di berbagai infrastruktur tanpa perlu konfigurasi ulang yang kompleks (Pahl, 2015).
 
 Merkel, D. (2014). Docker: lightweight Linux containers for consistent development and deployment. Linux Journal, 2014(239), 2.
 Pahl, C. (2015). Containerization and the PaaS cloud. IEEE Cloud Computing, 2(3), 24–31. https://doi.org/10.1109/MCC.2015.51
 
-Kemudahan yang diberikan dalam proses deployment aplikasi dapat membantu pengembang perpustakaan dalam melakukan penyebaran aplikasi secara efisien. Ayat ini menekankan pentingnya tolong-menolong dalam kebaikan, salah satunya dengan menghadirkan solusi teknologi yang memudahkan orang lain. Dengan demikian, rancangan Docker image untuk aplikasi SLiMS dapat menjadi bentuk kontribusi nyata dalam memberikan kemudahan, efisiensi, dan kebermanfaatan bagi pengelola perpustakaan maupun masyarakat luas. Islam telah mengajarkan memberikan kemudahan kepada orang lain dalam Al-Quran surah Al-Maidah ayat 2 yang berbunyi
-
-Artinya: Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa, dan jangan tolong-menolong dalam berbuat dosa dan permusuhan, dan bertakwalah kepada Allah. Sesungguhnya Allah sangat berat siksaan-Nya
-
-SLiMs merupakan aplikasi berbasis web yang berfungsi untuk pengelolaan koleksi yang ada di perpustakaan. Aplikasi website ini dikembangkan secara open source yang dilisensikan dibawah General Public License v3 (GPL v3). SLiMS pertama kali dirilis pada tahun 2007 dengan versi senayan3-rc4. Versi SLiMS saat ini yang berkembang merupakan versi 9.6.1 yang dirilis pada 11 Juli 2023. Dalam perkembangannya SLiMS sudah memiliki berbagai fitur yang siap mendukung kebutuhan pustakawan dalam mengelola perpustakaannya. 
-
-Perkembangan SLiMS tidak terlepas dari campur tangan developer dan komunitas pengembang SLiMS didalamnya. Sebagai Open Software Services (OSS) berbasis web, banyak developer dan komunitas yang berperan aktif untuk terus mengembangkan SLiMS Diantaranya merupakan pengembang dan komunitas dari indonesia dan juga sebagian dari luar negeri. Mereka berkontribusi dengan memberikan update-update fitur yang saling melengkapi sehingga dapat meningkatkan kinerja SLiMS untuk dilayankan kepada pemustaka. Perkembangan SLiMS juga dipengaruhi terhadap meningkatnya jumlah pengguna, per tahun 2019 pengguna slims untuk instansi di indonesia mencapai angka 1.923 pengguna. Sedangkan untuk pengguna diluar indonesia mencapai 75 instansi Pengguna SLiMS mencakup beragam jenis lembaga perpustakaan, meliputi perpustakaan sekolah, perpustakaan perguruan tinggi, perpustakaan instansi pemerintahan, perpustakaan daerah, perpustakaan umum, serta perpustakaan khusus.
-
-Namun, distribusi aplikasi SLiMS dalam bentuk Docker image hingga saat ini belum mendapatkan pembaruan secara berkelanjutan. Kondisi tersebut berpotensi menimbulkan keterbatasan dalam pemenuhan kebutuhan pengelolaan perpustakaan yang terus berkembang seiring dengan kemajuan teknologi informasi. Ketiadaan update dapat berdampak pada keterlambatan adopsi fitur baru, kurangnya perbaikan terhadap bug, serta potensi celah keamanan yang dapat mengganggu stabilitas sistem. Oleh karena itu, diperlukan upaya perancangan ulang dan pemeliharaan Docker image SLiMS agar senantiasa relevan, adaptif, dan sesuai dengan kebutuhan perpustakaan di berbagai jenis lembaga. Hal ini sejalan dengan pendapat Sommerville (2016) yang menyatakan bahwa perangkat lunak harus dikelola dan diperbarui secara berkelanjutan untuk menjaga kualitas, keandalan, serta kesesuaian dengan kebutuhan pengguna.
-
 Sommerville, I. (2016). Software Engineering (10th ed.). Boston: Pearson.
-
-Oleh karena itu, penelitian ini berfokus pada perancangan Docker image untuk aplikasi SLiMS dengan menggunakan metode penelitian DDR. Metode ini dipilih karena memungkinkan proses pengembangan yang iteratif serta melibatkan evaluasi secara berkelanjutan, sehingga hasil yang diperoleh dapat lebih sesuai dengan kebutuhan pengguna (Pressman & Maxim, 2015). Penelitian ini diharapkan dapat memberikan kontribusi dalam menghadirkan solusi teknologi yang mempermudah proses deployment aplikasi perpustakaan serta mendukung kinerja layanan informasi yang lebih baik.
 
 Pressman, R. S., & Maxim, B. R. (2015). Software Engineering: A Practitioner’s Approach (8th ed.). New York: McGraw-Hill.
 
-Dari latar belakang yang telah dipaparkan, peneliti menetapkan topik penelitian dengan judul “Rancangan Docker Image untuk Aplikasi SLiMS”. Pemilihan topik ini didasarkan pada kebutuhan akan solusi deployment yang lebih efisien, portabel, dan adaptif dalam mendukung pengelolaan aplikasi SLiMS di berbagai jenis perpustakaan. Dengan memanfaatkan teknologi container Docker, diharapkan rancangan yang dihasilkan mampu mengatasi keterbatasan metode deployment konvensional maupun virtualisasi, sekaligus memberikan kemudahan dalam proses pemeliharaan serta pembaruan sistem. Selain itu, penelitian ini juga dimaksudkan untuk memberikan kontribusi praktis bagi pengembang dan pengelola perpustakaan dalam upaya peningkatan kualitas layanan informasi melalui pemanfaatan teknologi yang lebih modern dan berkelanjutan.
 
 # IDENTIFIKASI MASALAH
-Berdasarkan latar belakan yang telah diuraikan diatas maka dapat diidentifikasi masalah yaitu:
+Berdasarkan latar belakang yang telah diuraikan, maka dapat diidentifikasi beberapa permasalahan sebagai berikut:
 
-1. Distribusi aplikasi SLiMS dalam bentuk Docker image belum tersedia secara berkelanjutan, sehingga menimbulkan kesulitan dalam proses instalasi dan deployment pada berbagai lingkungan perpustakaan.Diperlukan rancangan Docker image untuk aplikasi SLiMS yang mendukung instalasi secara efisien, portabel, dan adaptif.
-
-2. Diperlukan rancangan Docker image untuk aplikasi SLiMS yang mendukung instalasi secara efisien, portabel, dan adaptif.
-
-3. Perlu dipastikan rancangan Docker image yang dihasilkan memiliki kinerja yang optimal, meliputi stabilitas, efisiensi penggunaan sumber daya, serta kemudahan pemeliharaan dan pembaruan.
-
+1. Pemanfaatan sistem otomasi perpustakaan menjadi kebutuhan penting dalam mendukung efektivitas pengelolaan koleksi dan layanan informasi di perpustakaan.
+2. SLiMS sebagai sistem otomasi perpustakaan yang banyak digunakan memerlukan lingkungan aplikasi yang terkonfigurasi dengan baik agar dapat berjalan secara optimal.
+3. Proses instalasi dan deployment SLiMS masih memerlukan konfigurasi berbagai komponen pendukung seperti web server, database server, dan dependensi lainnya yang dapat menjadi kendala bagi sebagian pengelola perpustakaan.
+4. Perbedaan konfigurasi perangkat keras, sistem operasi, dan lingkungan server pada setiap perpustakaan berpotensi menyebabkan ketidakkonsistenan dalam proses implementasi SLiMS.
+5. Penggunaan metode deployment konvensional maupun virtual machine masih memiliki keterbatasan, baik dari sisi pengelolaan dependensi maupun efisiensi penggunaan sumber daya komputasi.
+6. Docker image SLiMS yang tersedia saat ini belum mendapatkan pembaruan dan pengelolaan secara berkelanjutan sehingga berpotensi menimbulkan masalah kompatibilitas, pemeliharaan, dan implementasi sistem.
+7. Diperlukan rancangan Docker image untuk aplikasi SLiMS yang mampu mendukung proses deployment secara lebih efisien, portabel, mudah dipelihara, dan sesuai dengan kebutuhan pengelolaan sistem informasi perpustakaan.
 
 
 # BATASAN MASALAH
-Dari identifikasi masalah yang ditentukan dari penelitian ini, diperlukan adanya suatu pembatasan masalah agar pengkajiannya dapat terfokus, berikut beberapa pembatasan masalah yang peneliti tetapkan:
-Penelitian ini hanya berfokus pada perancangan Docker image untuk aplikasi SLiMS, tidak mencakup pengembangan fitur baru pada aplikasi SLiMS itu sendiri.
+Agar penelitian ini lebih terarah dan sesuai dengan tujuan yang ingin dicapai, maka penelitian dibatasi pada hal-hal sebagai berikut:
 
-1. Lingkup penelitian dibatasi pada proses deployment dan pengujian kinerja Docker image aplikasi SLiMS, tanpa membahas aspek keamanan sistem secara mendalam.
-
-2. Pengujian kinerja dilakukan pada aspek efisiensi penggunaan sumber daya, stabilitas aplikasi, serta kemudahan deployment, bukan pada uji beban berskala besar.
-
-3. Penelitian menggunakan metode prototyping sehingga hasil yang diperoleh berupa rancangan dan implementasi prototipe Docker image, bukan produk final siap distribusi resmi.
-
-4. Lingkungan pengujian dibatasi pada server berbasis Linux dengan konfigurasi tertentu, sehingga hasil penelitian belum tentu dapat mewakili seluruh jenis infrastruktur yang lebih kompleks.
+1. Penelitian ini berfokus pada perancangan Docker image untuk aplikasi Senayan Library Management System (SLiMS) sebagai sistem otomasi perpustakaan berbasis web.
+2. Penelitian tidak mencakup pengembangan, modifikasi, atau penambahan fitur pada kode sumber aplikasi SLiMS.
+3. Rancangan Docker image yang dikembangkan difokuskan pada kebutuhan instalasi, konfigurasi, dan deployment aplikasi SLiMS dalam lingkungan server berbasis Linux.
+4. Pengujian yang dilakukan terbatas pada aspek fungsionalitas aplikasi, kemudahan deployment, stabilitas sistem, dan efisiensi penggunaan sumber daya komputasi seperti CPU, memori, dan media penyimpanan.
+5. Penelitian tidak membahas implementasi Docker dalam lingkungan orkestrasi kontainer seperti Docker Swarm, Kubernetes, maupun platform cloud secara khusus.
+6. Aspek keamanan sistem, seperti penetration testing, vulnerability assessment, dan audit keamanan aplikasi tidak dibahas secara mendalam dalam penelitian ini.
+7. Hasil penelitian berupa rancangan dan prototipe Docker image yang dapat digunakan sebagai referensi implementasi SLiMS, bukan sebagai produk distribusi resmi dari komunitas pengembang SLiMS.
 
 # RUMUSAN MASALAH
-Berdasarkan uraian latar belakang yang telah dijelaskan, maka rumusan masalah dalam penelitian ini adalah: 
+Berdasarkan latar belakang, identifikasi masalah, dan batasan masalah yang telah diuraikan, maka rumusan masalah dalam penelitian ini adalah sebagai berikut:
 
-1. Bagaimana rancangan docker image untuk aplikasi SLiMS untuk mendukung kebutuhan instalasi dan aplikasi SLiMS?
+1. Bagaimana rancangan Docker image untuk aplikasi Senayan Library Management System (SLiMS) yang dapat mendukung proses instalasi dan deployment secara efisien pada lingkungan perpustakaan?
+2. Bagaimana hasil pengujian rancangan Docker image untuk aplikasi SLiMS berdasarkan aspek fungsionalitas, kemudahan deployment, stabilitas sistem, dan efisiensi penggunaan sumber daya komputasi?
 
 # TUJUAN DAN MANFAAT PENELITIAN
 ## Tujuan Penelitian
-Berdasarkan rumusan masalah di atas, tujuan dari penelitian ini adalah:
+Berdasarkan rumusan masalah yang telah ditetapkan, tujuan penelitian ini adalah:
 
-1. Merancang Docker image untuk aplikasi SLiMS yang dapat mendukung proses instalasi dan deployment secara lebih efisien, portabel, dan adaptif di berbagai lingkungan perpustakaan.
-
-2. Menguji dan memastikan rancangan Docker image aplikasi SLiMS memiliki kinerja yang optimal, meliputi stabilitas, efisiensi penggunaan sumber daya, serta kemudahan pemeliharaan dan pembaruan.
-##Manfaat Penelitian
+1. Merancang Docker image untuk aplikasi Senayan Library Management System (SLiMS) yang dapat mendukung proses instalasi dan deployment secara efisien pada lingkungan perpustakaan.
+2. Mengimplementasikan rancangan Docker image untuk aplikasi SLiMS sebagai alternatif solusi deployment sistem otomasi perpustakaan yang lebih portabel dan mudah dipelihara.
+3. Menguji kinerja Docker image yang dirancang berdasarkan aspek fungsionalitas, kemudahan deployment, stabilitas sistem, dan efisiensi penggunaan sumber daya komputasi.
+4. Memberikan rekomendasi penerapan Docker image sebagai pendukung implementasi sistem otomasi perpustakaan guna meningkatkan efektivitas pengelolaan layanan informasi di perpustakaan.
 
 ### Manfaat Teoritis
 
-1. Memberikan kontribusi pada pengembangan ilmu pengetahuan di bidang teknologi informasi, khususnya dalam penerapan teknologi kontainerisasi untuk aplikasi perpustakaan.
-
-2. Menjadi referensi bagi penelitian selanjutnya yang berfokus pada optimalisasi deployment aplikasi berbasis web menggunakan Docker.
+1. Memberikan kontribusi terhadap pengembangan kajian Ilmu Perpustakaan dan Informasi, khususnya dalam pemanfaatan teknologi informasi untuk mendukung implementasi sistem otomasi perpustakaan.
+2. Menambah referensi ilmiah mengenai penerapan teknologi kontainerisasi (containerization) dalam pengelolaan sistem informasi perpustakaan.
+3. Menjadi bahan rujukan bagi penelitian selanjutnya yang berkaitan dengan implementasi Docker, deployment aplikasi berbasis web, maupun pengembangan infrastruktur teknologi informasi di lingkungan perpustakaan.
 
 ### Manfaat Praktis
 
-1. Bagi pengelola perpustakaan, penelitian ini dapat memberikan solusi dalam mempermudah proses instalasi dan pemeliharaan aplikasi SLiMS melalui Docker image.
+#### Bagi Perpustakaan
 
-2. Bagi pengembang SLiMS, penelitian ini dapat menjadi masukan untuk pengembangan distribusi aplikasi yang lebih modern, efisien, dan mudah diimplementasikan.
+Penelitian ini diharapkan dapat memberikan alternatif solusi dalam proses implementasi sistem otomasi perpustakaan yang lebih mudah, efisien, dan konsisten melalui penggunaan Docker image SLiMS.
 
-3. Bagi masyarakat umum, khususnya pengguna layanan perpustakaan, penelitian ini diharapkan dapat mendukung peningkatan kualitas layanan informasi melalui sistem yang lebih stabil dan mudah diakses.
+#### Bagi Pustakawan dan Pengelola Sistem Perpustakaan
+
+Penelitian ini diharapkan dapat membantu mempermudah proses instalasi, deployment, pemeliharaan, dan pembaruan aplikasi SLiMS sehingga pengelolaan sistem perpustakaan dapat dilakukan secara lebih efektif.
+
+#### Bagi Pengembang dan Komunitas SLiMS
+
+Penelitian ini diharapkan dapat menjadi masukan dalam pengembangan metode distribusi aplikasi SLiMS yang lebih modern, portabel, dan mudah diimplementasikan pada berbagai lingkungan server.
+
+#### Bagi Program Studi Ilmu Perpustakaan
+
+Penelitian ini diharapkan dapat memperkaya kajian mengenai pemanfaatan teknologi informasi dalam pengelolaan perpustakaan serta menjadi contoh penerapan pendekatan interdisipliner antara ilmu perpustakaan dan teknologi informasi.
+
+#### Bagi Peneliti Selanjutnya
+
+Penelitian ini diharapkan dapat menjadi referensi dalam pengembangan penelitian terkait otomasi perpustakaan, deployment aplikasi berbasis kontainer, maupun optimalisasi infrastruktur sistem informasi perpustakaan.
 
 REVIEW KAJIAN TERDAHULU
 
