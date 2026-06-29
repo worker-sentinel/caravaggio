@@ -22,8 +22,6 @@ Komponen yang dirancang terdiri atas satu peladen basis data, dua peladen aplika
 
 Rancangan ini disusun dengan mempertimbangkan prinsip High Availability dan skalabilitas horizontal sehingga kapasitas layanan dapat ditingkatkan tanpa melakukan perubahan besar terhadap struktur sistem yang telah dibangun.
 
-## Baik, kita lanjutkan **BAB IV** dan tetap mempertahankan gaya penulisan yang sudah Anda gunakan: formal akademik, deskriptif, naratif panjang, dan konsisten dengan metode **Design and Development (D&D)** — jadi bukan langsung lompat ke kesimpulan, tetapi menunjukkan alur **desain → pengembangan → implementasi → evaluasi**.
-
 ## 4.3 Implementasi Sistem
 
 Tahapan implementasi dilakukan setelah proses perancangan sistem selesai dan seluruh kebutuhan infrastruktur telah ditentukan berdasarkan hasil observasi awal serta wawancara dengan informan penelitian. Implementasi pada penelitian ini dilakukan menggunakan pendekatan **Design and Development (D&D)** yang menempatkan produk teknologi sebagai objek utama yang dikembangkan dan dievaluasi secara sistematis.
