@@ -214,8 +214,45 @@ Docker menawarkan solusi terhadap permasalahan tersebut melalui konsep container
 
 Dalam penelitian ini, Docker digunakan sebagai teknologi utama untuk merancang Docker Image yang mampu mendukung implementasi SLiMS secara lebih efektif, efisien, portabel, dan mudah dipelihara. Dengan demikian, penerapan Docker diharapkan dapat membantu perpustakaan dalam mengelola sistem otomasi perpustakaan secara berkelanjutan dan mendukung peningkatan kualitas layanan informasi kepada pemustaka.
 
-# KERANGKA BERFIKIR
-Perkembangan Teknologi Informasi │ ▼ Transformasi Perpustakaan │ ▼ Otomasi Perpustakaan │ ▼ SLiMS │ ▼ Kendala Implementasi SLiMS (Instalasi, Deployment, Pemeliharaan) │ ▼ Containerization │ ▼ Docker │ ▼ Rancangan Docker Image SLiMS │ ▼ Implementasi Sistem yang Lebih Efektif, Konsisten, dan Portabel │ ▼ Peningkatan Pengelolaan Layanan dan Akses Informasi
+## 2.6 kerangka berfikir
+
+```text
+Perkembangan Teknologi Informasi
+                │
+                ▼
+      Transformasi Perpustakaan
+                │
+                ▼
+       Otomasi Perpustakaan
+                │
+                ▼
+              SLiMS
+                │
+                ▼
+     Kendala Implementasi SLiMS
+ (Instalasi, Deployment, Pemeliharaan)
+                │
+                ▼
+          Containerization
+                │
+                ▼
+             Docker
+                │
+                ▼
+   Rancangan Docker Image SLiMS
+                │
+                ▼
+ Implementasi Sistem yang Lebih
+ Efektif, Konsisten, dan Portabel
+                │
+                ▼
+Peningkatan Pengelolaan Layanan
+      dan Akses Informasi
+```
+
+### Proposisi Penelitian
+
+Berdasarkan kerangka berpikir yang telah disusun, penelitian ini berangkat dari asumsi bahwa perancangan Docker Image yang sesuai dengan kebutuhan aplikasi SLiMS dapat membantu menyederhanakan proses deployment dan pemeliharaan sistem otomasi perpustakaan. Kemudahan implementasi tersebut diharapkan mampu mendukung keberlangsungan layanan informasi perpustakaan sehingga prinsip *Save the Time of the Reader* dan *Library is a Growing Organism* dapat diwujudkan melalui pemanfaatan teknologi informasi yang lebih optimal.
 
 
 # referensi
