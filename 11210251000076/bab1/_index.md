@@ -101,10 +101,6 @@ Penelitian ini diharapkan dapat menjadi masukan dalam pengembangan metode distri
 
 Penelitian ini diharapkan dapat memperkaya kajian mengenai pemanfaatan teknologi informasi dalam pengelolaan perpustakaan serta menjadi contoh penerapan pendekatan interdisipliner antara ilmu perpustakaan dan teknologi informasi.
 
-#### Bagi Peneliti Selanjutnya
-
-Penelitian ini diharapkan dapat menjadi referensi dalam pengembangan penelitian terkait otomasi perpustakaan, deployment aplikasi berbasis kontainer, maupun optimalisasi infrastruktur sistem informasi perpustakaan.
-
 ## KAJIAN TERDAHULU
 
 Kajian terdahulu dilakukan untuk mengetahui penelitian-penelitian yang telah dilakukan sebelumnya serta mengidentifikasi persamaan, perbedaan, dan celah penelitian (*research gap*) yang menjadi dasar pelaksanaan penelitian ini.
