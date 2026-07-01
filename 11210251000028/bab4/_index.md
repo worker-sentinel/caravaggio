@@ -20,7 +20,7 @@ Selain menjaga kerahasiaan kunci, mekanisme pertukaran kunci pada NBDE juga memb
 
 Dalam implementasi penelitian ini, proses unlock luks berlangsung secara otomatis pada saat sistem melakukan proses booting. Ketika partisi LUKS terdeteksi, Clevis akan menghubungi server Tang melalui jaringan untuk memperoleh informasi yang diperlukan dalam proses pembentukan kunci dekripsi. Apabila server Tang dapat diakses dan proses autentikasi kriptografi berhasil dilakukan, maka Clevis akan menghasilkan KJWK untuk membuka keyslot LUKS sehingga sistem dapat melanjutkan proses booting tanpa memerlukan intervensi pengguna. Sebaliknya, apabila server Tang tidak tersedia atau proses pertukaran kunci gagal dilakukan, maka partisi terenkripsi tidak dapat dibuka secara otomatis sehingga kerahasiaan data tetap terjaga. Mekanisme tersebut menunjukkan bahwa akses terhadap media penyimpanan tidak hanya bergantung pada keberadaan perangkat fisik, tetapi juga pada keberhasilan proses otorisasi melalui infrastruktur jaringan yang telah ditentukan, sehingga keamanan sistem secara keseluruhan dapat ditingkatkan (Red Hat, 2024).
 ## Implementasi NBDE Pada Sistem Operasi Archlinux
-
+ 
 ## Tang server
 Tang adalah layanan yang digunakan untuk menghubungkan kunci kriptografi dengan kondisi atau keberadaan jaringan tertentu sehingga pemanfaatannya bergantung pada lingkungan jaringan yang telah ditentukan (ArchLinux,2026). Mekanisme ini memungkinkan proses pembukaan kunci (dekripsi) dilakukan secara otomatis apabila sistem berada pada lingkungan jaringan yang telah ditentukan dan dipercaya.Pendekatan ini meningkatkan aspek keamanan karena akses terhadap data tidak hanya bergantung pada kunci enkripsi, tetapi juga pada validasi kondisi jaringan yang digunakan.
 
