@@ -235,11 +235,15 @@ Hasil tersebut menunjukkan bahwa ketika beban meningkat hingga 500 pengguna virt
 
 ---
 
-## 4.6.2 Hasil Pengujian Load Balancing
+## 4.6.2 Menjalankan Pengujian Load Balancer
+
+![](../../11210251000172/new-data/15-result-load-balancer.jpg)
+
+## 4.6.2 Hasil Pengujian Load Balancer
 
 ![](../../11210251000172/new-data/16-result-load-balancer.jpg)
 
-**Gambar 4.5 Hasil Pengujian Load Balancing**
+**Gambar 4.4 Hasil Pengujian Load Balancer**
 
 Berdasarkan hasil pengujian load balancing diperoleh bahwa:
 
