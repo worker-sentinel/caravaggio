@@ -8,3 +8,5 @@ Sugiyono. (2019). Metode penelitian kuantitatif, kualitatif, dan R&D. Alfabeta.
 
 
 Yin, R. K. (2018). Case study research and applications: Design and methods (6th ed.). SAGE Publications.
+
+Miles, M. B., Huberman, A. M., & Saldaña, J. (2014). Qualitative Data Analysis: A Methods Sourcebook (3rd ed.). Thousand Oaks, CA: SAGE Publications.
