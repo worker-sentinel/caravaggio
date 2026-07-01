@@ -2313,9 +2313,86 @@ Parameter pengujian:
 * Durasi: 4 menit
 * Endpoint: Halaman utama SLiMS
 
-### 4.5.1 Hasil Pengujian Monolitik
+### 4.5.1 Menjalankan Pengujian Monolitik
 
 ![](../../11210251000172/new-data/08-run-test-js.jpg)
+
+### Menjalankan Pengujian Menggunakan K6
+
+Setelah file skenario pengujian (`test.js`) selesai dibuat, tahap berikutnya adalah menjalankan pengujian menggunakan **K6** melalui container Docker. Pendekatan ini digunakan agar proses pengujian dapat dilakukan tanpa melakukan instalasi K6 secara langsung pada sistem host.
+
+Perintah yang digunakan adalah:
+
+```bash
+docker run --rm -v $(pwd):/scripts grafana/k6 run /scripts/test.js
+```
+
+#### Penjelasan Perintah
+
+| Bagian Perintah | Penjelasan |
+|---|---|
+| `docker run` | Menjalankan container baru dari image Docker. |
+| `--rm` | Menghapus container secara otomatis setelah proses selesai dijalankan sehingga tidak meninggalkan container yang tidak digunakan. |
+| `-v $(pwd):/scripts` | Melakukan *bind mount* direktori saat ini (`$(pwd)`) ke direktori `/scripts` di dalam container agar file `test.js` dapat diakses oleh K6. |
+| `grafana/k6` | Image Docker yang digunakan untuk menjalankan aplikasi K6. Jika image belum tersedia secara lokal maka Docker akan melakukan proses *pull* secara otomatis dari registry. |
+| `run` | Perintah bawaan K6 untuk menjalankan file pengujian. |
+| `/scripts/test.js` | Lokasi file skenario pengujian di dalam container. |
+
+#### Penjelasan Output Pengujian
+
+Setelah perintah dijalankan, sistem akan menampilkan informasi proses pengujian.
+
+##### Informasi Eksekusi
+
+```text
+execution: local
+script: /scripts/test.js
+output: -
+```
+
+Keterangan:
+
+- `execution: local` menunjukkan bahwa pengujian dijalankan secara lokal pada container.
+- `script: /scripts/test.js` menunjukkan file pengujian yang sedang dieksekusi.
+- `output: -` menunjukkan hasil ditampilkan langsung pada terminal.
+
+---
+
+##### Informasi Skenario Pengujian
+
+```text
+scenarios:
+default: Up to 500 looping VUs for 4m0s over 3 stages
+```
+
+Keterangan:
+
+- `default` merupakan nama skenario yang digunakan.
+- `500 max VUs` menunjukkan jumlah maksimum **Virtual Users (VU)** yang disimulasikan.
+- `4m0s` menunjukkan total waktu pengujian.
+- `3 stages` menunjukkan pengujian dilakukan bertahap (*ramp-up → load → ramp-down*).
+
+---
+
+##### Informasi Progres Pengujian
+
+Contoh:
+
+```text
+running (0m07.9s), 014/500 VUs, 49 complete
+```
+
+Keterangan:
+
+| Parameter | Penjelasan |
+|---|---|
+| `0m07.9s` | Waktu berjalan sejak pengujian dimulai |
+| `014/500 VUs` | Jumlah pengguna virtual aktif dibanding target maksimum |
+| `49 complete` | Jumlah iterasi yang telah selesai |
+
+Informasi tersebut akan terus diperbarui hingga seluruh skenario pengujian selesai dijalankan.
+
+Penggunaan K6 melalui container memberikan kemudahan dalam proses pengujian karena lingkungan eksekusi menjadi lebih konsisten dan tidak bergantung pada konfigurasi sistem host.
 
 ### 4.5.2 Hasil Pengujian Monolitik
 
@@ -2323,17 +2400,555 @@ Parameter pengujian:
 
 **Gambar 4.4 Hasil Pengujian Monolitik**
 
+### Hasil Pengujian Kinerja Menggunakan K6 (Arsitektur Monolitik)
+
+Setelah skenario pengujian dijalankan menggunakan K6, sistem menghasilkan sejumlah metrik yang digunakan untuk mengukur performa aplikasi pada kondisi beban simultan. Pengujian dilakukan menggunakan maksimum **500 Virtual Users (VU)** selama **4 menit**.
+
+Hasil pengujian ditampilkan pada terminal dan terdiri atas beberapa kelompok metrik yaitu **checks**, **HTTP**, **execution**, dan **network**.
+
+---
+
+#### 1. Hasil Validasi (Checks)
+
+Output:
+
+```text
+checks_total...........: 54612
+checks_succeeded.......: 99.39%
+checks_failed..........: 0.60%
+```
+
+Keterangan:
+
+| Parameter | Nilai | Penjelasan |
+|---|---:|---|
+| `checks_total` | 54.612 | Total seluruh validasi (*assertion*) yang dijalankan selama pengujian |
+| `checks_succeeded` | 99,39% | Persentase validasi yang berhasil |
+| `checks_failed` | 0,60% | Persentase validasi yang gagal |
+
+Interpretasi:
+
+Nilai keberhasilan sebesar **99,39%** menunjukkan sebagian besar permintaan berhasil diproses dan menghasilkan respons sesuai kriteria pengujian. Namun masih terdapat **0,60% kegagalan**, yang mengindikasikan bahwa pada kondisi beban tinggi sistem mulai mengalami keterbatasan dalam mempertahankan konsistensi respons.
+
+---
+
+#### 2. Validasi Status dan Konten Halaman
+
+Output:
+
+```text
+status is 200
+99% — ✓ 27141 / ✗ 165
+
+halaman utama muncul
+99% — ✓ 27141 / ✗ 165
+```
+
+Keterangan:
+
+| Pemeriksaan | Berhasil | Gagal |
+|---|---:|---:|
+| Status HTTP 200 | 27.141 | 165 |
+| Halaman utama muncul | 27.141 | 165 |
+
+Interpretasi:
+
+Pengujian menunjukkan mayoritas request menghasilkan **kode respons HTTP 200 (OK)** yang menandakan layanan tetap dapat diakses selama pengujian berlangsung.
+
+Sebanyak **165 request** gagal memenuhi kondisi validasi, baik karena respons tidak sesuai maupun halaman tidak berhasil dimuat secara sempurna.
+
+---
+
+#### 3. Hasil Pengukuran HTTP
+
+Output:
+
+```text
+http_req_duration:
+avg=1.09s
+min=5.27ms
+med=9.51ms
+max=1m0s
+p(90)=51.19ms
+p(95)=84.56ms
+```
+
+Keterangan:
+
+| Parameter | Nilai | Penjelasan |
+|---|---:|---|
+| `avg` | 1,09 detik | Rata-rata waktu respons |
+| `min` | 5,27 ms | Respons tercepat |
+| `med` | 9,51 ms | Nilai median |
+| `max` | 1 menit | Respons paling lambat |
+| `p(90)` | 51,19 ms | 90% request selesai ≤ 51,19 ms |
+| `p(95)` | 84,56 ms | 95% request selesai ≤ 84,56 ms |
+
+Interpretasi:
+
+Rata-rata waktu respons sebesar **1,09 detik** menunjukkan bahwa sistem masih dapat melayani permintaan, namun terdapat beberapa request yang mengalami keterlambatan sangat tinggi hingga mencapai **1 menit**.
+
+Nilai **P95 sebesar 84,56 ms** menunjukkan sebagian besar pengguna masih memperoleh respons relatif cepat, tetapi terdapat sejumlah kecil request yang meningkatkan rata-rata secara signifikan.
+
+---
+
+#### 4. Kegagalan Request
+
+Output:
+
+```text
+http_req_failed:
+0.60%
+165 out of 27306
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---:|
+| Request gagal | 165 |
+| Total request | 27.306 |
+| Persentase gagal | 0,60% |
+
+Interpretasi:
+
+Terdapat **165 request gagal** dari total **27.306 request** yang diproses.
+
+Hal ini menunjukkan bahwa pada kondisi beban tinggi sistem monolitik mulai menunjukkan indikasi penurunan kemampuan pemrosesan.
+
+---
+
+#### 5. Throughput Sistem
+
+Output:
+
+```text
+http_reqs:
+27306
+113.489 req/s
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---:|
+| Total request | 27.306 |
+| Request per detik | 113,49 req/s |
+
+Interpretasi:
+
+Sistem mampu memproses rata-rata **113 permintaan per detik** selama pengujian berlangsung.
+
+---
+
+#### 6. Statistik Eksekusi
+
+Output:
+
+```text
+iteration_duration:
+avg=2.07s
+med=1.01s
+p(95)=1.08s
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---:|
+| Rata-rata iterasi | 2,07 detik |
+| Median | 1,01 detik |
+| P95 | 1,08 detik |
+
+Interpretasi:
+
+Setiap siklus pengujian membutuhkan rata-rata **2,07 detik** untuk selesai, termasuk proses request dan waktu tunggu (*sleep*).
+
+---
+
+#### 7. Statistik Virtual User (VU)
+
+Output:
+
+```text
+vus:
+min=2
+max=500
+
+vus_max:
+500
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---:|
+| Minimum VU | 2 |
+| Maksimum VU | 500 |
+
+Interpretasi:
+
+Pengujian berhasil mencapai target maksimum **500 pengguna virtual secara bersamaan**.
+
+---
+
+#### 8. Statistik Jaringan
+
+Output:
+
+```text
+data_received:
+916 MB
+
+data_sent:
+2.2 MB
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---:|
+| Data diterima | 916 MB |
+| Data dikirim | 2,2 MB |
+
+Interpretasi:
+
+Volume data yang diterima lebih besar dibanding data yang dikirim karena mayoritas proses merupakan pengambilan halaman aplikasi dari server.
+
+Secara keseluruhan, hasil pengujian menunjukkan bahwa arsitektur monolitik masih mampu melayani permintaan pengguna hingga 500 pengguna virtual, namun mulai menunjukkan penurunan performa yang ditandai dengan meningkatnya waktu respons dan munculnya request yang gagal diproses.
+
 ---
 
 ### 4.5.3 Menjalankan Pengujian Load Balancer
 
 ![](../../11210251000172/new-data/15-result-load-balancer.jpg)
 
+### Implementasi Skenario Pengujian Menggunakan K6 (`test.js`)
+
+Pada penelitian ini digunakan **K6** sebagai alat pengujian (*load testing*) untuk mengukur kemampuan sistem dalam menangani permintaan pengguna secara simultan. Pengujian dilakukan menggunakan file skrip `test.js` yang berisi konfigurasi jumlah pengguna virtual, durasi pengujian, target URL, serta parameter validasi hasil respons.
+
+Berikut merupakan isi skrip pengujian yang digunakan.
+
+```javascript
+import http from 'k6/http';
+import { sleep, check } from 'k6';
+
+export const options = {
+  stages: [
+    { duration: '1m', target: 100 },
+    { duration: '2m', target: 500 },
+    { duration: '1m', target: 0 },
+  ],
+};
+
+export default function () {
+  const res = http.get('http://172.17.0.1:8080/index.php');
+
+  check(res, {
+    'status is 200': (r) => r.status === 200,
+    'halaman utama muncul': (r) => r.body.includes('Senayan'),
+  });
+
+  sleep(1);
+}
+```
+
+---
+
+### Penjelasan Import Library
+
+```javascript
+import http from 'k6/http';
+```
+
+Digunakan untuk memanggil modul **HTTP K6** yang berfungsi mengirim permintaan (*request*) ke server.
+
+Fungsi utama:
+
+- `http.get()` → mengirim permintaan metode GET.
+- `http.post()` → mengirim permintaan metode POST.
+- `http.put()` → mengirim permintaan metode PUT.
+
+Pada penelitian ini digunakan `GET` karena pengujian dilakukan terhadap halaman utama aplikasi.
+
+---
+
+```javascript
+import { sleep, check } from 'k6';
+```
+
+Digunakan untuk mengimpor fungsi tambahan dari K6.
+
+Keterangan:
+
+| Fungsi | Penjelasan |
+|---|---|
+| `sleep()` | Memberikan jeda antar request |
+| `check()` | Melakukan validasi terhadap respons yang diterima |
+
+---
+
+### Penjelasan Konfigurasi Pengujian
+
+```javascript
+export const options = {
+```
+
+Bagian ini digunakan untuk menentukan konfigurasi global pengujian.
+
+---
+
+```javascript
+stages: [
+```
+
+Parameter `stages` digunakan untuk menentukan pola peningkatan dan penurunan beban selama pengujian.
+
+---
+
+#### Tahap 1 – Ramp Up Awal
+
+```javascript
+{ duration: '1m', target: 100 }
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---|
+| Duration | 1 menit |
+| Target | 100 Virtual User |
+
+Interpretasi:
+
+Pada tahap pertama sistem menerima peningkatan pengguna secara bertahap hingga mencapai **100 pengguna virtual**.
+
+Tujuan tahap ini adalah mensimulasikan kondisi awal ketika pengguna mulai mengakses layanan.
+
+---
+
+#### Tahap 2 – Beban Maksimum
+
+```javascript
+{ duration: '2m', target: 500 }
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---|
+| Duration | 2 menit |
+| Target | 500 Virtual User |
+
+Interpretasi:
+
+Tahap kedua merupakan fase utama pengujian dimana sistem menerima beban maksimum hingga **500 pengguna virtual secara bersamaan**.
+
+Tahap ini digunakan untuk mengukur kemampuan sistem dalam mempertahankan performa ketika menerima lonjakan akses.
+
+---
+
+#### Tahap 3 – Ramp Down
+
+```javascript
+{ duration: '1m', target: 0 }
+```
+
+Keterangan:
+
+| Parameter | Nilai |
+|---|---|
+| Duration | 1 menit |
+| Target | 0 Virtual User |
+
+Interpretasi:
+
+Tahap akhir dilakukan dengan menurunkan jumlah pengguna secara bertahap hingga seluruh sesi pengujian selesai.
+
+---
+
+### Penjelasan Fungsi Utama Pengujian
+
+```javascript
+export default function () {
+```
+
+Bagian ini merupakan fungsi utama yang akan dijalankan oleh setiap Virtual User (VU).
+
+Setiap pengguna virtual akan menjalankan seluruh instruksi di dalam fungsi ini secara berulang.
+
+---
+
+### Pengiriman Request ke Sistem
+
+```javascript
+const res = http.get('http://172.17.0.1:8080/index.php');
+```
+
+Perintah ini digunakan untuk mengirim permintaan HTTP menuju aplikasi yang diuji.
+
+Keterangan:
+
+| Bagian | Penjelasan |
+|---|---|
+| `http.get()` | Mengirim request HTTP GET |
+| `172.17.0.1` | Alamat host tujuan |
+| `8080` | Port aplikasi |
+| `/index.php` | Halaman utama yang diuji |
+
+Respons server disimpan ke variabel `res`.
+
+---
+
+### Validasi Hasil Respons
+
+```javascript
+check(res, {
+```
+
+Digunakan untuk memeriksa apakah respons yang diterima sesuai dengan kondisi yang diharapkan.
+
+---
+
+#### Validasi Status HTTP
+
+```javascript
+'status is 200': (r) => r.status === 200
+```
+
+Kondisi ini memastikan server memberikan **HTTP Status 200 (OK)**.
+
+Jika status berbeda maka request dianggap gagal.
+
+---
+
+#### Validasi Isi Halaman
+
+```javascript
+'halaman utama muncul':
+(r) => r.body.includes('Senayan')
+```
+
+Digunakan untuk memastikan halaman yang diterima benar-benar memuat konten aplikasi.
+
+Kata **"Senayan"** digunakan sebagai indikator bahwa halaman utama SLiMS berhasil ditampilkan.
+
+---
+
+### Jeda Antar Request
+
+```javascript
+sleep(1);
+```
+
+Digunakan untuk memberikan jeda selama **1 detik** sebelum Virtual User melakukan iterasi berikutnya.
+
+Tujuan:
+
+- Mengurangi pengiriman request yang terlalu agresif.
+- Mensimulasikan perilaku pengguna nyata.
+- Membuat hasil pengujian lebih representatif.
+
+Secara keseluruhan, skrip `test.js` digunakan untuk mensimulasikan peningkatan beban pengguna secara bertahap hingga mencapai 500 pengguna virtual, melakukan validasi terhadap respons server, serta mengukur performa aplikasi selama pengujian berlangsung.
+
 ### 4.5.4 Hasil Pengujian Load Balancer
 
 ![](../../11210251000172/new-data/16-result-load-balancer.jpg)
 
 **Gambar 4.4 Hasil Pengujian Load Balancer**
+
+### Analisis Hasil Pengujian Arsitektur Load Balancing
+
+Pengujian dilakukan menggunakan tools **K6** dengan skenario peningkatan beban secara bertahap hingga mencapai **500 Virtual Users (VU)** selama **4 menit**. Pengujian bertujuan untuk mengukur kemampuan sistem dalam menangani permintaan secara simultan setelah diterapkan mekanisme **load balancing** pada lingkungan container.
+
+Berdasarkan hasil pengujian, diperoleh beberapa indikator performa sebagai berikut.
+
+#### 1. Total Request (http_reqs)
+
+Total permintaan (request) yang berhasil diproses selama pengujian mencapai **53.561 request** dengan rata-rata throughput sebesar **222,37 request per detik**.
+
+Hasil ini menunjukkan bahwa sistem mampu mempertahankan kapasitas pemrosesan pada tingkat tinggi meskipun menerima beban akses secara bersamaan dari hingga 500 pengguna virtual.
+
+Jumlah request yang tinggi mengindikasikan bahwa mekanisme distribusi beban berhasil memanfaatkan sumber daya beberapa container aplikasi secara lebih optimal dibandingkan pendekatan layanan tunggal.
+
+---
+
+#### 2. Tingkat Keberhasilan Pengujian (Success Rate)
+
+Nilai **checks_succeeded** menunjukkan angka **100%** atau **107.122 pemeriksaan berhasil dari total 107.122 pemeriksaan**.
+
+Pada skenario pengujian ini terdapat dua kondisi validasi:
+
+- Status HTTP harus bernilai **200 (OK)**.
+- Halaman utama berhasil dimuat sesuai konten yang diharapkan.
+
+Seluruh request memenuhi kedua kondisi tersebut sehingga tidak ditemukan kegagalan selama pengujian berlangsung.
+
+Hasil ini menunjukkan bahwa implementasi load balancing tidak hanya meningkatkan kapasitas pemrosesan tetapi juga mempertahankan konsistensi respons layanan.
+
+---
+
+#### 3. Request Gagal (Failed Request)
+
+Nilai **http_req_failed** menunjukkan **0,00%** atau tidak ditemukan request yang gagal diproses.
+
+Kondisi ini menunjukkan bahwa selama periode pengujian seluruh permintaan dapat diterima, diproses, dan dikembalikan kepada pengguna tanpa menghasilkan error.
+
+Tidak adanya request gagal mengindikasikan bahwa mekanisme distribusi permintaan berjalan secara stabil dan tidak menyebabkan bottleneck pada salah satu container aplikasi.
+
+---
+
+#### 4. Waktu Respons (Average Response Time)
+
+Indikator **http_req_duration** menunjukkan:
+
+- Rata-rata waktu respons (avg): **11,31 ms**
+- Minimum: **4,34 ms**
+- Median: **9,23 ms**
+- Maksimum: **4,73 detik**
+
+Nilai rata-rata sebesar **11,31 milidetik** menunjukkan bahwa sistem mampu memberikan respons dengan waktu yang relatif rendah meskipun menerima beban akses yang tinggi.
+
+Nilai maksimum sebesar **4,73 detik** menunjukkan adanya beberapa request tertentu yang mengalami waktu respons lebih panjang, namun tidak cukup signifikan untuk memengaruhi performa keseluruhan sistem.
+
+---
+
+#### 5. Persentil ke-95 (P95)
+
+Nilai **P95 sebesar 19,27 ms** menunjukkan bahwa **95% dari seluruh request berhasil diproses dalam waktu kurang dari 19,27 milidetik**.
+
+Metrik ini digunakan untuk menggambarkan pengalaman mayoritas pengguna dan umumnya dianggap lebih representatif dibanding rata-rata karena tidak terlalu dipengaruhi oleh nilai ekstrem.
+
+Semakin kecil nilai P95 maka semakin konsisten performa sistem ketika menerima beban tinggi.
+
+---
+
+#### 6. Aktivitas Virtual User (VU)
+
+Pengujian berhasil mencapai:
+
+- Maksimum **500 Virtual Users**
+- Minimum **2 Virtual Users**
+- Iterasi selesai sebanyak **53.561 iterasi**
+
+Hasil tersebut menunjukkan bahwa sistem mampu mempertahankan operasional selama proses peningkatan dan penurunan beban tanpa mengalami penghentian layanan.
+
+---
+
+#### 7. Penggunaan Jaringan (Network)
+
+Selama pengujian diperoleh:
+
+- Data diterima: **1,8 GB**
+- Data dikirim: **4,3 MB**
+
+Perbedaan nilai tersebut menunjukkan bahwa sebagian besar aktivitas jaringan berasal dari pengiriman konten halaman aplikasi kepada pengguna.
+
+Berdasarkan keseluruhan hasil pengujian dapat disimpulkan bahwa penerapan **load balancing berbasis container** mampu meningkatkan kemampuan sistem dalam menangani akses simultan. Distribusi permintaan ke beberapa instance aplikasi menyebabkan beban kerja tidak terpusat pada satu layanan sehingga waktu respons menjadi lebih rendah dan tingkat keberhasilan meningkat. Hasil ini sejalan dengan konsep load balancing yang menjelaskan bahwa penyebaran trafik ke beberapa server dapat meningkatkan **skalabilitas**, **availability**, dan **resource utilization** (Noruzi, 2004).
+
+Temuan ini juga mendukung penelitian Nance dan Hay (2020) yang menyatakan bahwa arsitektur berbasis container memberikan fleksibilitas distribusi layanan dan mampu meningkatkan efisiensi penggunaan sumber daya. 
+
+Selain itu, menurut F5 Networks (2024), load balancer berfungsi menjaga performa aplikasi dengan mendistribusikan trafik secara merata sehingga dapat mengurangi bottleneck dan meningkatkan pengalaman pengguna.
 
 ---
 
@@ -2351,13 +2966,25 @@ Bagian ini membahas interpretasi hasil pengujian berdasarkan indikator performa.
 | Avg Response Time |    1,09 s |       11,31 ms |
 | P95               |  84,56 ms |       19,27 ms |
 
-Interpretasi hasil ditaruh di bagian ini.
+Berdasarkan hasil pengujian yang telah dilakukan pada dua skenario arsitektur, yaitu arsitektur monolitik dan arsitektur dengan implementasi load balancing, diperoleh perbedaan performa yang cukup signifikan pada beberapa indikator pengujian.
 
-Hubungkan dengan:
+Tabel hasil pengujian menunjukkan bahwa sistem dengan pendekatan load balancing mampu menghasilkan **53.561 request**, sedangkan sistem monolitik hanya mencapai **27.306 request** selama periode pengujian yang sama. Peningkatan tersebut menunjukkan bahwa mekanisme distribusi beban memungkinkan sistem memproses jumlah permintaan yang lebih besar dibandingkan ketika seluruh permintaan dipusatkan pada satu instance aplikasi.
 
-* Noruzi (2004)
-* Nance & Hay (2020)
-* F5 Networks (2024)
+Dari sisi **success rate**, sistem monolitik memperoleh nilai **99,39%**, sedangkan implementasi load balancing mencapai **100%** tanpa ditemukan request yang gagal diproses. Hasil ini mengindikasikan bahwa proses distribusi permintaan berhasil menjaga ketersediaan layanan ketika jumlah akses meningkat secara simultan.
+
+Pada indikator **failed request**, sistem monolitik masih menunjukkan kegagalan sebesar **0,60%**, sementara pada sistem load balancing tidak ditemukan kegagalan selama proses pengujian berlangsung. Kondisi tersebut menunjukkan bahwa distribusi beban dapat mengurangi risiko bottleneck yang umumnya terjadi ketika seluruh permintaan diarahkan pada satu layanan.
+
+Perbedaan paling terlihat terdapat pada indikator **average response time**. Sistem monolitik menghasilkan rata-rata waktu respons sebesar **1,09 detik**, sedangkan sistem load balancing hanya sebesar **11,31 milidetik**. Selain itu, nilai **persentil ke-95 (P95)** juga mengalami penurunan dari **84,56 ms** menjadi **19,27 ms**. Penurunan nilai P95 menunjukkan bahwa sebagian besar pengguna memperoleh waktu respons yang lebih konsisten dan lebih cepat.
+
+Secara umum, hasil tersebut menunjukkan bahwa penerapan load balancing tidak hanya meningkatkan jumlah permintaan yang dapat diproses, tetapi juga meningkatkan kualitas layanan melalui penurunan latensi dan peningkatan tingkat keberhasilan akses.
+
+Temuan penelitian ini sejalan dengan penelitian **Noruzi (2004)** yang menyatakan bahwa pada sistem terdistribusi, mekanisme load balancing diperlukan untuk mendistribusikan beban kerja secara efisien antar server sehingga mampu meningkatkan performa dan mencegah terjadinya konsentrasi beban pada satu node. ([ScienceDirect][1])
+
+Hasil penelitian ini juga mendukung pendapat **Nance dan Hay (2020)** yang menjelaskan bahwa penerapan load balancing pada lingkungan komputasi modern berkontribusi terhadap peningkatan **skalabilitas**, **throughput**, serta pengurangan **response time**, khususnya ketika sistem terdiri dari beberapa layanan yang berjalan secara paralel. ([arXiv][2])
+
+Selain itu, hasil pengujian ini konsisten dengan rekomendasi industri yang disampaikan oleh **F5 Networks (2024)** bahwa load balancing berperan dalam meningkatkan **availability**, **resource utilization**, serta menjaga kestabilan layanan melalui distribusi trafik ke beberapa server backend sehingga mengurangi risiko overload pada satu titik layanan. ([InfoWorld][3])
+
+Berdasarkan keseluruhan hasil pengujian dapat disimpulkan bahwa implementasi load balancing pada sistem yang dikembangkan berhasil memberikan peningkatan performa dibandingkan arsitektur monolitik. Peningkatan tersebut terlihat dari bertambahnya kapasitas pemrosesan request, meningkatnya tingkat keberhasilan akses, serta menurunnya waktu respons sistem ketika menerima beban pengguna secara simultan.
 
 ---
 
