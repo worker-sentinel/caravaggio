@@ -137,31 +137,31 @@ Masukkan screenshot container, konfigurasi, dan hasil implementasi.
 
 ### 4.5.1.1 Membuat Jaringan Docker 
 
-![](../../11210251000172/new-data/01-create-nerwork-docker.png)
+![](../../11210251000172/new-data/01-create-nerwork-docker.jpg)
 
 ### 4.5.1.2 Menjalankan _image database_
 
-![](../../11210251000172/new-data/02-run-iamge-db.png)
+![](../../11210251000172/new-data/02-run-iamge-db.jpg)
 
 ### 4.5.1.3 Status _service database_
 
-![](../../11210251000172/new-data/03-status-db-service.png)
+![](../../11210251000172/new-data/03-status-db-service.jpg)
 
 ### 4.5.1.4 Menjalankan _image sistem otomasi perpustakaan_
 
-![](../../11210251000172/new-data/04-run-image-slims-1.png)
+![](../../11210251000172/new-data/04-run-image-slims-1.jpg)
 
 ### 4.5.1.5 Status _service sistem otomasi perpustakaan_
 
-![](../../11210251000172/new-data/05-status-slims-1-service.png)
+![](../../11210251000172/new-data/05-status-slims-1-service.jpg)
 
 ### 4.5.1.6 Memindahkan folder sistem otomasi perpustakaan
 
-![](../../11210251000172/new-data/06-move-slims-directory.png)
+![](../../11210251000172/new-data/06-move-slims-directory.jpg)
 
 ### 4.5.1.7 Konfigurasi _stress test_
 
-![](../../11210251000172/new-data/07-configure-test-js.png)
+![](../../11210251000172/new-data/07-configure-test-js.jpg)
 
 ---
 
@@ -215,11 +215,11 @@ Pengujian dilakukan pada dua skenario:
 
 ## 4.6.1 Menjalankan Pengujian Monolitik
 
-![](../../11210251000172/new-data/08-run-test-js.png)
+![](../../11210251000172/new-data/08-run-test-js.jpg)
 
 ## 4.6.1 Hasil Pengujian Monolitik
 
-![](../../11210251000172/new-data/09-result-monolitik.png)
+![](../../11210251000172/new-data/09-result-monolitik.jpg)
 
 **Gambar 4.4 Hasil Pengujian Monolitik**
 
@@ -237,7 +237,7 @@ Hasil tersebut menunjukkan bahwa ketika beban meningkat hingga 500 pengguna virt
 
 ## 4.6.2 Hasil Pengujian Load Balancing
 
-![](../../11210251000172/new-data/16-result-load-balancer.png)
+![](../../11210251000172/new-data/16-result-load-balancer.jpg)
 
 **Gambar 4.5 Hasil Pengujian Load Balancing**
 
