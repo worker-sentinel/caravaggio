@@ -6,7 +6,7 @@ Pada penelitian ini, implementasi Linux Unified Key Setup (LUKS) dilakukan mengg
 
 Selain menggunakan Linux Unified Key Setup (LUKS), implementasi Network Bound Disk Encryption (NBDE) juga memerlukan beberapa aplikasi pendukung, antara lain Tang sebagai server otentikasi, Clevis sebagai klien untuk proses binding dan dekripsi otomatis, serta Firewalld sebagai pengelola aturan keamanan jaringan. Berikut ini merupakan penjelasan mengenai penggunaan aplikasi pendukung tersebut dalam mendukung implementasi NBDE secara menyeluruh.
 
-<img width="818" height="471" alt="framework-nbde" src="https://github.com/user-attachments/assets/35d38966-4af5-439f-b37e-e7cfb35699f6" />
+![framework nbde](../bab4/assets/images/framework-nbde.png)
 
 Proses recovery operation pada implementasi Network Bound Disk Encryption (NBDE) yang ditunjukkan pada Gambar X menggambarkan mekanisme pertukaran kunci antara server Tang dan klien Clevis pada saat sistem melakukan proses pembukaan (unlock) partisi LUKS secara otomatis. Mekanisme ini dirancang agar kunci dekripsi media penyimpanan tidak pernah dikirimkan secara langsung melalui jaringan, melainkan dibentuk secara dinamis melalui proses kriptografi berbasis JSON Web Key (JWK). Pendekatan tersebut bertujuan untuk menjaga kerahasiaan kunci enkripsi sekaligus memastikan bahwa proses dekripsi hanya dapat dilakukan apabila klien berhasil berkomunikasi dengan server Tang yang sah (McCallum & Guttman, 2016).
 
