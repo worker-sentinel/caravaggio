@@ -56,3 +56,6 @@ Rosdakarya.
 28. Wahyudi, H., Nairobi, N., Ambya, A., Usman, M., & Suparta, I. W. (2024). PENYULUHAN ARSIP DINAMIS DAN UNDANG-UNDANG TENTANG KEARSIPAN. BEGAWI : Jurnal Pengabdian Kepada Masyarakat, 2(1), 20–24. https://doi.org/10.23960/begawi.v2i1.36
 
 29. International Organization for Standardization. (2016). Information and documentation — Records management — Part 1: Concepts and principles (ISO Standard No. 15489-1:2016). https://www.iso.org/standard/62542.html
+
+30. Jose, M., Jones, M., & Sakimura, N. (2015). JSON Web Key (JWK). RFC 7517. Internet Engineering Task Force (IETF). https://doi.org/10.17487/RFC7517
+31. McCallum, J., & Guttman, J. (2016). Tang: A Server for Binding Data to Networks. Red Hat.
