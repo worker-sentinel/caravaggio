@@ -1,8 +1,8 @@
 # BAB II LANDASAN TEORI
 
-## 2.2 Otomasi Perpustakaan
+## 2.1 Otomasi Perpustakaan
 
-### 2.2.1 Pengertian Otomasi Perpustakaan
+### 2.1.1 Pengertian Otomasi Perpustakaan
 
 Otomasi perpustakaan merupakan penerapan teknologi informasi dan komunikasi untuk mendukung berbagai kegiatan operasional perpustakaan secara terintegrasi. Otomasi tidak hanya mencakup penggunaan perangkat lunak dalam pengelolaan koleksi, tetapi juga melibatkan penerapan teknologi pada seluruh proses administrasi dan layanan perpustakaan guna meningkatkan efektivitas, efisiensi, dan kualitas layanan kepada pemustaka.
 
@@ -14,7 +14,7 @@ Seiring dengan perkembangan teknologi informasi, otomasi perpustakaan telah menj
 
 Dalam penelitian ini, otomasi perpustakaan menjadi landasan utama karena aplikasi Senayan Library Management System (SLiMS) merupakan salah satu implementasi sistem otomasi perpustakaan berbasis web. Agar sistem otomasi tersebut dapat diimplementasikan secara lebih efisien, konsisten, dan aman, diperlukan suatu mekanisme deployment yang mampu menyederhanakan proses instalasi, konfigurasi, serta pemeliharaan aplikasi. Salah satu pendekatan yang dapat digunakan adalah melalui pemanfaatan teknologi containerization menggunakan Docker.
 
-### 2.2.2 Tujuan Otomasi Perpustakaan
+### 2.1.2 Tujuan Otomasi Perpustakaan
 
 Penerapan otomasi perpustakaan dilakukan untuk mendukung pengelolaan perpustakaan yang lebih efektif dan efisien dalam memenuhi kebutuhan informasi pengguna. Perkembangan teknologi informasi telah mendorong perpustakaan untuk mengintegrasikan berbagai aktivitas operasional ke dalam sistem yang terkomputerisasi sehingga proses pengelolaan informasi dapat dilakukan secara lebih cepat, akurat, dan terstruktur.
 
@@ -39,7 +39,7 @@ Tujuan otomasi perpustakaan secara umum meliputi:
 
 Melalui penerapan otomasi perpustakaan, pengelolaan informasi dapat dilakukan secara lebih sistematis sehingga perpustakaan mampu memberikan layanan yang lebih responsif terhadap kebutuhan pengguna. Kemampuan sistem dalam mengintegrasikan berbagai aktivitas perpustakaan juga menjadi salah satu faktor yang mendukung keberhasilan transformasi digital di lingkungan perpustakaan. (Koha Community, 2024; IFLA, 2023)
 
-### 2.2.3 Manfaat Otomasi Perpustakaan
+### 2.1.3 Manfaat Otomasi Perpustakaan
 
 Otomasi perpustakaan memberikan berbagai manfaat bagi perpustakaan, pustakawan, maupun pemustaka. Pemanfaatan teknologi informasi dalam pengelolaan perpustakaan memungkinkan berbagai aktivitas operasional dilakukan secara lebih cepat, akurat, dan terintegrasi. Dengan adanya sistem otomasi, proses pengelolaan data yang sebelumnya dilakukan secara manual dapat disederhanakan sehingga meningkatkan produktivitas kerja dan kualitas layanan informasi.
 
@@ -51,7 +51,7 @@ Sementara itu, bagi pemustaka, otomasi perpustakaan memberikan kemudahan dalam m
 
 Otomasi perpustakaan juga mendukung keberlangsungan layanan informasi melalui pengelolaan data yang lebih terstruktur dan terdokumentasi dengan baik. Kemampuan sistem dalam menyimpan, memproses, dan menyajikan informasi secara konsisten membantu perpustakaan dalam menjaga kualitas layanan serta mendukung proses pengambilan keputusan berbasis data. Oleh karena itu, otomasi perpustakaan menjadi salah satu komponen penting dalam upaya meningkatkan efektivitas dan kualitas layanan perpustakaan di era digital. (IFLA, 2023; Breeding, 2024)
 
-### 2.2.4 Komponen Otomasi Perpustakaan
+### 2.1.4 Komponen Otomasi Perpustakaan
 
 Keberhasilan implementasi otomasi perpustakaan dipengaruhi oleh berbagai komponen yang saling mendukung dalam membentuk suatu sistem yang terintegrasi. Komponen-komponen tersebut berperan dalam memastikan bahwa seluruh proses pengelolaan dan layanan perpustakaan dapat berjalan secara efektif, efisien, dan berkelanjutan. Ketersediaan serta keterpaduan setiap komponen menjadi faktor penting dalam mendukung keberhasilan penerapan sistem otomasi perpustakaan.
 
@@ -67,7 +67,7 @@ Komponen yang tidak kalah penting adalah sumber daya manusia (_brainware_). Sumb
 
 Seluruh komponen tersebut harus bekerja secara terintegrasi agar sistem otomasi perpustakaan dapat berfungsi secara optimal. Ketidakseimbangan atau kelemahan pada salah satu komponen dapat memengaruhi kualitas layanan yang diberikan. Oleh karena itu, pengelolaan perangkat keras, perangkat lunak, basis data, jaringan, dan sumber daya manusia perlu dilakukan secara berkelanjutan guna mendukung penyelenggaraan layanan informasi yang efektif dan efisien. (IFLA, 2023; ALA, 2024)
 
-### 2.2.5 Tantangan Implementasi Otomasi Perpustakaan
+### 2.1.5 Tantangan Implementasi Otomasi Perpustakaan
 
 Meskipun otomasi perpustakaan memberikan berbagai manfaat dalam meningkatkan kualitas layanan dan efisiensi pengelolaan informasi, implementasinya masih menghadapi berbagai tantangan. Tantangan tersebut dapat berasal dari aspek teknologi, sumber daya manusia, maupun pengelolaan sistem yang digunakan. Berbagai kendala tersebut perlu diperhatikan agar penerapan otomasi perpustakaan dapat berjalan secara optimal dan berkelanjutan.
 
@@ -84,9 +84,9 @@ Selain itu, kebutuhan akan efisiensi dalam proses deployment dan pemeliharaan si
 Berbagai tantangan tersebut menunjukkan bahwa keberhasilan implementasi otomasi perpustakaan tidak hanya ditentukan oleh ketersediaan perangkat lunak yang digunakan, tetapi juga oleh kemampuan dalam mengelola lingkungan sistem yang mendukung operasional aplikasi. Oleh karena itu, diperlukan pendekatan yang mampu meningkatkan efisiensi implementasi serta memperkuat aspek keamanan sistem agar layanan otomasi perpustakaan dapat berjalan secara optimal dan berkelanjutan. (IFLA, 2023; Breeding, 2024; ALA, 2024)
 
 ---
-## 2.3 Senayan Library Management System (SLiMS)
+## 2.2 Senayan Library Management System (SLiMS)
 
-### 2.3.1 Pengertian Senayan Library Management System (SLiMS)
+### 2.2.1 Pengertian Senayan Library Management System (SLiMS)
 
 Senayan Library Management System (SLiMS) merupakan perangkat lunak otomasi perpustakaan berbasis web yang dikembangkan dengan prinsip perangkat lunak sumber terbuka (_open source_). Aplikasi ini dirancang untuk membantu perpustakaan dalam mengelola berbagai aktivitas operasional secara terintegrasi, mulai dari pengelolaan koleksi, layanan sirkulasi, keanggotaan, hingga penyediaan katalog daring (_Online Public Access Catalog_ atau OPAC).
 
@@ -94,7 +94,7 @@ SLiMS dikembangkan menggunakan bahasa pemrograman PHP dan sistem manajemen basis
 
 Kemudahan penggunaan, fleksibilitas implementasi, serta dukungan komunitas yang aktif menjadikan SLiMS sebagai salah satu perangkat lunak otomasi perpustakaan yang banyak digunakan di Indonesia. Berbagai jenis perpustakaan, mulai dari perpustakaan sekolah, perguruan tinggi, hingga perpustakaan khusus telah memanfaatkan SLiMS untuk mendukung pengelolaan layanan informasi secara lebih efektif dan efisien. (SLiMS Documentation, 2025)
 
-### 2.3.2 Sejarah dan Perkembangan SLiMS
+### 2.2.2 Sejarah dan Perkembangan SLiMS
 
 SLiMS pertama kali dikembangkan pada tahun 2007 oleh tim pengembang Pusat Informasi dan Humas Kementerian Pendidikan Nasional Republik Indonesia. Pada awal pengembangannya, aplikasi ini digunakan untuk memenuhi kebutuhan pengelolaan perpustakaan di lingkungan kementerian. Seiring dengan perkembangan teknologi informasi dan meningkatnya kebutuhan otomasi perpustakaan, SLiMS kemudian dikembangkan menjadi perangkat lunak sumber terbuka yang dapat digunakan secara luas oleh berbagai institusi.
 
@@ -102,7 +102,7 @@ Perkembangan SLiMS didukung oleh komunitas pengguna dan pengembang yang aktif me
 
 Hingga saat ini, SLiMS telah digunakan oleh ribuan perpustakaan di Indonesia maupun berbagai negara lainnya. Tingginya tingkat adopsi tersebut menunjukkan bahwa SLiMS telah menjadi salah satu solusi otomasi perpustakaan yang berkontribusi dalam mendukung transformasi digital perpustakaan. (SLiMS Documentation, 2025)
 
-### 2.3.3 Fitur-Fitur SLiMS
+### 2.2.3 Fitur-Fitur SLiMS
 
 SLiMS menyediakan berbagai fitur yang dirancang untuk mendukung pengelolaan perpustakaan secara terintegrasi. Fitur-fitur tersebut membantu pustakawan dalam menjalankan berbagai aktivitas operasional secara lebih efektif dan efisien.
 
@@ -125,7 +125,7 @@ Beberapa fitur utama yang tersedia dalam SLiMS antara lain:
 
 Keberadaan fitur-fitur tersebut menjadikan SLiMS mampu mendukung sebagian besar proses bisnis perpustakaan dalam satu platform yang terintegrasi. (SLiMS Documentation, 2025)
 
-### 2.3.4 Peran SLiMS dalam Otomasi Perpustakaan
+### 2.2.4 Peran SLiMS dalam Otomasi Perpustakaan
 
 SLiMS memiliki peran penting dalam mendukung implementasi otomasi perpustakaan. Melalui berbagai fitur yang tersedia, aplikasi ini membantu perpustakaan dalam mengelola koleksi, layanan sirkulasi, keanggotaan, serta penyediaan akses informasi secara lebih cepat dan akurat. Integrasi berbagai layanan tersebut memungkinkan proses pengelolaan perpustakaan dilakukan secara lebih sistematis dibandingkan dengan metode manual.
 
@@ -133,7 +133,7 @@ Pemanfaatan SLiMS juga membantu meningkatkan efisiensi kerja pustakawan melalui 
 
 Dalam konteks transformasi digital perpustakaan, SLiMS berfungsi sebagai salah satu implementasi nyata sistem otomasi perpustakaan yang mendukung peningkatan kualitas layanan informasi. Kemampuan aplikasi dalam mengintegrasikan berbagai aktivitas perpustakaan menjadikan SLiMS sebagai salah satu solusi yang banyak digunakan untuk mendukung pengelolaan perpustakaan modern. (Breeding, 2024; SLiMS Documentation, 2025)
 
-### 2.3.5 Tantangan Deployment dan Pemeliharaan SLiMS
+### 2.2.5 Tantangan Deployment dan Pemeliharaan SLiMS
 
 Meskipun SLiMS menyediakan berbagai fitur yang mendukung pengelolaan perpustakaan secara terintegrasi, implementasi aplikasi ini masih menghadapi sejumlah tantangan pada aspek deployment dan pemeliharaan sistem. Sebagai aplikasi berbasis web, SLiMS memerlukan lingkungan server yang terdiri atas beberapa komponen pendukung, seperti web server, bahasa pemrograman PHP, serta sistem manajemen basis data.
 
@@ -145,9 +145,9 @@ Tantangan tersebut menunjukkan bahwa keberhasilan implementasi SLiMS tidak hanya
 
 ---
 
-## 2.4 Efisiensi Sistem Informasi
+## 2.3 Efisiensi Sistem Informasi
 
-### 2.4.1 Pengertian Efisiensi
+### 2.3.1 Pengertian Efisiensi
 
 Efisiensi merupakan konsep yang berkaitan dengan kemampuan suatu organisasi atau sistem dalam mencapai tujuan yang diinginkan dengan penggunaan sumber daya yang optimal. Efisiensi menekankan pada bagaimana suatu pekerjaan dapat diselesaikan dengan meminimalkan penggunaan waktu, biaya, tenaga, maupun sumber daya lainnya tanpa mengurangi kualitas hasil yang diperoleh.
 
@@ -155,7 +155,7 @@ Dalam konteks teknologi informasi, efisiensi tidak hanya diukur dari kemampuan s
 
 Menurut standar ISO/IEC 25010, efisiensi kinerja (_performance efficiency_) merupakan karakteristik kualitas perangkat lunak yang berkaitan dengan tingkat kinerja relatif terhadap jumlah sumber daya yang digunakan dalam kondisi tertentu. Karakteristik ini mencakup aspek perilaku waktu (_time behaviour_), penggunaan sumber daya (_resource utilization_), dan kapasitas (_capacity_). Oleh karena itu, efisiensi menjadi salah satu aspek penting dalam pengembangan dan implementasi sistem informasi modern. (ISO/IEC 25010:2023)
 
-### 2.4.2 Efisiensi dalam Sistem Informasi
+### 2.3.2 Efisiensi dalam Sistem Informasi
 
 Efisiensi dalam sistem informasi mengacu pada kemampuan sistem untuk mendukung proses bisnis secara optimal dengan penggunaan sumber daya yang seminimal mungkin. Sistem informasi yang efisien mampu membantu organisasi dalam meningkatkan produktivitas kerja, mempercepat proses operasional, serta mengurangi biaya yang diperlukan untuk menjalankan layanan teknologi informasi.
 
@@ -165,7 +165,7 @@ Perkembangan teknologi containerization memberikan pendekatan baru dalam meningk
 
 Dalam konteks implementasi sistem otomasi perpustakaan, efisiensi menjadi aspek yang penting karena berhubungan dengan kemampuan perpustakaan dalam menyediakan layanan informasi secara berkelanjutan. Sistem yang mudah diimplementasikan, mudah dipelihara, dan tidak memerlukan sumber daya yang berlebihan dapat membantu organisasi dalam meningkatkan kualitas layanan serta mengurangi kompleksitas pengelolaan infrastruktur teknologi informasi. (Laudon & Laudon, 2022; ISO/IEC 25010:2023)
 
-### 2.4.3 Indikator Efisiensi pada Deployment Aplikasi
+### 2.3.3 Indikator Efisiensi pada Deployment Aplikasi
 
 Pengukuran efisiensi pada proses deployment aplikasi diperlukan untuk mengetahui sejauh mana suatu pendekatan implementasi mampu mengoptimalkan penggunaan sumber daya dan menyederhanakan pengelolaan sistem. Dalam penelitian ini, efisiensi deployment aplikasi digunakan untuk mengevaluasi manfaat penggunaan Docker Image pada implementasi SLiMS.
 
@@ -195,9 +195,9 @@ Beberapa indikator yang dapat digunakan untuk mengukur efisiensi deployment apli
 Indikator-indikator tersebut dapat digunakan untuk menilai sejauh mana rancangan Docker Image yang dikembangkan mampu meningkatkan efisiensi implementasi aplikasi SLiMS. Dengan demikian, aspek efisiensi tidak hanya dilihat dari kinerja aplikasi, tetapi juga dari kemudahan pengelolaan dan optimalisasi sumber daya yang mendukung operasional sistem. (ISO/IEC 25010:2023; Red Hat, 2024)
 
 ---
-## 2.5 Keamanan Sistem Informasi
+## 2.4 Keamanan Sistem Informasi
 
-### 2.5.1 Pengertian Keamanan Sistem Informasi
+### 2.4.1 Pengertian Keamanan Sistem Informasi
 
 Keamanan sistem informasi merupakan upaya untuk melindungi data, informasi, serta sumber daya teknologi informasi dari berbagai ancaman yang dapat mengganggu operasional sistem. Penerapan keamanan sistem informasi bertujuan untuk memastikan bahwa informasi yang dikelola oleh suatu organisasi tetap terlindungi dari akses yang tidak sah, perubahan yang tidak diizinkan, maupun gangguan yang dapat menghambat ketersediaan layanan.
 
@@ -205,31 +205,31 @@ Dalam lingkungan teknologi informasi modern, keamanan sistem informasi menjadi a
 
 Keamanan sistem informasi tidak hanya berfokus pada perlindungan data, tetapi juga mencakup perlindungan terhadap infrastruktur, aplikasi, dan layanan yang mendukung proses bisnis organisasi. Dengan penerapan keamanan yang baik, organisasi dapat meminimalkan risiko gangguan layanan, kehilangan data, maupun kerugian yang disebabkan oleh insiden keamanan informasi. (Whitman & Mattord, 2022; NIST, 2024)
 
-### 2.5.2 CIA Triad
+### 2.4.2 CIA Triad
 
 CIA Triad merupakan salah satu konsep dasar yang paling banyak digunakan dalam keamanan sistem informasi. CIA Triad terdiri atas tiga prinsip utama, yaitu *Confidentiality*, *Integrity*, dan *Availability*. Ketiga prinsip tersebut digunakan sebagai kerangka kerja untuk memastikan bahwa informasi dan sistem dapat dikelola secara aman dan sesuai dengan kebutuhan organisasi.
 
 Penerapan CIA Triad membantu organisasi dalam mengidentifikasi kebutuhan keamanan serta menentukan langkah-langkah perlindungan yang sesuai terhadap aset informasi yang dimiliki. Dalam konteks sistem informasi, ketiga prinsip tersebut saling melengkapi dan menjadi dasar dalam pengembangan maupun pengelolaan keamanan sistem. (NIST, 2024)
 
-#### 2.5.2.1 Confidentiality
+#### 2.4.2.1 Confidentiality
 
 *Confidentiality* atau kerahasiaan merupakan prinsip yang bertujuan untuk memastikan bahwa informasi hanya dapat diakses oleh pihak yang memiliki hak atau otorisasi yang sesuai. Perlindungan terhadap kerahasiaan informasi dilakukan untuk mencegah terjadinya akses, penggunaan, maupun pengungkapan informasi oleh pihak yang tidak berwenang.
 
 Penerapan prinsip *confidentiality* dapat dilakukan melalui berbagai mekanisme, seperti pengaturan hak akses, autentikasi pengguna, enkripsi data, serta pembatasan akses terhadap sumber daya sistem. Dengan menjaga kerahasiaan informasi, organisasi dapat melindungi data penting dari risiko penyalahgunaan maupun kebocoran informasi. (NIST, 2024)
 
-#### 2.5.2.2 Integrity
+#### 2.4.2.2 Integrity
 
 *Integrity* atau integritas merupakan prinsip yang bertujuan untuk menjaga keakuratan, konsistensi, dan keutuhan data selama proses penyimpanan, pengolahan, maupun pertukaran informasi. Integritas memastikan bahwa data tidak mengalami perubahan yang tidak sah atau tidak disengaja sehingga informasi yang tersedia tetap dapat dipercaya.
 
 Penerapan prinsip *integrity* dapat dilakukan melalui mekanisme validasi data, kontrol perubahan (*change control*), pencatatan aktivitas sistem (*logging*), serta pengelolaan konfigurasi yang baik. Dengan menjaga integritas informasi, organisasi dapat memastikan bahwa data yang digunakan dalam proses operasional tetap akurat dan sesuai dengan kondisi yang sebenarnya. (Whitman & Mattord, 2022)
 
-#### 2.5.2.3 Availability
+#### 2.4.2.3 Availability
 
 *Availability* atau ketersediaan merupakan prinsip yang bertujuan untuk memastikan bahwa informasi dan layanan dapat diakses oleh pengguna yang berwenang pada saat dibutuhkan. Ketersediaan sistem menjadi faktor penting dalam mendukung keberlangsungan layanan dan operasional organisasi.
 
 Upaya untuk menjaga *availability* dapat dilakukan melalui penyediaan infrastruktur yang andal, mekanisme pencadangan (*backup*), pemantauan sistem, serta strategi pemulihan ketika terjadi gangguan. Dengan menjaga ketersediaan layanan, organisasi dapat meminimalkan dampak yang ditimbulkan oleh kegagalan sistem maupun insiden keamanan yang dapat mengganggu operasional. (NIST, 2024)
 
-### 2.5.3 Keamanan pada Lingkungan Container
+### 2.4.3 Keamanan pada Lingkungan Container
 
 Perkembangan teknologi containerization menghadirkan pendekatan baru dalam implementasi aplikasi modern. Meskipun container menawarkan berbagai keuntungan dalam aspek portabilitas dan efisiensi, penerapannya tetap memerlukan perhatian terhadap aspek keamanan. Kesalahan konfigurasi container, penggunaan image yang tidak terpercaya, maupun pemberian hak akses yang berlebihan dapat meningkatkan risiko keamanan sistem.
 
@@ -237,7 +237,7 @@ Keamanan pada lingkungan container mencakup berbagai aspek, seperti keamanan ima
 
 Salah satu pendekatan yang banyak digunakan dalam meningkatkan keamanan container adalah penggunaan image yang minimalis, pembatasan hak akses proses aplikasi, pemindaian kerentanan (*vulnerability scanning*), serta pembaruan komponen perangkat lunak secara berkala. Langkah-langkah tersebut membantu mengurangi permukaan serangan (*attack surface*) dan meningkatkan keamanan lingkungan container secara keseluruhan. (Docker Inc., 2025; Red Hat, 2024)
 
-### 2.5.4 Relevansi CIA Triad terhadap Docker Image SLiMS
+### 2.4.4 Relevansi CIA Triad terhadap Docker Image SLiMS
 
 Prinsip CIA Triad memiliki keterkaitan yang erat dengan perancangan Docker Image untuk aplikasi SLiMS. Pada aspek *confidentiality*, keamanan image dapat ditingkatkan melalui pengelolaan hak akses yang tepat dan pembatasan akses terhadap komponen sistem yang sensitif. Pada aspek *integrity*, penggunaan Docker Image yang terstandarisasi membantu menjaga konsistensi konfigurasi aplikasi sehingga risiko perubahan yang tidak diinginkan dapat diminimalkan.
 
@@ -248,9 +248,9 @@ Dalam penelitian ini, CIA Triad digunakan sebagai landasan teoritis untuk mengev
 
 ---
 
-## 2.6 Docker
+## 2.5 Docker
 
-### 2.6.1 Pengertian Docker
+### 2.5.1 Pengertian Docker
 
 Docker merupakan platform containerization yang digunakan untuk membangun, mendistribusikan, dan menjalankan aplikasi dalam lingkungan yang terisolasi yang disebut container. Docker memungkinkan aplikasi dan seluruh dependensinya dikemas ke dalam satu paket yang konsisten sehingga dapat dijalankan pada berbagai lingkungan tanpa mengalami permasalahan kompatibilitas yang sering ditemukan pada metode deployment konvensional.
 
@@ -258,7 +258,7 @@ Docker pertama kali diperkenalkan pada tahun 2013 dan berkembang menjadi salah s
 
 Melalui Docker, pengembang dan administrator sistem dapat memastikan bahwa aplikasi yang dijalankan pada lingkungan pengembangan, pengujian, maupun produksi memiliki konfigurasi yang sama. Kemampuan tersebut membantu mengurangi risiko kegagalan aplikasi akibat perbedaan konfigurasi sistem dan meningkatkan konsistensi proses deployment. (Merkel, 2014; Docker Inc., 2025)
 
-### 2.6.2 Arsitektur Docker
+### 2.5.2 Arsitektur Docker
 
 Docker menggunakan arsitektur berbasis klien dan server (_client-server architecture_) yang terdiri atas beberapa komponen utama yang saling berinteraksi. Komponen tersebut meliputi Docker Client, Docker Engine, Docker Image, Docker Container, dan Docker Registry.
 
@@ -270,7 +270,7 @@ Docker Registry berfungsi sebagai repositori penyimpanan Docker Image. Registry 
 
 Hubungan antar komponen tersebut memungkinkan proses pembangunan dan distribusi aplikasi dilakukan secara lebih terstruktur serta mendukung implementasi sistem yang konsisten pada berbagai lingkungan server. (Docker Inc., 2025)
 
-### 2.6.3 Docker Image
+### 2.5.3 Docker Image
 
 Docker Image merupakan template yang digunakan untuk membuat Docker Container. Image berisi seluruh komponen yang dibutuhkan oleh aplikasi untuk dapat berjalan, termasuk sistem operasi dasar, pustaka (_library_), dependensi, konfigurasi, serta kode aplikasi.
 
@@ -278,7 +278,7 @@ Docker Image bersifat _immutable_, yang berarti isi image tidak berubah setelah 
 
 Dalam implementasi aplikasi modern, Docker Image memiliki peran penting karena menjadi dasar dalam proses penyebaran aplikasi. Image yang dirancang dengan baik dapat membantu meningkatkan efisiensi penggunaan sumber daya, mempercepat proses deployment, serta mendukung penerapan praktik keamanan yang lebih baik. Oleh karena itu, Docker Image menjadi komponen utama yang menjadi fokus dalam penelitian ini. (Turnbull, 2014)
 
-### 2.6.4 Docker Container
+### 2.5.4 Docker Container
 
 Docker Container merupakan instansi yang berjalan dari sebuah Docker Image. Container menyediakan lingkungan eksekusi yang terisolasi sehingga aplikasi dapat dijalankan secara independen tanpa memengaruhi aplikasi lain yang berada pada server yang sama.
 
@@ -286,7 +286,7 @@ Setiap container memiliki konfigurasi, proses, jaringan, dan penyimpanan yang da
 
 Kemampuan Docker dalam menjalankan banyak container dengan konfigurasi yang konsisten menjadikan teknologi ini banyak digunakan untuk mendukung implementasi aplikasi berbasis layanan maupun aplikasi web modern. Selain itu, proses pembuatan dan penghapusan container dapat dilakukan dengan cepat sehingga mempermudah pengelolaan aplikasi dalam berbagai lingkungan implementasi. (Mouat, 2015)
 
-### 2.6.5 Docker Compose
+### 2.5.5 Docker Compose
 
 Docker Compose merupakan alat yang digunakan untuk mendefinisikan dan mengelola beberapa container dalam satu konfigurasi terpadu. Docker Compose memungkinkan administrator sistem untuk mendeskripsikan seluruh layanan aplikasi melalui sebuah berkas konfigurasi sehingga proses deployment dapat dilakukan secara otomatis dan konsisten.
 
@@ -294,7 +294,7 @@ Pada aplikasi yang terdiri atas beberapa layanan, seperti web server, basis data
 
 Dalam implementasi SLiMS, Docker Compose dapat digunakan untuk mengelola container aplikasi dan container basis data secara terintegrasi. Penggunaan Docker Compose membantu menciptakan lingkungan deployment yang lebih sederhana, mudah direplikasi, dan lebih mudah dipelihara dibandingkan konfigurasi manual. (Poulton, 2023)
 
-### 2.6.6 Optimasi Docker Image
+### 2.5.6 Optimasi Docker Image
 
 Optimasi Docker Image merupakan serangkaian teknik yang digunakan untuk meningkatkan efisiensi image melalui pengurangan ukuran file, penyederhanaan konfigurasi, serta optimalisasi dependensi yang digunakan oleh aplikasi. Optimasi image bertujuan untuk menghasilkan image yang lebih ringan, lebih cepat didistribusikan, serta lebih efisien dalam penggunaan sumber daya komputasi.
 
@@ -304,7 +304,7 @@ Teknik lain yang banyak digunakan adalah _multi-stage build_, yaitu metode pemba
 
 Penerapan teknik optimasi Docker Image dapat memberikan manfaat berupa pengurangan ukuran image, peningkatan kecepatan deployment, penghematan ruang penyimpanan, serta peningkatan efisiensi penggunaan sumber daya server. Oleh karena itu, optimasi image menjadi salah satu aspek penting dalam pengembangan dan pengelolaan aplikasi berbasis container. (Turnbull, 2014; Docker Inc., 2025)
 
-### 2.6.7 Keamanan Docker Image
+### 2.5.7 Keamanan Docker Image
 
 Keamanan Docker Image merupakan aspek penting yang perlu diperhatikan dalam implementasi aplikasi berbasis container. Docker Image yang tidak dirancang dengan baik dapat mengandung kerentanan keamanan yang berpotensi dimanfaatkan oleh pihak yang tidak berwenang untuk mengakses atau mengganggu sistem.
 
@@ -318,7 +318,7 @@ Dalam konteks penelitian ini, keamanan Docker Image menjadi aspek yang penting k
 
 ---
 
-## 2.8 Kerangka Berpikir
+## 2.6 Kerangka Berpikir
 
 ```
  Otomasi Perpustakaan
@@ -355,14 +355,12 @@ Dalam konteks penelitian ini, keamanan Docker Image menjadi aspek yang penting k
  yang Lebih Optimal
 ```
 
-### 2.7.1 Proposisi Penelitian
+### 2.6.1 Proposisi Penelitian
 
 Berdasarkan kerangka berpikir yang telah disusun, penelitian ini berangkat dari asumsi bahwa perancangan Docker Image yang memperhatikan aspek optimasi dan keamanan dapat membantu meningkatkan kualitas implementasi aplikasi SLiMS. Penerapan teknik optimasi Docker Image diharapkan mampu meningkatkan efisiensi deployment melalui pengurangan ukuran image, optimalisasi penggunaan sumber daya, serta kemudahan replikasi lingkungan aplikasi.
 
 Selain itu, penerapan praktik keamanan Docker Image diharapkan mampu mendukung perlindungan aplikasi dan data perpustakaan melalui penerapan prinsip _Confidentiality_, _Integrity_, dan _Availability_. Dengan demikian, rancangan Docker Image yang dihasilkan diharapkan dapat menyediakan lingkungan implementasi SLiMS yang lebih efisien, konsisten, mudah dipelihara, dan aman sehingga mampu mendukung peningkatan kualitas layanan otomasi perpustakaan.
 
-
-# REFERENSI
 
 Republik Indonesia. (2007). _Undang-Undang Republik Indonesia Nomor 43 Tahun 2007 tentang Perpustakaan_. Sekretariat Negara Republik Indonesia.
 
