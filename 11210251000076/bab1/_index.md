@@ -47,12 +47,10 @@ Berdasarkan latar belakang yang telah diuraikan, maka dapat diidentifikasi beber
 
 1. Pemanfaatan sistem otomasi perpustakaan menjadi kebutuhan penting dalam mendukung efektivitas pengelolaan koleksi dan layanan informasi di perpustakaan.
 2. SLiMS sebagai sistem otomasi perpustakaan yang banyak digunakan memerlukan lingkungan aplikasi yang terkonfigurasi dengan baik agar dapat berjalan secara optimal.
-3. Proses instalasi dan deployment SLiMS masih memerlukan konfigurasi berbagai komponen pendukung seperti web server, database server, dan dependensi lainnya yang dapat menjadi kendala bagi sebagian pengelola perpustakaan.
-4. Perbedaan konfigurasi perangkat keras, sistem operasi, dan lingkungan server pada setiap perpustakaan berpotensi menyebabkan ketidakkonsistenan dalam proses implementasi SLiMS.
-5. Penggunaan metode deployment konvensional maupun virtual machine masih memiliki keterbatasan, baik dari sisi pengelolaan dependensi maupun efisiensi penggunaan sumber daya komputasi.
-6. Docker image SLiMS yang tersedia secara publik umumnya belum mendapatkan pembaruan secara berkelanjutan, masih menggunakan komponen perangkat lunak yang relatif usang, serta memiliki dokumentasi dan konfigurasi yang beragam sehingga berpotensi menimbulkan masalah kompatibilitas, pemeliharaan, dan implementasi sistem.
-7. Sebagian Docker image SLiMS yang tersedia belum dirancang dengan memperhatikan efisiensi penggunaan sumber daya, ukuran image, serta kemudahan deployment dan pemeliharaan sistem.
-8. Belum tersedia rancangan Docker image SLiMS yang secara khusus dikembangkan dengan mempertimbangkan kebutuhan implementasi perpustakaan, kemudahan deployment, konsistensi lingkungan aplikasi, dan efisiensi penggunaan sumber daya komputasi.
+3. Penggunaan metode deployment konvensional maupun virtual machine masih memiliki keterbatasan, baik dari sisi pengelolaan dependensi maupun efisiensi penggunaan sumber daya komputasi.
+4. Docker image SLiMS yang tersedia secara publik umumnya belum mendapatkan pembaruan secara berkelanjutan, memiliki dokumentasi dan konfigurasi yang beragam sehingga berpotensi menimbulkan masalah kompatibilitas, pemeliharaan, dan implementasi sistem.
+5. Sebagian Docker image SLiMS yang tersedia belum dirancang dengan memperhatikan efisiensi penggunaan sumber daya, ukuran image, serta kemudahan deployment dan pemeliharaan sistem.
+6. Belum tersedia rancangan Docker image SLiMS yang secara khusus dikembangkan dengan mempertimbangkan kebutuhan implementasi perpustakaan, kemudahan deployment, konsistensi lingkungan aplikasi, dan efisiensi penggunaan sumber daya komputasi.
 
 
 
