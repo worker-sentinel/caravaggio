@@ -52,18 +52,19 @@ Implementasi NBDE pada sistem operasi Arch Linux menunjukkan bahwa mekanisme enk
 | Sistem Operasi | RouterOS v7 |
 
 4. Cisco
-| Jenis       | spesifikasi |
-|-------------|-------------|
-| Prosessor   |             |
-| Penyimpanan |             |
-| RAM         |             |
-| RAM         |             |
+| Jenis       | spesifikasi                                                  |
+|-------------|--------------------------------------------------------------|
+| Port        | 24 port 10/100 Mbps, 2 port combo mini-GBIC                  |
+| Fitur       | IGMP Snooping, Head-of-Line (HOL) Blocking, Link Aggregation |
+| Ukuran      | 44 x 25.7 x 4.4 cm                                           |
+| RAM         | 128 MB                                                       |
+| Daya        | 21.3 W                                                       |
 
 
 ## Prosedur Uji Coba
 ### dracut
 ### mkinitcpio
-## Tang server
+#### Tang server
 Tang adalah layanan yang digunakan untuk menghubungkan kunci kriptografi dengan kondisi atau keberadaan jaringan tertentu sehingga pemanfaatannya bergantung pada lingkungan jaringan yang telah ditentukan (ArchLinux,2026). Mekanisme ini memungkinkan proses pembukaan kunci (dekripsi) dilakukan secara otomatis apabila sistem berada pada lingkungan jaringan yang telah ditentukan dan dipercaya.Pendekatan ini meningkatkan aspek keamanan karena akses terhadap data tidak hanya bergantung pada kunci enkripsi, tetapi juga pada validasi kondisi jaringan yang digunakan.
 
 ![install tang](../bab4/assets/images/install-tangserver.png)
@@ -99,7 +100,7 @@ Sebagai tindak lanjut dari port yang sudah dikonfigurasi pada Tang server, maka 
 
 Dalam konteks implementasi layanan Tang pada server, pembukaan port 7500/TCP ini bertujuan untuk memastikan bahwa layanan dapat diakses oleh klien melalui jaringan. Tanpa penambahan port ini, firewall berpotensi memblokir lalu lintas masuk menuju port yang digunakan oleh layanan, sehingga proses komunikasi antara server dan klien tidak dapat berlangsung. Oleh karena itu, pengaturan firewall menjadi bagian penting dalam tahapan konfigurasi sistem guna menjamin ketersediaan layanan sekaligus tetap mempertahankan kontrol keamanan jaringan.
 
-# clevis
+#### clevis
 Selain layanan Tang pada sisi server, implementasi Network Bound Disk Encryption (NBDE) juga memerlukan komponen pendukung pada sisi klien, yaitu Clevis. Clevis merupakan perangkat lunak yang berfungsi sebagai automated decryption framework yang memungkinkan proses pembukaan kunci enkripsi dilakukan secara otomatis berdasarkan kebijakan tertentu. Dalam konteks NBDE, Clevis digunakan untuk melakukan binding antara sistem terenkripsi seperti LUKS dengan layanan Tang sebagai penyedia kunci di jaringan, sehingga proses dekripsi dapat berlangsung tanpa interaksi manual saat sistem melakukan booting (Red Hat, 2023).
 
 Lebih lanjut, Clevis bekerja dengan mengimplementasikan konsep policy-based decryption, di mana kunci enkripsi tidak disimpan secara langsung dalam sistem, melainkan diperoleh melalui mekanisme autentikasi terhadap layanan yang telah dikonfigurasi sebelumnya. Mekanisme ini meningkatkan aspek keamanan karena kunci hanya dapat diperoleh apabila klien berada dalam lingkungan jaringan yang sesuai dengan kebijakan yang telah ditentukan. Dengan demikian, Clevis berperan sebagai penghubung antara sistem terenkripsi dengan server Tang dalam skema NBDE, sehingga memungkinkan proses dekripsi otomatis berjalan secara aman dan terkontrol.
@@ -118,7 +119,7 @@ Setelah proses instalasi dan konfigurasi layanan Tang pada sisi server serta Cle
 
 Apabila layanan Tang tidak dapat diakses atau terjadi kesalahan dalam komunikasi jaringan, maka Clevis tidak akan mampu memperoleh kebijakan dekripsi yang dibutuhkan untuk membuka media penyimpanan yang  terenkripsi. Kondisi ini berpotensi menyebabkan kegagalan mekanisme automatic unlocking dalam skema NBDE, sehingga sistem memerlukan intervensi manual untuk memasukkan kata sandi enkripsi. Oleh karena itu, tahapan pengujian konektivitas menjadi bagian penting dalam memastikan keberhasilan implementasi Network Bound Disk Encryption secara menyeluruh. 
 
-# kernel parameter
+#### kernel parameter
 ![install hook clevis](../bab4/assets/images/install-hook-clevis.png)
  proses instalasi paket mkinitcpio-clevis-hook pada sistem operasi Arch Linux menggunakan utilitas yay sebagai AUR helper. Paket tersebut merupakan salah satu komponen yang diperlukan dalam implementasi Network Bound Disk Encryption (NBDE) karena menyediakan hook Clevis yang akan dimuat pada saat proses booting. Sebelum instalasi dilakukan, sistem terlebih dahulu mengunduh kode sumber paket dari repositori Arch User Repository (AUR) beserta seluruh informasi yang diperlukan untuk proses kompilasi dan pemasangan.
 
@@ -152,7 +153,7 @@ Selanjutnya ditambahkan parameter ip= yang berisi konfigurasi alamat IP statis, 
 
 Konfigurasi parameter kernel command line merupakan tahap akhir sebelum dilakukan proses binding antara volume LUKS dan server Tang. Apabila parameter jaringan tidak dikonfigurasi dengan benar, lingkungan initramfs tidak akan mampu mengakses server Tang sehingga proses dekripsi otomatis gagal dilakukan dan pengguna tetap harus memasukkan passphrase LUKS secara manual. Oleh karena itu, konfigurasi ini berperan penting dalam memastikan implementasi NBDE dapat berjalan secara optimal dan sesuai dengan tujuan penelitian.
 
-## binding
+#### binding
 ![cek ip address](../bab4/assets/images/cek-ipaddress.png)
 hasil pemeriksaan konfigurasi jaringan pada perangkat klien menggunakan perintah ip a. Pemeriksaan ini bertujuan untuk memastikan bahwa antarmuka jaringan telah memperoleh konfigurasi alamat IP sesuai dengan parameter yang sebelumnya ditetapkan pada kernel command line. Ketersediaan koneksi jaringan merupakan syarat utama agar Clevis dapat berkomunikasi dengan server Tang selama proses booting.
 
