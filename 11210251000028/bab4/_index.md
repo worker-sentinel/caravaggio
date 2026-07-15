@@ -24,10 +24,45 @@ Setelah seluruh konfigurasi selesai dilakukan, implementasi NBDE diuji melalui b
 
 Implementasi NBDE pada sistem operasi Arch Linux menunjukkan bahwa mekanisme enkripsi media penyimpanan dapat diintegrasikan dengan proses otorisasi berbasis jaringan tanpa mengurangi tingkat keamanan data yang disimpan. Penggunaan Arch Linux memberikan keleluasaan dalam melakukan konfigurasi setiap komponen yang terlibat, mulai dari pengelolaan layanan sistem, konfigurasi initramfs, hingga integrasi Clevis dengan proses booting. Dengan demikian, sistem mampu melakukan pembukaan media penyimpanan secara otomatis ketika seluruh persyaratan keamanan terpenuhi, namun tetap mempertahankan perlindungan data apabila server otorisasi tidak tersedia. 
 ## spesifikasi perangkat
-| Nama     | spesifikasi |
-|----------|-------------|
-| server 1 |             |
- 
+1. server 1
+| Jenis         | spesifikasi                 |
+|---------------|-----------------------------|
+| Prosessor     | Intel core i7 gen 9         |
+| Penyimpanan 1 | 1TB nvme teamgroup m.2 mp33 |
+| Penyimpanan 2 | 1TB 2.5 SATA 6GB/s SSD SV 1A|
+| RAM           | 16GB DDR4 3200 teamgroup    |
+
+
+2. server 2
+| Jenis         | spesifikasi                      |
+|---------------|----------------------------------|
+| Prosessor     | Intel core i7 gen 9              |
+| Penyimpanan 1 | 1TB nvme teamgroup m.2 mp33      |
+| Penyimpanan 2 | 2TB WD20SPZX SATA 66GB/S IU CA500|
+| RAM           | 16GB DDR4 3200 teamgroup         |
+
+
+3. Mikrotik
+| Jenis          | spesifikasi |
+|----------------|-------------|
+| Arsitektur     | ARM 64bit   |
+| CPU            | IPQ-6010    |
+| Penyimpanan    | 128 MB      |
+| RAM            | 1 GB        |
+| Sistem Operasi | RouterOS v7 |
+
+4. Cisco
+| Jenis       | spesifikasi |
+|-------------|-------------|
+| Prosessor   |             |
+| Penyimpanan |             |
+| RAM         |             |
+| RAM         |             |
+
+
+## Prosedur Uji Coba
+### dracut
+### mkinitcpio
 ## Tang server
 Tang adalah layanan yang digunakan untuk menghubungkan kunci kriptografi dengan kondisi atau keberadaan jaringan tertentu sehingga pemanfaatannya bergantung pada lingkungan jaringan yang telah ditentukan (ArchLinux,2026). Mekanisme ini memungkinkan proses pembukaan kunci (dekripsi) dilakukan secara otomatis apabila sistem berada pada lingkungan jaringan yang telah ditentukan dan dipercaya.Pendekatan ini meningkatkan aspek keamanan karena akses terhadap data tidak hanya bergantung pada kunci enkripsi, tetapi juga pada validasi kondisi jaringan yang digunakan.
 
